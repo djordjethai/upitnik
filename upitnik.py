@@ -4,12 +4,27 @@ from openai import OpenAI
 from myfunc.retrievers import HybridQueryProcessor
 from myfunc.mojafunkcija import send_email
 from pitanja import odgovori
+import matplotlib.pyplot as plt
+import numpy as np
 
 client=OpenAI()
 avatar_ai="bot.png" 
 
+def create_radar_chart(data, labels, num_vars):
+    angles = np.linspace(0, 2 * np.pi, num_vars, endpoint=False).tolist()
+    data += data[:1]
+    angles += angles[:1]
 
-def posalji_mail(email,gap_analiza):
+    fig, ax = plt.subplots(figsize=(6, 6), subplot_kw=dict(polar=True))
+    ax.fill(angles, data, color='red', alpha=0.25)
+    ax.plot(angles, data, color='red', linewidth=2)  # Draw the outline
+    ax.set_yticklabels([])
+    ax.set_xticks(angles[:-1])
+    ax.set_xticklabels(labels)
+
+    return fig
+
+def posalji_mail(email,gap_analiza, image_path):
     st.info(f"Saljem email na adresu {email}")
     send_email(
             subject="Gap Analiza",
@@ -19,7 +34,8 @@ def posalji_mail(email,gap_analiza):
             smtp_server="smtp.office365.com",
             smtp_port=587,
             username="azure.test@positive.rs",
-            password=os.getenv("PRAVNIK_PASS")
+            password=os.getenv("PRAVNIK_PASS"),
+            image_path= image_path
             )
     st.info(f"Poslat je email na adresu {email}")
     
@@ -72,11 +88,19 @@ def main():
                     message_placeholder.markdown(recommendation_response + "▌")
                 message_placeholder.markdown(recommendation_response)
                 
-            st.info("U ovoj fazi ce se dodati grafikoni...") 
+            st.title('Polar Chart Example')
+            labels = ['Poslovna zrelostt', 'Digitalna zrelost', 'Upotreba AI', 'Sajber bezbednost', 'IT infrastruktura']
+            data = [4, 3, 4, 2, 5]
+            num_vars = len(data)
+            # Plotting
+            radar_fig = create_radar_chart(data, labels, num_vars)
+            radar_fig.savefig('radar_chart.png', bbox_inches='tight')
+            # Display in Streamlit
+            st.pyplot(radar_fig)
             gap_analiza = full_response + "\n\n" + recommendation_response + "\n\n" + "Ovde ce biti i grafikoni..."
             
             # sledi formatiranje i slanje maila
-            posalji_mail(email, gap_analiza)
+            posalji_mail(email, gap_analiza, 'radar_chart.png')
                 
 if __name__ == "__main__":
     main()
