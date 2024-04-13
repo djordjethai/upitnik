@@ -1,0 +1,226 @@
+[
+	{
+        "question_text": "1. Kako biste opisali poslovnu strategiju vaše kompanije?",
+        "answer_type": "choice",
+        "options": [
+            "- Jasno definisana i dokumentovana",
+            "- Usmeno dogovorena među menadžmentom",
+            "- Ne postoji formalna strategija"
+        ]
+    },
+    {
+        "question_text": "2. Koliko često revizirate svoju poslovnu strategiju?",
+        "answer_type": "choice",
+        "options": [
+            "- Jednom godišnje",
+            "- Na svake 2 do 3 godine",
+            "- Rijetko ili nikada"
+        ]
+    },
+    {
+        "question_text": "3. Da li imate jasno definisane poslovne ciljeve za narednu fiskalnu godinu?",
+        "answer_type": "choice",
+        "options": [
+            "- Da",
+            "- Ne",
+            "- U procesu definisanja"
+        ]
+    },
+    {
+        "question_text": "4. Kako merite napredak prema postizanju poslovnih ciljeva?",
+        "answer_type": "choice",
+        "options": [
+            "- Kroz KPI (ključne pokazatelje učinka)",
+            "- Opštim procenama i povratnim informacijama",
+            "- Ne merimo napredak sistematično"
+        ]
+    },
+    {
+        "question_text": "5. Da li vaša kompanija poseduje jasno definisan proces za rukovođenje promenama?",
+        "answer_type": "choice",
+        "options": [
+            "- Da",
+            "- Ne",
+            "- U razvoju"
+        ]
+    },
+    {
+        "question_text": "1. Koji digitalni alati su trenutno u upotrebi u vašoj kompaniji? ",
+        "answer_type": "choice",
+        "options": [
+            "- Email i komunikacioni alati",
+            "- ERP (Enterprise Resource Planning)",
+            "- CRM (Customer Relationship Management)",
+            "- DMS (Document Management System)",
+            "- BI (Business Intelligence) alati",
+            "- Ostalo [Molimo navedite]"
+        ]
+    },
+    {
+        "question_text": "2. U kojoj meri vaše trenutno IT okruženje podržava integraciju novih digitalnih alata?",
+        "answer_type": "choice",
+        "options": [
+            "- Potpuno je spremno za integraciju",
+            "- Delimično spremno, sa određenim limitacijama",
+            "- Nije spremno ili potrebna su značajna ulaganja"
+        ]
+    },
+    {
+        "question_text": "3. Kako ocenjujete zrelost vaše kompanije u primeni digitalnih alata i tehnologija?",
+        "answer_type": "choice",
+        "options": [
+            "- Na početku smo digitalne transformacije",
+            "- Napredovali smo, ali imamo prostora za unapređenje",
+            "- Smatramo se liderima u digitalizaciji unutar naše industrije"
+        ]
+    },
+    {
+        "question_text": "4. Kako procenjujete efikasnost digitalnih alata koje trenutno koristite?",
+        "answer_type": "choice",
+        "options": [
+            "- Veoma efikasne",
+            "- Delimično efikasne",
+            "- Neefikasne i zahtevaju zamenu ili unapređenje"
+        ]
+    },
+    {
+        "question_text": "5. Da li vaša kompanija koristi ERP sistem? Ako da, koliko ste zadovoljni njegovim performansama? ",
+        "answer_type": "choice",
+        "options": [
+            "- Da, veoma smo zadovoljni",
+            "- Da, ali nije potpuno prilagođen našim potrebama",
+            "- Ne koristimo ERP sistem"
+        ]
+    },
+    {
+        "question_text": "6. Kako rukovodstvo vaše kompanije gleda na ulaganje u digitalnu transformaciju? ",
+        "answer_type": "choice",
+        "options": [
+            "- Kao na prioritet i ključan faktor uspeha",
+            "- Kao na neophodnost, ali s ograničenim resursima",
+            "- Skeptično ili s ograničenim razumevanjem značaja"
+        ]
+    },
+    {
+        "question_text": "7. Koliko često vaša kompanija vrši analizu poslovnog procesa s ciljem implementacije digitalnih rešenja? ",
+        "answer_type": "choice",
+        "options": [
+            "- Kontinuirano",
+            "- Jednom godišnje",
+            "- Retko ili nikada"
+        ]
+    },
+    {
+        "question_text": "8. Da li koristite BI alate kako biste analizirali i vizualizovali podatke? ",
+        "answer_type": "choice",
+        "options": [
+            "- Da, redovno",
+            "- Povremeno, kada je to potrebno",
+            "- Ne koristimo BI alate"
+        ]
+    },
+    {
+        "question_text": "9. Da li vaša kompanija ima strategiju prikupljanja i analize velikih podataka (Big Data)? ",
+        "answer_type": "choice",
+        "options": [
+            "- Da, imamo razvijenu strategiju i alate",
+            "- U početnoj fazi smo razvoja",
+            "- Ne, ali razumemo značaj i planiramo razvoj"
+        ]
+    },
+    {
+        "question_text": "10. Kako vaša kompanija upravlja klijentima i njihovim iskustvom putem digitalnih kanala? ",
+        "answer_type": "choice",
+        "options": [
+            "- Uvođenjem CRM sistema i prilagođenim digitalnim kampanjama",
+            "- Povremeno koristimo email i društvene mreže",
+            "- Nismo fokusirani na digitalno upravljanje klijentima"
+        ]
+    },
+    {
+        "question_text": "11. Da li su vaši sistemi i alati dostupni na daljinu zaposlenima? ",
+        "answer_type": "choice",
+        "options": [
+            "- Da, imamo potpuno funkcionalno radno okruženje na daljinu",
+            "- Delimično, sa određenim ograničenjima",
+            "- Ne, naši sistemi nisu prilagođeni za rad na daljinu"
+        ]
+    },
+    {
+        "question_text": "12. Da li razmišljate o implementaciji veštačke inteligencije u poslovnim procesima? ",
+        "answer_type": "choice",
+        "options": [
+            "- Da, aktivno razmatramo i istražujemo mogućnosti",
+            "- Zainteresovani smo, ali trenutno bez konkretne akcije",
+            "- Ne razmatramo trenutno"
+        ]
+    },
+    {
+        "question_text": "13. Kako merite ROI (povraćaj investicije) za digitalne alate i tehnologije koje implementirate? ",
+        "answer_type": "choice",
+        "options": [
+            "- Preciznim metrikama i dugoročnim praćenjem",
+            "- Osnovnim metrikama i kratkoročnim praćenjem",
+            "- Ne merimo aktivno ROI"
+        ]
+    },
+    {
+        "question_text": "14. Da li vaša kompanija ima posebno odelenje ili tim posvećen digitalnoj transformaciji? ",
+        "answer_type": "choice",
+        "options": [
+            "- Da",
+            "- U procesu formiranja",
+            "- Ne"
+        ]
+    },
+    {
+        "question_text": "15. Koji su glavni izazovi s kojima se suočavate prilikom digitalizacije poslovanja? ",
+        "answer_type": "opis",
+        "options": [
+            "- "
+        ]
+    },
+    {
+        "question_text": "16. Kako se obučavaju zaposleni za korišćenje novih digitalnih alata? ",
+        "answer_type": "choice",
+        "options": [
+            "- Internim treningom i radionicama",
+            "- Online kursevima i profesionalnim razvojem",
+            "- Ne postoji formalni proces obuke"
+        ]
+    },
+    {
+        "question_text": "17. Da li vaša kompanija koristi cloud usluge? ",
+        "answer_type": "choice",
+        "options": [
+            "- Da, u velikoj meri koristimo cloud",
+            "- Delimično koristimo cloud usluge",
+            "- Ne koristimo cloud usluge"
+        ]
+    },
+    {
+        "question_text": "18. Kako pristupate održavanju i ažuriranju vaših digitalnih alata? ",
+        "answer_type": "choice",
+        "options": [
+            "- Redovno i proaktivno",
+            "- Kada se pojavi potreba ili problem",
+            "- Retko ili nikako"
+        ]
+    },
+    {
+        "question_text": "19. Koje digitalne alate planirate implementirati u narednih 12 meseci? ",
+        "answer_type": "opis",
+        "options": [
+            "- "
+        ]
+    },
+    {
+        "question_text": "20. Kako ocenjujete potrebu za digitalnom transformacijom u vašoj industriji? ",
+        "answer_type": "choice",
+        "options": [
+            "- Veoma visoka i urgentna",
+            "- Važna, ali ne hitna",
+            "- Nisko na listi prioriteta"
+        ]
+    }
+]

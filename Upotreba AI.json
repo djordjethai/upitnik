@@ -1,0 +1,232 @@
+[
+	{
+        "question_text": "1. Kako biste opisali poslovnu strategiju vaše kompanije?",
+        "answer_type": "choice",
+        "options": [
+            "- Jasno definisana i dokumentovana",
+            "- Usmeno dogovorena među menadžmentom",
+            "- Ne postoji formalna strategija"
+        ]
+    },
+    {
+        "question_text": "2. Koliko često revizirate svoju poslovnu strategiju?",
+        "answer_type": "choice",
+        "options": [
+            "- Jednom godišnje",
+            "- Na svake 2 do 3 godine",
+            "- Rijetko ili nikada"
+        ]
+    },
+    {
+        "question_text": "3. Da li imate jasno definisane poslovne ciljeve za narednu fiskalnu godinu?",
+        "answer_type": "choice",
+        "options": [
+            "- Da",
+            "- Ne",
+            "- U procesu definisanja"
+        ]
+    },
+    {
+        "question_text": "4. Kako merite napredak prema postizanju poslovnih ciljeva?",
+        "answer_type": "choice",
+        "options": [
+            "- Kroz KPI (ključne pokazatelje učinka)",
+            "- Opštim procenama i povratnim informacijama",
+            "- Ne merimo napredak sistematično"
+        ]
+    },
+    {
+        "question_text": "5. Da li vaša kompanija poseduje jasno definisan proces za rukovođenje promenama?",
+        "answer_type": "choice",
+        "options": [
+            "- Da",
+            "- Ne",
+            "- U razvoju"
+        ]
+    },
+    {
+        "question_text": "1. Da li trenutno koristite neke alate zasnovane na veštačkoj inteligenciji (AI) unutar vaše organizacije?",
+        "answer_type": "choice",
+        "options": [
+            "- Da",
+            "- Ne",
+            "- Planiramo u skorijoj budućnosti"
+        ]
+    },
+    {
+        "question_text": "2. Za koje poslovne funkcije vidite potencijal upotrebe AI? ",
+        "answer_type": "choice",
+        "options": [
+            "- Prodaja i marketing",
+            "- Korisnička podrška",
+            "- Ljudski resursi",
+            "- Finansije i računovodstvo",
+            "- Lanac snabdevanja i logistika",
+            "- Ostalo [Molimo navedite]"
+        ]
+    },
+    {
+        "question_text": "3. Koliko ste upoznati sa prednostima koje AI može doneti vašem poslovanju? ",
+        "answer_type": "choice",
+        "options": [
+            "- Veoma upoznati",
+            "- Donekle upoznati",
+            "- Neupoznati"
+        ]
+    },
+    {
+        "question_text": "4. Da li smatrate da bi implementacija AI alata mogla unaprediti efikasnost vaših poslovnih procesa? ",
+        "answer_type": "choice",
+        "options": [
+            "- Da",
+            "- Moguće",
+            "- Ne"
+        ]
+    },
+    {
+        "question_text": "5. Koje su vaše primarne brige vezane za integraciju AI u vašem poslovanju? ",
+        "answer_type": "choice",
+        "options": [
+            "- Troškovi i ROI",
+            "- Sigurnost podataka",
+            "- Nedostatak stručnjaka za AI",
+            "- Otpor zaposlenih prema promenama",
+            "- Ostalo [Molimo navedite]"
+        ]
+    },
+    {
+        "question_text": "6. Da li biste bili zainteresovani za usluge poslovnog savetovanja kako bi bolje razumeli kako AI može biti primenjen u vašem poslu? ",
+        "answer_type": "choice",
+        "options": [
+            "- Da",
+            "- Možda",
+            "- Ne"
+        ]
+    },
+    {
+        "question_text": "7. Koje oblasti unutar vaše kompanije biste želeli prvo da transformišete kroz upotrebu AI? ",
+        "answer_type": "choice",
+        "options": [
+            "- Automatizaciju rutinskih zadataka",
+            "- Analitiku i obradu podataka",
+            "- Unapređenje korisničkih iskustava",
+            "- Procene rizika i donošenje odluka",
+            "- Ostalo [Molimo navedite]"
+        ]
+    },
+    {
+        "question_text": "8. Kako ocenjujete nivo tehničke spremnosti vaše kompanije za implementaciju AI? ",
+        "answer_type": "choice",
+        "options": [
+            "- Visok",
+            "- Srednji",
+            "- Nizak"
+        ]
+    },
+    {
+        "question_text": "9. Da li ste ikada koristili AI za analizu velikih setova podataka (big data) radi donošenja informisanih odluka? ",
+        "answer_type": "choice",
+        "options": [
+            "- Da",
+            "- Ne",
+            "- Nije primenljivo"
+        ]
+    },
+    {
+        "question_text": "10. Koji AI alati ili tehnologije vas najviše zanimaju? ",
+        "answer_type": "choice",
+        "options": [
+            "- Mašinsko učenje (ML)",
+            "- Obrada prirodnog jezika (NLP)",
+            "- Prediktivna analitika",
+            "- Robotska automatizacija procesa (RPA)",
+            "- Ostalo [Molimo navedite]"
+        ]
+    },
+    {
+        "question_text": "11. Da li razmišljate o razvoju personalizovanih AI alata specifičnih za potrebe vaše industrije? ",
+        "answer_type": "choice",
+        "options": [
+            "- Da",
+            "- Razmišljamo o tome",
+            "- Ne"
+        ]
+    },
+    {
+        "question_text": "12. Kako biste ocenili važnost AI u budućem razvoju vaše industrije? ",
+        "answer_type": "choice",
+        "options": [
+            "- Krucijalno važno",
+            "- Važno",
+            "- Ne tako važno"
+        ]
+    },
+    {
+        "question_text": "13. Da li trenutno imate tim stručnjaka posvećenih AI projektima ili planirate njihovo angažovanje? ",
+        "answer_type": "choice",
+        "options": [
+            "- Da, imamo tim",
+            "- Planiramo da formiramo tim",
+            "- Ne"
+        ]
+    },
+    {
+        "question_text": "14. Koliko često pratite najnovije trendove i inovacije u AI tehnologiji? ",
+        "answer_type": "choice",
+        "options": [
+            "- Redovno",
+            "- Povremeno",
+            "- Rijetko"
+        ]
+    },
+    {
+        "question_text": "15. Da li ste svesni pravnih i etičkih smernica povezanih sa korišćenjem AI? ",
+        "answer_type": "choice",
+        "options": [
+            "- Da",
+            "- Donekle",
+            "- Ne"
+        ]
+    },
+    {
+        "question_text": "16. Da li razmišljate o upotrebi AI za poboljšanje sajber bezbednosti? ",
+        "answer_type": "choice",
+        "options": [
+            "- Da",
+            "- Moguće u budućnosti",
+            "- Ne"
+        ]
+    },
+    {
+        "question_text": "17. Na kojim projektima biste trenutno razmotrili upotrebu AI? ",
+        "answer_type": "choice",
+        "options": [
+            "- [Otvoreni tekstualni odgovor]"
+        ]
+    },
+    {
+        "question_text": "18. Kako planirate da edukujete svoje zaposlene o AI i njegovim mogućnostima? ",
+        "answer_type": "choice",
+        "options": [
+            "- Internim treninzima",
+            "- Partnerstvom sa stručnim organizacijama",
+            "- Ne planiramo trenutno"
+        ]
+    },
+    {
+        "question_text": "19. Da li ste već iskusili neke izazove sa integracijom AI alata? Ako da, koje? ",
+        "answer_type": "choice",
+        "options": [
+            "- [Otvoreni tekstualni odgovor]"
+        ]
+    },
+    {
+        "question_text": "20. Da li biste bili zainteresovani za workshopove ili seminare o primeni AI u vašoj specifičnoj industriji? ",
+        "answer_type": "choice",
+        "options": [
+            "- Da",
+            "- Možda",
+            "- Ne"
+        ]
+    }
+]

@@ -1,0 +1,225 @@
+[
+	{
+        "question_text": "1. Kako biste opisali poslovnu strategiju vaše kompanije?",
+        "answer_type": "choice",
+        "options": [
+            "- Jasno definisana i dokumentovana",
+            "- Usmeno dogovorena među menadžmentom",
+            "- Ne postoji formalna strategija"
+        ]
+    },
+    {
+        "question_text": "2. Koliko često revizirate svoju poslovnu strategiju?",
+        "answer_type": "choice",
+        "options": [
+            "- Jednom godišnje",
+            "- Na svake 2 do 3 godine",
+            "- Rijetko ili nikada"
+        ]
+    },
+    {
+        "question_text": "3. Da li imate jasno definisane poslovne ciljeve za narednu fiskalnu godinu?",
+        "answer_type": "choice",
+        "options": [
+            "- Da",
+            "- Ne",
+            "- U procesu definisanja"
+        ]
+    },
+    {
+        "question_text": "4. Kako merite napredak prema postizanju poslovnih ciljeva?",
+        "answer_type": "choice",
+        "options": [
+            "- Kroz KPI (ključne pokazatelje učinka)",
+            "- Opštim procenama i povratnim informacijama",
+            "- Ne merimo napredak sistematično"
+        ]
+    },
+    {
+        "question_text": "5. Da li vaša kompanija poseduje jasno definisan proces za rukovođenje promenama?",
+        "answer_type": "choice",
+        "options": [
+            "- Da",
+            "- Ne",
+            "- U razvoju"
+        ]
+    },
+    {
+        "question_text": "1. Kako biste opisali poslovnu strategiju vaše kompanije? ",
+        "answer_type": "choice",
+        "options": [
+            "- Jasno definisana i dokumentovana",
+            "- Usmeno dogovorena među menadžmentom",
+            "- Ne postoji formalna strategija"
+        ]
+    },
+    {
+        "question_text": "2. Koliko često revizirate svoju poslovnu strategiju? ",
+        "answer_type": "choice",
+        "options": [
+            "- Jednom godišnje",
+            "- Na svake 2 do 3 godine",
+            "- Rijetko ili nikada"
+        ]
+    },
+    {
+        "question_text": "3. Da li imate jasno definisane poslovne ciljeve za narednu fiskalnu godinu? ",
+        "answer_type": "choice",
+        "options": [
+            "- Da",
+            "- Ne",
+            "- U procesu definisanja"
+        ]
+    },
+    {
+        "question_text": "4. Kako merite napredak prema postizanju poslovnih ciljeva? ",
+        "answer_type": "choice",
+        "options": [
+            "- Kroz KPI (ključne pokazatelje učinka)",
+            "- Opštim procenama i povratnim informacijama",
+            "- Ne merimo napredak sistematično"
+        ]
+    },
+    {
+        "question_text": "5. Da li vaša kompanija poseduje jasno definisan proces za rukovođenje promenama? ",
+        "answer_type": "choice",
+        "options": [
+            "- Da",
+            "- Ne",
+            "- U razvoju"
+        ]
+    },
+    {
+        "question_text": "6. Kako se vaša kompanija odnosi prema riziku? ",
+        "answer_type": "choice",
+        "options": [
+            "- Aktivno ga upravljamo i koristimo u strategijskom planiranju",
+            "- Razmotrimo povremeno ili u posebnim situacijama",
+            "- Izognemo se stilu upravljanja rizikom"
+        ]
+    },
+    {
+        "question_text": "7. Da li vaša kompanija primenjuje neku od metoda za unapređenje procesa (npr. Lean, Six Sigma)? ",
+        "answer_type": "choice",
+        "options": [
+            "- Da",
+            "- Ne",
+            "- Planiramo u budućnosti"
+        ]
+    },
+    {
+        "question_text": "8. Koliko često se organizuju interni treninzi za razvoj veština zaposlenih? ",
+        "answer_type": "choice",
+        "options": [
+            "- Redovno",
+            "- Povremeno",
+            "- Retko ili nikada"
+        ]
+    },
+    {
+        "question_text": "9. Da li imate formalni sistem za upravljanje talentima i razvoj karijere zaposlenih? ",
+        "answer_type": "choice",
+        "options": [
+            "- Da",
+            "- U razvoju",
+            "- Ne"
+        ]
+    },
+    {
+        "question_text": "10. Kako bi ocenili saradnju između različitih odeljenja unutar kompanije? ",
+        "answer_type": "choice",
+        "options": [
+            "- Odlična",
+            "- Dobra sa prostorom za unapređenje",
+            "- Slaba ili inconsistentna"
+        ]
+    },
+    {
+        "question_text": "11. Da li postoji sistem za deljenje znanja unutar kompanije? ",
+        "answer_type": "choice",
+        "options": [
+            "- Da, imamo platformu/softver za deljenje znanja",
+            "- Neformalno deljenje znanja",
+            "- Ne postoji sistem"
+        ]
+    },
+    {
+        "question_text": "12. Kako ocenjujete kreativnost i inovativnost unutar vaše organizacije? ",
+        "answer_type": "choice",
+        "options": [
+            "- Veoma kreativni i inovativni",
+            "- Ponekad pokazujemo inovativnost",
+            "- Skloni smo praćenju umesto inoviranju"
+        ]
+    },
+    {
+        "question_text": "13. Koliko je vaša kompanija otvorena za promene ili nove ideje? ",
+        "answer_type": "choice",
+        "options": [
+            "- Veoma otvorena",
+            "- Umereno otvorena s oprezom",
+            "- Otporna na promene"
+        ]
+    },
+    {
+        "question_text": "14. Koju ulogu igra korporativna kultura u vašem poslovanju? ",
+        "answer_type": "choice",
+        "options": [
+            "- Ključna je za naš uspeh",
+            "- Važna je, ali ne ključna",
+            "- Nije nam prioritet"
+        ]
+    },
+    {
+        "question_text": "15. Da li kompanija implementira strategije za održavanje i unapređenje korporativne kulture? ",
+        "answer_type": "choice",
+        "options": [
+            "- Da",
+            "- U razvoju",
+            "- Ne"
+        ]
+    },
+    {
+        "question_text": "16. Kako upravljate zadovoljstvom i angažovanjem zaposlenih? ",
+        "answer_type": "choice",
+        "options": [
+            "- Sistematskim anketama i akcionim planovima",
+            "- Povremeno, bez formalnog merenja",
+            "- Ne upravljamo aktivno"
+        ]
+    },
+    {
+        "question_text": "17. Da li imate razvijen sistem za etičko ponašanje i usklađenost sa propisima u kompaniji? ",
+        "answer_type": "choice",
+        "options": [
+            "- Da, imamo kod etike i redovno organizujemo treninge",
+            "- U razvoju / Razmatramo",
+            "- Ne postoji formalni sistem"
+        ]
+    },
+    {
+        "question_text": "18. Kako ocenjujete efikasnost upravnog odbora ili rukovodstva u vođenju kompanije? ",
+        "answer_type": "choice",
+        "options": [
+            "- Veoma efikasan",
+            "- Efikasan s prostorom za poboljšanje",
+            "- Neefikasan"
+        ]
+    },
+    {
+        "question_text": "19. Da li postoji jasno definisan plan oporavka u slučaju poslovnih poremećaja? ",
+        "answer_type": "choice",
+        "options": [
+            "- Da, imamo detaljan i testiran plan oporavka",
+            "- U razmatranju / U razvoju",
+            "- Ne"
+        ]
+    },
+    {
+        "question_text": "20. Kojim izazovima se trenutno najviše suočava vaše poslovanje? ",
+        "answer_type": "opis",
+        "options": [
+            "- "
+        ]
+    }
+]
