@@ -54,8 +54,8 @@
         ]
     },
     {
-        "question_text": "2. Za koje poslovne funkcije vidite potencijal upotrebe AI? ",
-        "answer_type": "choice",
+        "question_text": "Za koje poslovne funkcije vidite potencijal upotrebe AI? ",
+        "answer_type": "multichoice",
         "options": [
             "- Prodaja i marketing",
             "- Korisnička podrška",
@@ -84,8 +84,8 @@
         ]
     },
     {
-        "question_text": "5. Koje su vaše primarne brige vezane za integraciju AI u vašem poslovanju? ",
-        "answer_type": "choice",
+        "question_text": "Koje su vaše primarne brige vezane za integraciju AI u vašem poslovanju? ",
+        "answer_type": "multichoice",
         "options": [
             "- Troškovi i ROI",
             "- Sigurnost podataka",
@@ -104,8 +104,8 @@
         ]
     },
     {
-        "question_text": "7. Koje oblasti unutar vaše kompanije biste želeli prvo da transformišete kroz upotrebu AI? ",
-        "answer_type": "choice",
+        "question_text": "Koje oblasti unutar vaše kompanije biste želeli prvo da transformišete kroz upotrebu AI? ",
+        "answer_type": "multichoice",
         "options": [
             "- Automatizaciju rutinskih zadataka",
             "- Analitiku i obradu podataka",
@@ -133,8 +133,8 @@
         ]
     },
     {
-        "question_text": "10. Koji AI alati ili tehnologije vas najviše zanimaju? ",
-        "answer_type": "choice",
+        "question_text": "Koji AI alati ili tehnologije vas najviše zanimaju? ",
+        "answer_type": "multichoice",
         "options": [
             "- Mašinsko učenje (ML)",
             "- Obrada prirodnog jezika (NLP)",
@@ -176,7 +176,7 @@
         "options": [
             "- Redovno",
             "- Povremeno",
-            "- Rijetko"
+            "- Retko"
         ]
     },
     {
@@ -199,7 +199,7 @@
     },
     {
         "question_text": "17. Na kojim projektima biste trenutno razmotrili upotrebu AI? ",
-        "answer_type": "choice",
+        "answer_type": "opis",
         "options": [
             "- [Otvoreni tekstualni odgovor]"
         ]
@@ -215,7 +215,7 @@
     },
     {
         "question_text": "19. Da li ste već iskusili neke izazove sa integracijom AI alata? Ako da, koje? ",
-        "answer_type": "choice",
+        "answer_type": "opis",
         "options": [
             "- [Otvoreni tekstualni odgovor]"
         ]

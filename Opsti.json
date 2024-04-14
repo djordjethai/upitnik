@@ -1,6 +1,6 @@
 [
     {
-        "question_text": "1. Kako biste opisali poslovnu strategiju vaše kompanije?",
+        "question_text": "Kako biste opisali poslovnu strategiju vaše kompanije?",
         "answer_type": "choice",
         "options": [
             "- Jasno definisana i dokumentovana",
@@ -9,7 +9,7 @@
         ]
     },
     {
-        "question_text": "2. Koliko često revizirate svoju poslovnu strategiju?",
+        "question_text": "Koliko često revizirate svoju poslovnu strategiju?",
         "answer_type": "choice",
         "options": [
             "- Jednom godišnje",
@@ -18,7 +18,7 @@
         ]
     },
     {
-        "question_text": "3. Da li imate jasno definisane poslovne ciljeve za narednu fiskalnu godinu?",
+        "question_text": "Da li imate jasno definisane poslovne ciljeve za narednu fiskalnu godinu?",
         "answer_type": "choice",
         "options": [
             "- Da",
@@ -27,7 +27,7 @@
         ]
     },
     {
-        "question_text": "4. Kako merite napredak prema postizanju poslovnih ciljeva?",
+        "question_text": "Kako merite napredak prema postizanju poslovnih ciljeva?",
         "answer_type": "choice",
         "options": [
             "- Kroz KPI (ključne pokazatelje učinka)",
@@ -36,7 +36,7 @@
         ]
     },
     {
-        "question_text": "5. Da li vaša kompanija poseduje jasno definisan proces za rukovođenje promenama?",
+        "question_text": "Da li vaša kompanija poseduje jasno definisan proces za rukovođenje promenama?",
         "answer_type": "choice",
         "options": [
             "- Da",
@@ -45,7 +45,7 @@
         ]
     },
     {
-        "question_text": "6. Kako se vaša kompanija odnosi prema riziku?",
+        "question_text": "Kako se vaša kompanija odnosi prema riziku?",
         "answer_type": "choice",
         "options": [
             "- Aktivno ga upravljamo i koristimo u strategijskom planiranju",
@@ -54,7 +54,7 @@
         ]
     },
     {
-        "question_text": "7. Da li vaša kompanija primenjuje neku od metoda za unapređenje procesa (npr. Lean, Six Sigma)?",
+        "question_text": "Da li vaša kompanija primenjuje neku od metoda za unapređenje procesa (npr. Lean, Six Sigma)?",
         "answer_type": "choice",
         "options": [
             "- Da",
@@ -63,7 +63,7 @@
         ]
     },
     {
-        "question_text": "8. Koliko često se organizuju interni treninzi za razvoj veština zaposlenih?",
+        "question_text": "Koliko često se organizuju interni treninzi za razvoj veština zaposlenih?",
         "answer_type": "choice",
         "options": [
             "- Redovno",
@@ -72,7 +72,7 @@
         ]
     },
     {
-        "question_text": "9. Da li imate formalni sistem za upravljanje talentima i razvoj karijere zaposlenih?",
+        "question_text": "Da li imate formalni sistem za upravljanje talentima i razvoj karijere zaposlenih?",
         "answer_type": "choice",
         "options": [
             "- Da",
@@ -81,7 +81,7 @@
         ]
     },
     {
-        "question_text": "10. Kako bi ocenili saradnju između različitih odeljenja unutar kompanije?",
+        "question_text": "Kako bi ocenili saradnju između različitih odeljenja unutar kompanije?",
         "answer_type": "choice",
         "options": [
             "- Odlična",
@@ -90,7 +90,7 @@
         ]
     },
     {
-        "question_text": "11. Da li postoji sistem za deljenje znanja unutar kompanije?",
+        "question_text": "Da li postoji sistem za deljenje znanja unutar kompanije?",
         "answer_type": "choice",
         "options": [
             "- Da, imamo platformu/softver za deljenje znanja",
@@ -99,7 +99,7 @@
         ]
     },
     {
-        "question_text": "12. Kako ocenjujete kreativnost i inovativnost unutar vaše organizacije?",
+        "question_text": "Kako ocenjujete kreativnost i inovativnost unutar vaše organizacije?",
         "answer_type": "choice",
         "options": [
             "- Veoma kreativni i inovativni",
@@ -108,7 +108,7 @@
         ]
     },
     {
-        "question_text": "13. Koliko je vaša kompanija otvorena za promene ili nove ideje?",
+        "question_text": "Koliko je vaša kompanija otvorena za promene ili nove ideje?",
         "answer_type": "choice",
         "options": [
             "- Veoma otvorena",
@@ -117,7 +117,7 @@
         ]
     },
     {
-        "question_text": "14. Koju ulogu igra korporativna kultura u vašem poslovanju?",
+        "question_text": "Koju ulogu igra korporativna kultura u vašem poslovanju?",
         "answer_type": "choice",
         "options": [
             "- Ključna je za naš uspeh",
@@ -126,7 +126,7 @@
         ]
     },
     {
-        "question_text": "15. Da li kompanija implementira strategije za održavanje i unapređenje korporativne kulture?",
+        "question_text": "Da li kompanija implementira strategije za održavanje i unapređenje korporativne kulture?",
         "answer_type": "choice",
         "options": [
             "- Da",
@@ -135,7 +135,7 @@
         ]
     },
     {
-        "question_text": "16. Kako upravljate zadovoljstvom i angažovanjem zaposlenih?",
+        "question_text": "Kako upravljate zadovoljstvom i angažovanjem zaposlenih?",
         "answer_type": "choice",
         "options": [
             "- Sistematskim anketama i akcionim planovima",
@@ -144,7 +144,7 @@
         ]
     },
     {
-        "question_text": "17. Da li imate razvijen sistem za etičko ponašanje i usklađenost sa propisima u kompaniji?",
+        "question_text": "Da li imate razvijen sistem za etičko ponašanje i usklađenost sa propisima u kompaniji?",
         "answer_type": "choice",
         "options": [
             "- Da, imamo kod etike i redovno organizujemo treninge",
@@ -153,7 +153,7 @@
         ]
     },
     {
-        "question_text": "18. Kako ocenjujete efikasnost upravnog odbora ili rukovodstva u vođenju kompanije?",
+        "question_text": "Kako ocenjujete efikasnost upravnog odbora ili rukovodstva u vođenju kompanije?",
         "answer_type": "choice",
         "options": [
             "- Veoma efikasan",
@@ -162,7 +162,7 @@
         ]
     },
     {
-        "question_text": "19. Da li postoji jasno definisan plan oporavka u slučaju poslovnih poremećaja?",
+        "question_text": "Da li postoji jasno definisan plan oporavka u slučaju poslovnih poremećaja?",
         "answer_type": "choice",
         "options": [
             "- Da, imamo detaljan i testiran plan oporavka",
@@ -171,7 +171,7 @@
         ]
     },
     {
-        "question_text": "20. Kojim izazovima se trenutno najviše suočava vaše poslovanje?",
+        "question_text": "Kojim izazovima se trenutno najviše suočava vaše poslovanje?",
         "answer_type": "opis",
         "options": [
             "- "

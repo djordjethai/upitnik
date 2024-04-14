@@ -45,7 +45,7 @@
         ]
     },
     {
-        "question_text": "1. Da li vaša kompanija ima uspostavljen plan za upravljanje sajber incidentima? Use JSON. The possible answers are: - Da, - U procesu implementacije, - Ne.",
+        "question_text": "1. Da li vaša kompanija ima uspostavljen plan za upravljanje sajber incidentima? ",
         "answer_type": "choice",
         "options": [
             "- Da",
@@ -54,7 +54,7 @@
         ]
     },
     {
-        "question_text": "2. Koliko često obučavate svoje zaposlene o sajber bezbednosti i prevenciji sajber napada? Use JSON. The possible answers are: - Redovno (najmanje jednom u 6 meseci), - Jednom godišnje, - Rijetko ili nikada.",
+        "question_text": "2. Koliko često obučavate svoje zaposlene o sajber bezbednosti i prevenciji sajber napada? ",
         "answer_type": "choice",
         "options": [
             "- Redovno (najmanje jednom u 6 meseci)",
@@ -63,7 +63,7 @@
         ]
     },
     {
-        "question_text": "3. Da li vaša kompanija koristi rešenja za firewall i antivirusnu zaštitu? Use JSON. The possible answers are: - Da, koristimo oba rešenja, - Samo firewall, - Samo antivirus, - Ne koristimo ni jedno.",
+        "question_text": "3. Da li vaša kompanija koristi rešenja za firewall i antivirusnu zaštitu?",
         "answer_type": "choice",
         "options": [
             "- Da, koristimo oba rešenja",
@@ -73,7 +73,7 @@
         ]
     },
     {
-        "question_text": "4. Da li ste imali sajber sigurnosni incident u poslednjih godinu dana? Use JSON. The possible answers are: - Da, - Ne, - Ne znamo.",
+        "question_text": "4. Da li ste imali sajber sigurnosni incident u poslednjih godinu dana? ",
         "answer_type": "choice",
         "options": [
             "- Da",
@@ -82,7 +82,7 @@
         ]
     },
     {
-        "question_text": "5. Koliko često obavljate sigurnosne provere i procene ranjivosti vaše IT infrastrukture? Use JSON. The possible answers are: - Redovno (barem jednom kvartalno), - Jednom godišnje, - Rijetko ili nikada.",
+        "question_text": "5. Koliko često obavljate sigurnosne provere i procene ranjivosti vaše IT infrastrukture? ",
         "answer_type": "choice",
         "options": [
             "- Redovno (barem jednom kvartalno)",
@@ -91,7 +91,7 @@
         ]
     },
     {
-        "question_text": "6. Da li ste implementirali dvofaktorsku autentifikaciju (2FA) za pristup osetljivim sistemima i podacima? Use JSON. The possible answers are: - Da, - U procesu implementacije, - Ne.",
+        "question_text": "6. Da li ste implementirali dvofaktorsku autentifikaciju (2FA) za pristup osetljivim sistemima i podacima? ",
         "answer_type": "choice",
         "options": [
             "- Da",
@@ -100,7 +100,7 @@
         ]
     },
     {
-        "question_text": "7. Kako upravljate pravima pristupa za zaposlene i treće strane do vaših sistema i podataka? Use JSON. The possible answers are: - Pažljivim dodeljivanjem i redovnim preispitivanjem pristupnih prava, - Dodeljivanjem pristupa na osnovu zahteva, bez redovnog preispitivanja, - Bez formalnog sistema za upravljanje pravima pristupa.",
+        "question_text": "7. Kako upravljate pravima pristupa za zaposlene i treće strane do vaših sistema i podataka? ",
         "answer_type": "choice",
         "options": [
             "- Pažljivim dodeljivanjem i redovnim preispitivanjem pristupnih prava",
@@ -109,7 +109,7 @@
         ]
     },
     {
-        "question_text": "8. Da li vaša kompanija ima rezervni plan (backup) i strategiju za oporavak podataka u slučaju sajber napada? Use JSON. The possible answers are: - Da, sa redovnim testiranjem oporavka, - Da, ali bez redovnog testiranja, - Ne.",
+        "question_text": "8. Da li vaša kompanija ima rezervni plan (backup) i strategiju za oporavak podataka u slučaju sajber napada?",
         "answer_type": "choice",
         "options": [
             "- Da, sa redovnim testiranjem oporavka",
@@ -118,7 +118,7 @@
         ]
     },
     {
-        "question_text": "9. Da li koristite enkripciju za zaštitu osetljivih podataka pri skladištenju i prenosu? Use JSON. The possible answers are: - Da, - Delimično, - Ne.",
+        "question_text": "9. Da li koristite enkripciju za zaštitu osetljivih podataka pri skladištenju i prenosu? ",
         "answer_type": "choice",
         "options": [
             "- Da",
@@ -127,7 +127,7 @@
         ]
     },
     {
-        "question_text": "10. Kako bi ocenili svest vaših zaposlenih o značaju sajber bezbednosti? Use JSON. The possible answers are: - Visoka, - Umerena, - Niska.",
+        "question_text": "10. Kako bi ocenili svest vaših zaposlenih o značaju sajber bezbednosti? ",
         "answer_type": "choice",
         "options": [
             "- Visoka",
@@ -136,7 +136,7 @@
         ]
     },
     {
-        "question_text": "11. Da li vaša firma ima eksternog partnera ili stručnjaka za sajber bezbednost? Use JSON. The possible answers are: - Da, imamo eksternog partnera, - Ne, ali planiramo angažovanje, - Ne, oslanjamo se isključivo na interne resurse.",
+        "question_text": "11. Da li vaša firma ima eksternog partnera ili stručnjaka za sajber bezbednost? ",
         "answer_type": "choice",
         "options": [
             "- Da, imamo eksternog partnera",
@@ -145,7 +145,7 @@
         ]
     },
     {
-        "question_text": "12. Da li vaša kompanija koristi usluge sajber bezbednosnog osiguranja? Use JSON. The possible answers are: - Da, - Razmatramo, - Ne.",
+        "question_text": "12. Da li vaša kompanija koristi usluge sajber bezbednosnog osiguranja? ",
         "answer_type": "choice",
         "options": [
             "- Da",
@@ -154,7 +154,7 @@
         ]
     },
     {
-        "question_text": "13. Da li praktikujete redovno ažuriranje softvera i sistema kao deo vaše strategije sajber bezbednosti? Use JSON. The possible answers are: - Da, - Kada je to moguće, - Rijetko ili nikada.",
+        "question_text": "13. Da li praktikujete redovno ažuriranje softvera i sistema kao deo vaše strategije sajber bezbednosti? ",
         "answer_type": "choice",
         "options": [
             "- Da",
@@ -163,7 +163,7 @@
         ]
     },
     {
-        "question_text": "14. Koliko često se sprovode penetration testovi na vašoj IT infrastrukturi? Use JSON. The possible answers are: - Redovno (barem jednom godišnje), - Povremeno, - Nikada.",
+        "question_text": "14. Koliko često se sprovode penetration testovi na vašoj IT infrastrukturi? ",
         "answer_type": "choice",
         "options": [
             "- Redovno (barem jednom godišnje)",
@@ -172,7 +172,7 @@
         ]
     },
     {
-        "question_text": "15. Da li ste razvili politike sajber higijene koje su obavezne za sve zaposlene? Use JSON. The possible answers are: - Da, - U procesu definisanja, - Ne.",
+        "question_text": "15. Da li ste razvili politike sajber higijene koje su obavezne za sve zaposlene? ",
         "answer_type": "choice",
         "options": [
             "- Da",
@@ -181,7 +181,7 @@
         ]
     },
     {
-        "question_text": "16. Da li posedujete centralizovani sistem za upravljanje zapisima i logovima kojim možete pratiti neautorizovani pristup? Use JSON. The possible answers are: - Da, - Delimično, - Ne.",
+        "question_text": "16. Da li posedujete centralizovani sistem za upravljanje zapisima i logovima kojim možete pratiti neautorizovani pristup? ",
         "answer_type": "choice",
         "options": [
             "- Da",
@@ -190,7 +190,7 @@
         ]
     },
     {
-        "question_text": "17. Koliko često preispitujete svoje politike i procedure sajber bezbednosti? Use JSON. The possible answers are: - Redovno, najmanje jednom godišnje, - Jednom u nekoliko godina, - Rijetko ili nikada.",
+        "question_text": "17. Koliko često preispitujete svoje politike i procedure sajber bezbednosti? ",
         "answer_type": "choice",
         "options": [
             "- Redovno, najmanje jednom godišnje",
@@ -199,7 +199,7 @@
         ]
     },
     {
-        "question_text": "18. Da li ste u poslednjih godinu dana učestvovali u simulaciji sajber napada ili vežbi oporavka? Use JSON. The possible answers are: - Da, - Ne, ali planiramo, - Ne.",
+        "question_text": "18. Da li ste u poslednjih godinu dana učestvovali u simulaciji sajber napada ili vežbi oporavka? ",
         "answer_type": "choice",
         "options": [
             "- Da",
@@ -208,7 +208,7 @@
         ]
     },
     {
-        "question_text": "19. Kako vaša kompanija upravlja uređajima zaposlenih koji pristupaju korporativnoj mreži? (BYOD - Bring Your Own Device politika) Use JSON. The possible answers are: - Imamo jasno definisanu BYOD politiku, - Radimo na razvoju politike, - Nemamo politiku za BYOD.",
+        "question_text": "19. Kako vaša kompanija upravlja uređajima zaposlenih koji pristupaju korporativnoj mreži? (BYOD - Bring Your Own Device politika)",
         "answer_type": "choice",
         "options": [
             "- Imamo jasno definisanu BYOD politiku",
@@ -217,7 +217,7 @@
         ]
     },
     {
-        "question_text": "20. Da li posedujete certifikate ili standardizacije vezane za sajber bezbednost u poslovanju? (npr. ISO 27001) Use JSON. The possible answers are: - Da, - U procesu sticanja, - Ne.",
+        "question_text": "20. Da li posedujete certifikate ili standardizacije vezane za sajber bezbednost u poslovanju? (npr. ISO 27001) ",
         "answer_type": "choice",
         "options": [
             "- Da",

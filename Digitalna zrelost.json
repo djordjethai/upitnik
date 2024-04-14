@@ -45,8 +45,8 @@
         ]
     },
     {
-        "question_text": "1. Koji digitalni alati su trenutno u upotrebi u vašoj kompaniji? ",
-        "answer_type": "choice",
+        "question_text": "Koji digitalni alati su trenutno u upotrebi u vašoj kompaniji? ",
+        "answer_type": "multichoice",
         "options": [
             "- Email i komunikacioni alati",
             "- ERP (Enterprise Resource Planning)",
