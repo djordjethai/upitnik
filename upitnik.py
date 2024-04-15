@@ -10,7 +10,7 @@ import numpy as np
 client=OpenAI()
 avatar_ai="bot.png" 
 
-# agent llm odgovara na razlicite upite
+# agent llm odgovara na razlicite upite - treba u myfunc
 def positive_agent(messages):
     with st.chat_message("assistant", avatar=avatar_ai):
         message_placeholder = st.empty()
@@ -91,15 +91,23 @@ def main():
         if result:
             # prva faza citanje odgovora i komentar
             gap_message=[
-                {"role": "system", "content": "[Use only the Serbian language] You are an expert in business data analysis. Analyze the document. Think critically and do business analysis of the company. The accent is on GAP analysis. "},
-                {"role": "user", "content": f"Write your report based on this input: {result}"}
+                {"role": "system", "content": """[Use only the Serbian language] You are an expert in business data analysis. \
+                 Analyze the document. Think critically and do business analysis of the company. The accent is on GAP analysis. """},
+
+                {"role": "user", "content": f"Write your GAP analysis report based on this input: {result}"}
             ]
             full_response = positive_agent(gap_message)
             predlozi = recommended(full_response)
             # druga faza preporuke na osnovu portfolia
             recommend_message=[
-                        {"role": "system", "content": "[Use only the Serbian Language] You are an experienced digital transformation consultant. You are working for company Positive doo, the leader in Digital Transformation services in Serbia."},
-                        {"role": "user", "content": f"Based on previous GAP analysis: {full_response}, make suggestions for business improvement of the descibed business process. Suggest solutins based on the text from portfolio of your company Positive doo: {predlozi}"}
+                        {"role": "system", "content": """[Use only the Serbian Language] \
+                         You are an experienced digital transformation consultant. \
+                         You are working for company Positive doo, the leader in Digital Transformation services in Serbia."""},
+
+                        {"role": "user", "content": f"""Based on previous GAP analysis: {full_response}, \
+                         make suggestions for business improvement of the descibed business process. \
+                         Be sure to suggest solutions in the form of the proposal (offer) \
+                         based on the text from portfolio of your company Positive doo: {predlozi}"""}
             ]
             recommendation_response = positive_agent(recommend_message)    
             # treca faza kreiranje dokumenta

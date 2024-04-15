@@ -2,7 +2,7 @@ import streamlit as st
 import json
 import re
 
-# proverava ispravnost email adrese
+# proverava ispravnost email adrese - treba u myfunc
 def is_valid_email(email):
     # Regular expression pattern for validating an email
     email_regex = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
