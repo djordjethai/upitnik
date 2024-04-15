@@ -88,8 +88,8 @@ python-magic==0.4.27
 pytz==2024.1
 PyYAML==6.0.1
 pypandoc==1.13
-pdflatex==0.1.3
-referencing==0.33.0
+pdflatex
+referencing
 regex==2023.12.25
 requests==2.31.0
 rich==13.7.1
