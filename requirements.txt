@@ -127,7 +127,7 @@ tornado==6.3.3
 tqdm==4.66.1
 traitlets==5.8.1
 transformers==4.37.2
-trio==0.23.1
+trio
 trio-websocket==0.11.1
 typer==0.9.0
 types-requests==2.31.0.20240218
