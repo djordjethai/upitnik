@@ -283,7 +283,14 @@ def main():
             gap_analiza = full_response + "\n\n" + recommendation_response + "\n\n"
             # cetvrta faza slanje maila
             posalji_mail(email, gap_analiza, grafikon)
-            os.remove("formatted_document.docx")
+            try:    
+                os.remove("analysis_report.pdf")
+            except:
+                pass
+            try:
+                os.remove("formatted_document.docx")
+            except:
+                pass
                 
 if __name__ == "__main__":
     main()
