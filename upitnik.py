@@ -1,9 +1,11 @@
 ﻿import matplotlib.pyplot as plt
 import numpy as np
 import os
+import pypandoc
 import streamlit as st
 
 from docx import Document
+from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.shared import Pt
 from email import encoders
 from email.mime.base import MIMEBase
@@ -19,6 +21,18 @@ from myfunc.retrievers import HybridQueryProcessor
 
 client=OpenAI()
 avatar_ai="bot.png" 
+
+
+# Convert Markdown content to a PDF file
+def create_pdf(content, image_path=None, filename="analysis_report.pdf"):
+    # Include the image in Markdown format if provided
+    if image_path:
+        image_md = f"![Embedded Image]({os.path.abspath(image_path)})"
+        content += "\n\n" + image_md
+
+    # Convert Markdown to PDF using Pandoc
+    pypandoc.convert_text(content, 'pdf', format='md', outputfile=filename, extra_args=['-V', 'geometry:margin=1in'])
+    return filename
 
 
 # docx koji sadrzi formatirani tekst (i grafikon)
@@ -56,6 +70,8 @@ def create_docx(content, image_path=None, filename="formatted_document.docx"):
         else:
             p = doc.add_paragraph(line)
 
+    for paragraph in doc.paragraphs:
+        paragraph.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
     # Add image if provided
     if image_path:
         doc.add_picture(image_path, width=Pt(300))  # Width is just an example
@@ -65,8 +81,27 @@ def create_docx(content, image_path=None, filename="formatted_document.docx"):
     return filename
 
 
-# salje mejl
+# Function to send email, adjusted for the new PDF generation
 def posalji_mail(email, gap_analiza, image_path):
+    st.info(f"Sending email to {email}")
+    pdf_path = create_pdf(gap_analiza, image_path)
+    send_email(
+        subject="Gap Analysis Report",
+        message="Please find attached the gap analysis report, which includes the radar chart.",
+        from_addr="azure.test@positive.rs",
+        to_addr=email,
+        smtp_server="smtp.office365.com",
+        smtp_port=587,
+        username="azure.test@positive.rs",
+        password=os.getenv("PRAVNIK_PASS"),
+        attachments=[pdf_path]
+    )
+    st.info(f"Email sent to {email}")
+    os.remove(pdf_path)  # Optionally remove the file after sending
+
+
+# salje mejl
+def posalji_mail2(email, gap_analiza, image_path):
     st.info(f"Saljem email na adresu {email}")
     doc_path = create_docx(gap_analiza, image_path)  # Now also passing the image path
 
@@ -85,8 +120,32 @@ def posalji_mail(email, gap_analiza, image_path):
     st.info(f"Poslat je email na adresu {email}")
 
 
-# Slanje mejla sa attachmentom
+# Adjusted mail sending function to attach PDF
 def send_email(subject, message, from_addr, to_addr, smtp_server, smtp_port, username, password, attachments=None):
+    msg = MIMEMultipart()
+    msg['From'] = from_addr
+    msg['To'] = to_addr
+    msg['Subject'] = subject
+    msg.attach(MIMEText(message, 'plain'))
+    
+    if attachments:
+        for attachment in attachments:
+            with open(attachment, 'rb') as file:
+                part = MIMEBase('application', 'octet-stream')
+                part.set_payload(file.read())
+            encoders.encode_base64(part)
+            part.add_header('Content-Disposition', 'attachment', filename=os.path.basename(attachment))
+            msg.attach(part)
+
+    server = SMTP(smtp_server, smtp_port)
+    server.starttls()
+    server.login(username, password)
+    server.send_message(msg)
+    server.quit()
+
+
+# Slanje mejla sa attachmentom
+def send_email2(subject, message, from_addr, to_addr, smtp_server, smtp_port, username, password, attachments=None):
     """
     Sends an email using SMTP protocol.
 
