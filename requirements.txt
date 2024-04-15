@@ -13,7 +13,7 @@ cachetools==5.3.3
 certifi==2024.2.2
 cffi==1.16.0
 chardet==5.2.0
-charset-normalizer==3.3.2
+charset-normalizer
 click==8.1.7
 cohere==4.52
 colorama==0.4.6
@@ -91,7 +91,7 @@ pypandoc==1.13
 pdflatex
 referencing
 regex==2023.12.25
-requests==2.31.0
+requests
 rich==13.7.1
 rpds-py==0.18.0
 six==1.16.0
