@@ -1,2 +1,1 @@
-Pandoc
-MiKTeX
+sudo apt install texlive
