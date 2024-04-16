@@ -2,7 +2,7 @@
 import numpy as np
 import os
 import streamlit as st
-import json
+
 from docx import Document
 from docx.shared import Pt
 from email import encoders
@@ -67,7 +67,7 @@ def create_docx(content, image_path=None, filename="formatted_document.docx"):
 
 # salje mejl
 def posalji_mail(email, gap_analiza, image_path):
-    st.info(f"Šaljem email na adresu {email}")
+    st.info(f"Saljem email na adresu {email}")
     doc_path = create_docx(gap_analiza, image_path)  # Now also passing the image path
 
     # Assuming your send_email function can handle attachments and is defined as shown previously
@@ -117,7 +117,7 @@ def send_email(subject, message, from_addr, to_addr, smtp_server, smtp_port, use
     if attachments:  # Attach any files specified
         for attachment in attachments:
             part = MIMEBase('application', "octet-stream")
-            with open(attachment, 'rb' ) as file:
+            with open(attachment, 'rb') as file:
                 part.set_payload(file.read())
             encoders.encode_base64(part)
             part.add_header('Content-Disposition', f'attachment; filename={os.path.basename(attachment)}')
@@ -187,37 +187,45 @@ def recommended(full_response):
 def main():
     with st.sidebar:
         st.caption("Ver. 14.04.24" )
-        st.subheader("Demo Anketa i slanje maila ")
-        opcija = "Anketa" 
+        st.subheader("Demo GAP sa grafikonon i slanjem maila ")
+        opcija = st.selectbox("Odaberite upitnik", ("",
+                                                    "Opsti", 
+                                                    "Poslovna zrelost", 
+                                                    "Digitalna zrelost", 
+                                                    "Sajber bezbednost", 
+                                                    "IT infrastruktura", 
+                                                    "Upotreba AI" ))
     if opcija !="":  # Check if the result is not None
         result, email = odgovori(opcija)
         if result:
             # prva faza citanje odgovora i komentar
-            #gap_message=[
-         #       {"role": "system", "content": """[Use only the Serbian language] You are an expert in business data analysis. \
-         #        Analyze the document. Think critically and do business analysis of the company. The accent is on GAP analysis. """},
-#
-#                {"role": "user", "content": f"Write your GAP analysis report based on this input: {result}"}
-#            ]
-            #full_response = positive_agent(gap_message)
-            #predlozi = recommended(full_response)
+            gap_message=[
+                {"role": "system", "content": """[Use only Serbian language] You are an expert in business data analysis. \
+                 Analyze the document. Think critically and do business analysis of the company. The accent is on GAP analysis, focusing on 
+                 generating sections Current state, Desired state. """},
+
+                {"role": "user", "content": f"Write your GAP analysis report based on this input: {result}"}
+            ]
+            full_response = positive_agent(gap_message)
+            predlozi = recommended(full_response)
             # druga faza preporuke na osnovu portfolia
-            #recommend_message=[
-            #            {"role": "system", "content": """[Use only the Serbian Language] \
-            #             You are an experienced digital transformation consultant. \
-            #             You are working for company Positive doo, the leader in Digital Transformation services in Serbia."""},
-#
-#                        {"role": "user", "content": f"""Based on previous GAP analysis: {full_response}, \
-#                         make suggestions for business improvement of the descibed business process. \
-###                         Be sure to suggest solutions in the form of the proposal (offer) \
-#                         based on the text from portfolio of your company Positive doo: {predlozi}"""}
-        #    ]
-            #recommendation_response = positive_agent(recommend_message)    
+            recommend_message=[
+                        {"role": "system", "content": """[Use only Serbian Language] \
+                         You are an experienced digital transformation consultant. \
+                         You are working for company Positive doo, the leader in Digital Transformation services in Serbia.
+                         When making propositions, convince the client in a non-invasive way that hiring your company is the right choice."""},
+
+                        {"role": "user", "content": f"""Based on previous GAP analysis: {full_response}, \
+                         make suggestions for business improvement of the descibed business process. \
+                         Write in potential, not in the future tense.
+                         Suggest solutions in the form of the proposal (offer) based on the text from portfolio of your company Positive doo: {predlozi}!!!"""}
+            ]
+            recommendation_response = positive_agent(recommend_message)    
             # treca faza kreiranje dokumenta
-            #grafikon = show_graph()
-            gap_analiza = json.dumps(result, indent=4, ensure_ascii=False) 
+            grafikon = show_graph()
+            gap_analiza = full_response + "\n\n" + recommendation_response + "\n\n"
             # cetvrta faza slanje maila
-            posalji_mail(email, gap_analiza, None)
+            posalji_mail(email, gap_analiza, grafikon)
             os.remove("formatted_document.docx")
                 
 if __name__ == "__main__":

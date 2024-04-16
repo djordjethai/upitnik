@@ -40,8 +40,8 @@ def odgovori(opcija):
                 responses[question_text] = st.selectbox(question_text, options)
         # za multiselect i mogucnost upisa dodatnog odgovora
         elif answer_type == 'multichoice':
-                responses[question_text] = st.multiselect(question_text, options[:-1], placeholder = "Mozete odabrati vise opcija i upisati nove ")
-                responses[question_text].append(st.text_input(f"Navedite dodatni odgovor za pitanje {question_text}"))
+                responses[question_text] = st.multiselect(question_text, options[:-1], placeholder = "Možete odabrati vise opcija i upisati nove ")
+                responses[question_text].append(st.text_input(f"Navedite dodatni odgovor na prethodno pitanje {question_text}"))
         # za tekstualne odgovore        
         elif answer_type == 'opis':
             responses[question_text] = st.text_area(question_text)
