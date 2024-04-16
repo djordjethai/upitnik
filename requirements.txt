@@ -161,9 +161,6 @@ multidict==6.0.5
 mutagen==1.47.0
 myfunc @ git+https://github.com/djordjethai/myfunc.git@2ebb6a80f425d3dfe1869b87a7e8802adb47ba7f
 mypy-extensions==1.0.0
-mysql==0.0.3
-mysql-connector-python==8.3.0
-mysqlclient==2.2.4
 nbclient==0.10.0
 nbconvert==7.16.3
 nbformat==5.10.3
