@@ -176,7 +176,7 @@ def recommended(full_response):
 # glavni program
 def main():
     with st.sidebar:
-        st.caption("Ver. 14.04.24" )
+        st.caption("Ver. 16.04.24" )
         st.subheader("Demo GAP sa grafikonon i slanjem maila ")
         opcija = st.selectbox("Odaberite upitnik", ("",
                                                     "Opsti", 

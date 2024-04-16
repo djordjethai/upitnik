@@ -186,7 +186,7 @@ def recommended(full_response):
 # glavni program
 def main():
     with st.sidebar:
-        st.caption("Ver. 14.04.24" )
+        st.caption("Ver. 16.04.24" )
         st.subheader("Demo Anketa i slanje maila ")
         opcija = "Anketa" 
     if opcija !="":  # Check if the result is not None

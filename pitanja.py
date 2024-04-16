@@ -30,6 +30,7 @@ def odgovori(opcija):
     responses = {}
     email = ""
     # Iterate through questions and display appropriate input options
+    counter = 0
     for question in questions:
         question_text = question['question_text']
         options = question['options']
@@ -37,14 +38,15 @@ def odgovori(opcija):
 
         # For choice questions (single or multiple options)
         if answer_type == 'choice':
-                responses[question_text] = st.selectbox(question_text, options)
+            responses[question_text] = st.selectbox(question_text, options[:-1], index=None, placeholder = "Odaberite jednu opciju ")
         # za multiselect i mogucnost upisa dodatnog odgovora
         elif answer_type == 'multichoice':
-                responses[question_text] = st.multiselect(question_text, options[:-1], placeholder = "Možete odabrati vise opcija i upisati nove ")
-                responses[question_text].append(st.text_input(f"Navedite dodatni odgovor na prethodno pitanje {question_text}"))
+            counter += 1
+            responses[question_text] = st.multiselect(question_text, options[:-1], placeholder = "Možete odabrati vise opcija i upisati nove ")
+            responses[question_text].append(st.text_input(f"Navedite dodatni odgovor na prethodno pitanje", key=f"dodatni odgovor {counter}"))
         # za tekstualne odgovore        
         elif answer_type == 'opis':
-            responses[question_text] = st.text_area(question_text)
+            responses[question_text] = st.text_area(question_text, placeholder="Upišite odgovor ovde")
 
     email = st.text_input("Unestite email (obavezno polje):")
     # Submit button
