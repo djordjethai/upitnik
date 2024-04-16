@@ -24,7 +24,7 @@ avatar_ai="bot.png"
 pdf_file = "analysis_report.pdf"
 
 # modifikovano iz myfunc.mojafunkcija (umesto downlaod ide save pdf)
-def sacuvaj_dokument_upitnik(content, file_name, image_path2):
+def sacuvaj_dokument_upitnik(content, file_name):
     """
     Saves a markdown content as a text, DOCX, and PDF file, providing options to download each format.
     
@@ -214,9 +214,8 @@ def main():
             #recommendation_response = "xx"  
             # treca faza kreiranje dokumenta
             grafikon = show_graph()
-            image_path = "radar_chart.png"
             gap_analiza = full_response + "\n\n" + recommendation_response + "\n\n"
-            sacuvaj_dokument_upitnik(gap_analiza, pdf_file, image_path)
+            sacuvaj_dokument_upitnik(gap_analiza, pdf_file)
             # cetvrta faza slanje maila
             posalji_mail(email, gap_analiza, grafikon)
             try:    
