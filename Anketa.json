@@ -3,171 +3,224 @@
         "question_text": "1. Čime se vaša kompanija bavi?",
         "answer_type": "opis",
         "options": [
-            "- [Tekstualni odgovor]"
+            "[Tekstualni odgovor]"
         ]
     },
     {
-        "question_text": "2. Kako vidite trenutno poslovanje i gde su vam najveći izazovi i problemi u radu?",
+        "question_text": "2. Kako vidite trenutno poslovanje i gde su vam najveći izazovi u radu?",
         "answer_type": "opis",
         "options": [
-            "- [Tekstualni odgovor]"
+            "[Tekstualni odgovor]"
         ]
     },
     {
-        "question_text": "3. Da li se često susrećete s upitima koji se tiču detalja operativne prirode?",
+        "question_text": "3. Da li se često susrećete sa upitima koji se tiču detalja operativne prirode?",
         "answer_type": "choice",
         "options": [
-            "- Da",
-            "- Ne",
-            "- Ponekad"
+            "",
+            "Da",
+            "Ne",
+            "Ponekad",
+            "Drugo [tekstualni odgovor]"
         ]
     },
     {
         "question_text": "4. Koliki je trenutni broj zaposlenih u vašoj kompaniji?",
-        "answer_type": "opis",
-        "options": [
-            "- [Tekstualni odgovor]"
-        ]
-    },
-    {
-        "question_text": "5. Koji metod koristite za internu komunikaciju unutar kompanije?",
-        "answer_type": "opis",
-        "options": [
-            "- [Tekstualni odgovor]"
-        ]
-    },
-    {
-        "question_text": "6. Kako komunicirate sa klijentima?",
-        "answer_type": "opis",
-        "options": [
-            "- [Tekstualni odgovor]"
-        ]
-    },
-    {
-        "question_text": "7. Koji tipovi web upita su najčešći (na sajtu, u webshopu, itd.)?",
-        "answer_type": "opis",
-        "options": [
-            "- [Tekstualni odgovor]"
-        ]
-    },
-    {
-        "question_text": "8. Ko je zadužen za praćenje i odgovaranje na web upite?",
-        "answer_type": "opis",
-        "options": [
-            "- [Tekstualni odgovor]"
-        ]
-    },
-    {
-        "question_text": "9. Da li imate naloge na društvenim mrežama i ko je odgovoran za interakciju na njima?",
-        "answer_type": "opis",
-        "options": [
-            "- [Tekstualni odgovor]"
-        ]
-    },
-    {
-        "question_text": "10. Koju vrstu podrške od AI-a očekujete?",
-        "answer_type": "multichoice",
-        "options": [
-            "- Chatbot",
-            "- Asistent",
-            "- Evidencija",
-            "- Drugo [tekstualni odgovor]"
-        ]
-    },
-    {
-        "question_text": "11. Koje aktivnosti bi AI trebao da obavlja?",
-        "answer_type": "multichoice",
-        "options": [
-            "- Informativne",
-            "- Edukativne",
-            "- Prodajne",
-            "- Drugo [tekstualni odgovor]"
-        ]
-    },
-    {
-        "question_text": "12. Da li biste želeli da AI nudi unapred pripremljene materijale?",
         "answer_type": "choice",
         "options": [
-            "- Da",
-            "- Ne",
-            "- Zavisi od situacije"
+            "",
+            "1-10",
+            "11-50",
+            "51-200",
+            "201-500",
+            "500+"
         ]
     },
     {
-        "question_text": "13. Kakav stil komunikacije očekujete od AI-a?",
-        "answer_type": "choice",
-        "options": [
-            "- Strogo profesionalan",
-            "- Opušteno prijateljski",
-            "- Neutralan"
-        ]
-    },
-    {
-        "question_text": "14. Koja vrsta komunikacije sa klijentima vam je poželjnija?",
-        "answer_type": "choice",
-        "options": [
-            "- Usmeravanje na online resurse",
-            "- Direktna komunikacija uživo",
-            "- Drugo [tekstualni odgovor]"
-        ]
-    },
-    {
-        "question_text": "15. Kako bi ocenili AI koji postavlja dodatna pitanja kako bi održao interakciju?",
-        "answer_type": "choice",
-        "options": [
-            "- Pozitivno",
-            "- Negativno",
-            "- Neutralno"
-        ]
-    },
-    {
-        "question_text": "16. Koje demografske karakteristike su važne za vašu ciljnu publiku?",
-        "answer_type": "opis",
-        "options": [
-            "- Starosni raspon [tekstualni odgovor]"
-        ]
-    },
-    {
-        "question_text": "17. Koji formati podataka su vam dostupni?",
+        "question_text": "5. Kako vršite internu komunikaciju unutar kompanije? (selektujte opcije po prioritetu)",
         "answer_type": "multichoice",
         "options": [
-            "- .txt",
-            "- .pdf",
-            "- .sql",
-            "- Vektorska baza",
-            "- Drugo [tekstualni odgovor]"
+            "",
+            "Telefonski poziv",
+            "Mail",
+            "Chit-chat aplikacije",
+            "Project Management sistem",
+            "Drugo [tekstualni odgovor]"
         ]
     },
     {
-        "question_text": "18. Gde se trenutno nalaze vaši podaci?",
-        "answer_type": "opis",
-        "options": [
-            "- [Tekstualni odgovor]"
-        ]
-    },
-    {
-        "question_text": "19. Po kojim kriterijumima ćete prepoznati unapređenje?",
+        "question_text": "6. Kako vršite komunikaciju sa klijentima? (selektujte opcije po prioritetu)",
         "answer_type": "multichoice",
         "options": [
-            "- Poboljšanje korisničkih usluga",
-            "- Smanjenje vremena odgovora",
-            "- Podrška prodaji",
-            "- Automatizacija rutinskih zadataka",
-            "- Drugo [tekstualni odgovor]"
+            "",
+            "Telefonski poziv",
+            "Mail",
+            "Chit-chat aplikacije",
+            "Video sastanci",
+            "Drugo [tekstualni odgovor]"
         ]
     },
     {
-        "question_text": "20. Postoje li već određeni rokovi ili termini važni za implementaciju AI-a?",
-        "answer_type": "opis",
+        "question_text": "7. Koji tipovi upita su najčešći?",
+        "answer_type": "multichoice",
         "options": [
-            "- [Tekstualni odgovor]"
+            "",
+            "Web site",
+            "Webshop",
+            "Društvene mreže",
+            "Drugo [tekstualni odgovor]"
         ]
     },
     {
-        "question_text": "21. Gde planirate implementaciju AI bota?",
+        "question_text": "8. Ko je zadužen za praćenje i odgovaranje na te upite?",
+        "answer_type": "choice",
+        "options": [
+            "",
+            "Trenutno nedefinisano",
+            "Određen tim",
+            "Određeni pojedinac",
+            "Drugo [tekstualni odgovor]"
+        ]
+    },
+    {
+        "question_text": "9. Da li imate naloge na društvenim mrežama?",
+        "answer_type": "multichoice",
+        "options": [
+            "",
+            "Instagram",
+            "Facebook",
+            "LinkedIn",
+            "Ne",
+            "Drugo [tekstualni odgovor]"
+        ]
+    },
+    {
+        "question_text": "10. Ko je zadužen za interakciju na njima?",
+        "answer_type": "choice",
+        "options": [
+            "",
+            "Trenutno nedefinisano",
+            "Određen tim",
+            "Određeni pojedinac",
+            "Drugo [tekstualni odgovor]"
+        ]
+    },
+    {
+        "question_text": "11. Koju vrstu podrške od AI-a očekujete?",
+        "answer_type": "multichoice",
+        "options": [
+            "",
+            "Chatbot",
+            "Asistent",
+            "Evidencija",
+            "Drugo [tekstualni odgovor]"
+        ]
+    },
+    {
+        "question_text": "12. Koje prirode bi AI trebalo da bude?",
+        "answer_type": "multichoice",
+        "options": [
+            "",
+            "Informativne",
+            "Edukativne",
+            "Prodajne",
+            "Drugo [tekstualni odgovor]"
+        ]
+    },
+    {
+        "question_text": "13. Šta mislite o pružanju dodatnog sadržaja putem AI-a (linkovi, brošure, mailovi, brojevi telefona itd.)?",
+        "answer_type": "choice",
+        "options": [
+            "",
+            "Da",
+            "Ne",
+            "Zavisi od situacije"
+        ]
+    },
+    {
+        "question_text": "14. Kakav stil komunikacije očekujete od AI-a?",
+        "answer_type": "choice",
+        "options": [
+            "",
+            "Strogo profesionalan",
+            "Opušteno profesionalan",
+            "Prijateljski",
+            "Neutralan"
+        ]
+    },
+    {
+        "question_text": "15. Koju vrstu komunikacije sa klijentima preferirate? (selektujte opcije po prioritetu)",
+        "answer_type": "multichoice",
+        "options": [
+            "",
+            "Usmeravanje na online komunikacione kanale",
+            "Komunikacija uživo",
+            "Drugo [tekstualni odgovor]"
+        ]
+    },
+    {
+        "question_text": "16. Kako biste ocenili AI koji postavlja dodatna pitanja kako bi održao interakciju?",
+        "answer_type": "choice",
+        "options": [
+            "",
+            "Pozitivno",
+            "Negativno",
+            "Neutralno"
+        ]
+    },
+    {
+        "question_text": "17. Na kom jeziku očekujete da AI komunicira sa publikom?",
         "answer_type": "opis",
         "options": [
-            "- [Tekstualni odgovor]"
+            "Jezik [tekstualni odgovor]"
+        ]
+    },
+    {
+        "question_text": "18. Koji formati vaših podataka su vam dostupni? (možete selektovati više opcija)",
+        "answer_type": "multichoice",
+        "options": [
+            "",
+            ".txt",
+            ".pdf",
+            ".sql",
+            "Vektorska baza",
+            "Drugo [tekstualni odgovor]"
+        ]
+    },
+    {
+        "question_text": "19. Gde se trenutno nalaze vaši podaci?",
+        "answer_type": "opis",
+        "options": [
+            "[Tekstualni odgovor]"
+        ]
+    },
+    {
+        "question_text": "20. Po kojim kriterijumima ćete prepoznati unapređenje?",
+        "answer_type": "multichoice",
+        "options": [
+            "",
+            "Poboljšanje korisničkih usluga",
+            "Smanjenje vremena odgovora",
+            "Podrška prodaji",
+            "Automatizacija rutinskih zadataka",
+            "Drugo [tekstualni odgovor]"
+        ]
+    },
+    {
+        "question_text": "21. Postoje li određeni rokovi ili termini važni za implementaciju AI-a?",
+        "answer_type": "opis",
+        "options": [
+            "[Tekstualni odgovor]"
+        ]
+    },
+    {
+        "question_text": "22. Gde planirate implementaciju AI bota? (možete selektovati više opcija)",
+        "answer_type": "multichoice",
+        "options": [
+            "",
+            "Web site",
+            "Interni software",
+            "Drugo [tekstualni odgovor]"
         ]
     }
 ]
