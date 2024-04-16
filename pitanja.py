@@ -68,7 +68,7 @@ def odgovori(opcija):
 
     # Email input and submit action
     email = st.text_input("Unesite email (obavezno polje):")
-
+    print(responses)
     if st.button('Submit') and is_valid_email(email) and check_reqQ(responses, requirement_statuses):
         with st.expander("Odgovori"):
             st.write(responses)
