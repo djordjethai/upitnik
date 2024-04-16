@@ -223,14 +223,6 @@ def main():
                 os.remove(pdf_file)
             except:
                 pass
-            try:
-                os.remove("formatted_document.docx")
-            except:
-                pass
-            try:
-                os.remove("temp_document.docx")
-            except:
-                pass
                 
 if __name__ == "__main__":
     main()
