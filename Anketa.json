@@ -24,7 +24,8 @@
             "Ne",
             "Ponekad",
             "Drugo [tekstualni odgovor]"  
-        ]
+        ],
+        "required": false
     },
     {
         "question_text": "4. Koliki je trenutni broj zaposlenih u vašoj kompaniji?",
@@ -49,7 +50,8 @@
             "Chit-chat aplikacije",
             "Project Management sistem",
             "Drugo [tekstualni odgovor]"
-        ]
+        ],
+        "required": false
     },
     {
         "question_text": "6. Kako vršite komunikaciju sa klijentima? (selektujte opcije po prioritetu)",
@@ -61,7 +63,8 @@
             "Chit-chat aplikacije",
             "Video sastanci",
             "Drugo [tekstualni odgovor]"
-        ]
+        ],
+        "required": false
     },
     {
         "question_text": "7. Koji tipovi upita su najčešći?",
@@ -72,7 +75,8 @@
             "Webshop",
             "Društvene mreže",
             "Drugo [tekstualni odgovor]"
-        ]
+        ],
+        "required": false
     },
     {
         "question_text": "8. Ko je zadužen za praćenje i odgovaranje na te upite?",
@@ -83,7 +87,8 @@
             "Određen tim",
             "Određeni pojedinac",
             "Drugo [tekstualni odgovor]"
-        ]
+        ],
+        "required": false
     },
     {
         "question_text": "9. Da li imate naloge na društvenim mrežama?",
@@ -95,7 +100,8 @@
             "LinkedIn",
             "Ne",
             "Drugo [tekstualni odgovor]"
-        ]
+        ],
+        "required": false
     },
     {
         "question_text": "10. Ko je zadužen za interakciju na njima?",
@@ -106,7 +112,8 @@
             "Određen tim",
             "Određeni pojedinac",
             "Drugo [tekstualni odgovor]"
-        ]      
+        ],
+        "required": false      
     },
     {
         "question_text": "11. Koju vrstu podrške od AI-a očekujete?",
@@ -117,7 +124,8 @@
             "Asistent",
             "Evidencija",
             "Drugo [tekstualni odgovor]"
-        ]
+        ],
+        "required": false
     },
     {
         "question_text": "12. Koje prirode bi AI trebalo da bude?",
@@ -215,7 +223,8 @@
             "Podrška prodaji",
             "Automatizacija rutinskih zadataka",
             "Drugo [tekstualni odgovor]"
-        ]
+        ],
+        "required": false
     },
     {
         "question_text": "21. Postoje li određeni rokovi ili termini važni za implementaciju AI-a?",

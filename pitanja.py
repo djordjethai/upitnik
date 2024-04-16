@@ -19,42 +19,62 @@ def load_questions(opcija):
         questions = json.load(file)
     return questions
 
-# Streamlit app layout - univerzalni formular
+
+def check_reqQ(responses, requirement_statuses):
+    for question_text, required in requirement_statuses.items():
+        if required:  # Only check required questions
+            answer = responses.get(question_text, '')
+            # If the answer is a list, check if it contains any valid non-empty entries
+            if isinstance(answer, list):
+                # Check for non-empty and non-whitespace string entries
+                if not any(isinstance(a, str) and a.strip() for a in answer):
+                    return False
+            elif isinstance(answer, str) and not answer.strip():
+                # If it's a string, ensure it's not empty or just whitespace
+                return False
+    return True
+
+
+# Streamlit app layout - universal form
 def odgovori(opcija):
     st.subheader(opcija)
-
-    # Load the questions na osnovu odabrane vrste upitnika
     questions = load_questions(opcija)
 
-    # Dictionary to store answers
+    # Dictionaries to store answers and requirement statuses
     responses = {}
+    requirement_statuses = {}
     email = ""
-    # Iterate through questions and display appropriate input options
     counter = 0
-    for question in questions:
+
+    # Iterating through each question to create the form
+    for index, question in enumerate(questions, start=1):
         question_text = question['question_text']
         options = question['options']
         answer_type = question['answer_type']
+        required = question['required']
 
-        # For choice questions (single or multiple options)
+        # Storing requirement status
+        requirement_statuses[question_text] = required
+
+        # Handling different types of questions
         if answer_type == 'choice':
-            responses[question_text] = st.selectbox(question_text, options[:-1], index=None, placeholder = "Odaberite jednu opciju ")
-        # za multiselect i mogucnost upisa dodatnog odgovora
+            responses[question_text] = st.selectbox(question_text, options[:-1], placeholder="Odaberite jednu opciju ")
         elif answer_type == 'multichoice':
             counter += 1
-            responses[question_text] = st.multiselect(question_text, options[:-1], placeholder = "Možete odabrati vise opcija i upisati nove ")
-            responses[question_text].append(st.text_input(f"Navedite dodatni odgovor na prethodno pitanje", key=f"dodatni odgovor {counter}"))
-        # za tekstualne odgovore        
+            responses[question_text] = st.multiselect(question_text, options[:-1], placeholder="Možete odabrati više opcija i upisati nove ")
+            responses[question_text].append(st.text_input(f"Navedite dodatni odgovor na prethodno pitanje", key=f"dodatni odgovor {counter}", placeholder="Upišite odgovor ovde"))
         elif answer_type == 'opis':
             responses[question_text] = st.text_area(question_text, placeholder="Upišite odgovor ovde")
 
-    email = st.text_input("Unestite email (obavezno polje):")
-    # Submit button
-    if st.button('Submit') and is_valid_email(email):
+    # Email input and submit action
+    email = st.text_input("Unesite email (obavezno polje):")
+
+    if st.button('Submit') and is_valid_email(email) and check_reqQ(responses, requirement_statuses):
         with st.expander("Odgovori"):
             st.write(responses)
-        # Here you can further process responses or save them
+        # Further processing or saving the responses can be added here
         return responses, email
     else:
+        st.info("Niste popunili sva obavezna polja")
         return {}, email
     
