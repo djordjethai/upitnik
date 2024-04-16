@@ -1,2 +1,2 @@
 texlive
-pypandoc
+pandoc
