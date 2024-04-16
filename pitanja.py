@@ -58,7 +58,7 @@ def odgovori(opcija):
 
         # Handling different types of questions
         if answer_type == 'choice':
-            responses[question_text] = st.selectbox(question_text, options[:-1], placeholder="Odaberite jednu opciju ")
+            responses[question_text] = st.selectbox(question_text, options[:-1], index=None, placeholder="Odaberite jednu opciju ")
         elif answer_type == 'multichoice':
             counter += 1
             responses[question_text] = st.multiselect(question_text, options[:-1], placeholder="Možete odabrati više opcija i upisati nove ")
