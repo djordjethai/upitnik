@@ -77,7 +77,7 @@ def sacuvaj_dokument_upitnik(content, file_name):
  
 
 # Function to send email, adjusted for the new PDF generation
-def posalji_mail(email, gap_analiza, image_path):
+def posalji_mail(email):
     st.info(f"Sending email to {email}")
     cwd = os.getcwd()
     pdf_path = os.path.join(cwd, pdf_file)
@@ -213,11 +213,11 @@ def main():
             recommendation_response = positive_agent(recommend_message)
             #recommendation_response = "xx"  
             # treca faza kreiranje dokumenta
-            grafikon = show_graph()
+            show_graph()
             gap_analiza = full_response + "\n\n" + recommendation_response + "\n\n"
             sacuvaj_dokument_upitnik(gap_analiza, pdf_file)
             # cetvrta faza slanje maila
-            posalji_mail(email, gap_analiza, grafikon)
+            posalji_mail(email)
             try:    
                 os.remove(pdf_file)
             except:
