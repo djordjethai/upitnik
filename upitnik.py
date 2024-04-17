@@ -17,7 +17,7 @@ from pitanja import odgovori
 from smtplib import SMTP
 
 from myfunc.retrievers import HybridQueryProcessor
-
+from myfunc.varvars_dicts import work_vars
 
 client=OpenAI()
 avatar_ai="bot.png" 
@@ -127,7 +127,7 @@ def positive_agent(messages):
         message_placeholder = st.empty()
         full_response = ""
         for response in client.chat.completions.create(
-            model="gpt-4-turbo-preview",
+            model=work_vars["names"]["openai_model"],
             messages=messages,
             stream=True,
         ):
@@ -176,7 +176,7 @@ def recommended(full_response):
 # glavni program
 def main():
     with st.sidebar:
-        st.caption("Ver. 16.04.24" )
+        st.caption("Ver. 17.04.24" )
         st.subheader("Demo GAP sa grafikonon i slanjem maila ")
         opcija = st.selectbox("Odaberite upitnik", ("",
                                                     "Opsti", 
