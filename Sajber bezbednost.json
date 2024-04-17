@@ -50,7 +50,7 @@
     "required": false
     },
     {
-        "question_text": "1. Da li vaša kompanija ima uspostavljen plan za upravljanje sajber incidentima? ",
+        "question_text": "6. Da li vaša kompanija ima uspostavljen plan za upravljanje sajber incidentima? ",
         "answer_type": "choice",
         "options": [
             "- Da",
@@ -60,7 +60,7 @@
     "required": false
     },
     {
-        "question_text": "2. Koliko često obučavate svoje zaposlene o sajber bezbednosti i prevenciji sajber napada? ",
+        "question_text": "7. Koliko često obučavate svoje zaposlene o sajber bezbednosti i prevenciji sajber napada? ",
         "answer_type": "choice",
         "options": [
             "- Redovno (najmanje jednom u 6 meseci)",
@@ -70,7 +70,7 @@
     "required": false
     },
     {
-        "question_text": "3. Da li vaša kompanija koristi rešenja za firewall i antivirusnu zaštitu?",
+        "question_text": "8. Da li vaša kompanija koristi rešenja za firewall i antivirusnu zaštitu?",
         "answer_type": "choice",
         "options": [
             "- Da, koristimo oba rešenja",
@@ -81,7 +81,7 @@
     "required": false
     },
     {
-        "question_text": "4. Da li ste imali sajber sigurnosni incident u poslednjih godinu dana? ",
+        "question_text": "9. Da li ste imali sajber sigurnosni incident u poslednjih godinu dana? ",
         "answer_type": "choice",
         "options": [
             "- Da",
@@ -91,7 +91,7 @@
     "required": false
     },
     {
-        "question_text": "5. Koliko često obavljate sigurnosne provere i procene ranjivosti vaše IT infrastrukture? ",
+        "question_text": "10. Koliko često obavljate sigurnosne provere i procene ranjivosti vaše IT infrastrukture? ",
         "answer_type": "choice",
         "options": [
             "- Redovno (barem jednom kvartalno)",
@@ -101,7 +101,7 @@
     "required": false
     },
     {
-        "question_text": "6. Da li ste implementirali dvofaktorsku autentifikaciju (2FA) za pristup osetljivim sistemima i podacima? ",
+        "question_text": "11. Da li ste implementirali dvofaktorsku autentifikaciju (2FA) za pristup osetljivim sistemima i podacima? ",
         "answer_type": "choice",
         "options": [
             "- Da",
@@ -111,7 +111,7 @@
     "required": false
     },
     {
-        "question_text": "7. Kako upravljate pravima pristupa za zaposlene i treće strane do vaših sistema i podataka? ",
+        "question_text": "12. Kako upravljate pravima pristupa za zaposlene i treće strane do vaših sistema i podataka? ",
         "answer_type": "choice",
         "options": [
             "- Pažljivim dodeljivanjem i redovnim preispitivanjem pristupnih prava",
@@ -121,7 +121,7 @@
     "required": false
     },
     {
-        "question_text": "8. Da li vaša kompanija ima rezervni plan (backup) i strategiju za oporavak podataka u slučaju sajber napada?",
+        "question_text": "13. Da li vaša kompanija ima rezervni plan (backup) i strategiju za oporavak podataka u slučaju sajber napada?",
         "answer_type": "choice",
         "options": [
             "- Da, sa redovnim testiranjem oporavka",
@@ -131,7 +131,7 @@
     "required": false
     },
     {
-        "question_text": "9. Da li koristite enkripciju za zaštitu osetljivih podataka pri skladištenju i prenosu? ",
+        "question_text": "14. Da li koristite enkripciju za zaštitu osetljivih podataka pri skladištenju i prenosu? ",
         "answer_type": "choice",
         "options": [
             "- Da",
@@ -141,7 +141,7 @@
     "required": false
     },
     {
-        "question_text": "10. Kako bi ocenili svest vaših zaposlenih o značaju sajber bezbednosti? ",
+        "question_text": "15. Kako bi ocenili svest vaših zaposlenih o značaju sajber bezbednosti? ",
         "answer_type": "choice",
         "options": [
             "- Visoka",
@@ -151,7 +151,7 @@
     "required": false
     },
     {
-        "question_text": "11. Da li vaša firma ima eksternog partnera ili stručnjaka za sajber bezbednost? ",
+        "question_text": "16. Da li vaša firma ima eksternog partnera ili stručnjaka za sajber bezbednost? ",
         "answer_type": "choice",
         "options": [
             "- Da, imamo eksternog partnera",
@@ -161,7 +161,7 @@
     "required": false
     },
     {
-        "question_text": "12. Da li vaša kompanija koristi usluge sajber bezbednosnog osiguranja? ",
+        "question_text": "17. Da li vaša kompanija koristi usluge sajber bezbednosnog osiguranja? ",
         "answer_type": "choice",
         "options": [
             "- Da",
@@ -171,7 +171,7 @@
     "required": false
     },
     {
-        "question_text": "13. Da li praktikujete redovno ažuriranje softvera i sistema kao deo vaše strategije sajber bezbednosti? ",
+        "question_text": "18. Da li praktikujete redovno ažuriranje softvera i sistema kao deo vaše strategije sajber bezbednosti? ",
         "answer_type": "choice",
         "options": [
             "- Da",
@@ -181,7 +181,7 @@
     "required": false
     },
     {
-        "question_text": "14. Koliko često se sprovode penetration testovi na vašoj IT infrastrukturi? ",
+        "question_text": "19. Koliko često se sprovode penetration testovi na vašoj IT infrastrukturi? ",
         "answer_type": "choice",
         "options": [
             "- Redovno (barem jednom godišnje)",
@@ -191,7 +191,7 @@
     "required": false
     },
     {
-        "question_text": "15. Da li ste razvili politike sajber higijene koje su obavezne za sve zaposlene? ",
+        "question_text": "20. Da li ste razvili politike sajber higijene koje su obavezne za sve zaposlene? ",
         "answer_type": "choice",
         "options": [
             "- Da",
@@ -201,7 +201,7 @@
     "required": false
     },
     {
-        "question_text": "16. Da li posedujete centralizovani sistem za upravljanje zapisima i logovima kojim možete pratiti neautorizovani pristup? ",
+        "question_text": "21. Da li posedujete centralizovani sistem za upravljanje zapisima i logovima kojim možete pratiti neautorizovani pristup? ",
         "answer_type": "choice",
         "options": [
             "- Da",
@@ -211,7 +211,7 @@
     "required": false
     },
     {
-        "question_text": "17. Koliko često preispitujete svoje politike i procedure sajber bezbednosti? ",
+        "question_text": "22. Koliko često preispitujete svoje politike i procedure sajber bezbednosti? ",
         "answer_type": "choice",
         "options": [
             "- Redovno, najmanje jednom godišnje",
@@ -221,7 +221,7 @@
     "required": false
     },
     {
-        "question_text": "18. Da li ste u poslednjih godinu dana učestvovali u simulaciji sajber napada ili vežbi oporavka? ",
+        "question_text": "23. Da li ste u poslednjih godinu dana učestvovali u simulaciji sajber napada ili vežbi oporavka? ",
         "answer_type": "choice",
         "options": [
             "- Da",
@@ -231,7 +231,7 @@
     "required": false
     },
     {
-        "question_text": "19. Kako vaša kompanija upravlja uređajima zaposlenih koji pristupaju korporativnoj mreži? (BYOD - Bring Your Own Device politika)",
+        "question_text": "24. Kako vaša kompanija upravlja uređajima zaposlenih koji pristupaju korporativnoj mreži? (BYOD - Bring Your Own Device politika)",
         "answer_type": "choice",
         "options": [
             "- Imamo jasno definisanu BYOD politiku",
@@ -241,7 +241,7 @@
     "required": false
     },
     {
-        "question_text": "20. Da li posedujete certifikate ili standardizacije vezane za sajber bezbednost u poslovanju? (npr. ISO 27001) ",
+        "question_text": "25. Da li posedujete certifikate ili standardizacije vezane za sajber bezbednost u poslovanju? (npr. ISO 27001) ",
         "answer_type": "choice",
         "options": [
             "- Da",

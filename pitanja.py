@@ -40,6 +40,7 @@ def odgovori(opcija):
     st.subheader(opcija)
     st.caption("Polja obeležena * su obavezna za unos")
     questions = load_questions(opcija)
+    print("AAA", questions)
     # Dictionaries to store answers and requirement statuses
     responses = {}
     requirement_statuses = {}
