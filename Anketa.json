@@ -21,8 +21,7 @@
     "options": [
         "Da",
         "Ne",
-        "Ponekad",
-        "Drugo [tekstualni odgovor]"  
+        "Ponekad"
     ],
     "required": false
   },
@@ -34,7 +33,7 @@
       "11-50",
       "51-200",
       "201-500",
-      "Drugo [tekstualni odgovor]"
+      "Preko 500"
     ],
     "required": true
   },
@@ -45,8 +44,7 @@
         "Telefonski poziv",
         "Mail",
         "Chit-chat aplikacije",
-        "Project Management sistem",
-        "Drugo [tekstualni odgovor]"
+        "Project Management sistem"
     ],
     "required": false
   },
@@ -57,8 +55,7 @@
         "Telefonski poziv",
         "Mail",
         "Chit-chat aplikacije",
-        "Video sastanci",
-        "Drugo [tekstualni odgovor]"
+        "Video sastanci"
     ],
     "required": false
   },
@@ -68,8 +65,7 @@
     "options": [
         "Web site",
         "Webshop",
-        "Društvene mreže",
-        "Drugo [tekstualni odgovor]"
+        "Društvene mreže"
     ],
     "required": false
   },
@@ -77,10 +73,10 @@
     "question_text": "8. Ko je zadužen za praćenje i odgovaranje na te upite?",
     "answer_type": "choice",
     "options": [
-        "Trenutno nedefinisano",
-        "Određen tim",
-        "Određeni pojedinac",
-        "Drugo [tekstualni odgovor]"
+      "Trenutno nedefinisano",
+      "Određen tim",
+      "Određeni pojedinac",
+      "Drugo [tekstualni odgovor]"
     ],
     "required": false
   },
@@ -91,8 +87,7 @@
         "Instagram",
         "Facebook",
         "LinkedIn",
-        "Ne",
-        "Drugo [tekstualni odgovor]"
+        "Ne"
     ],
     "required": false
   },
@@ -102,8 +97,7 @@
     "options": [
         "Trenutno nedefinisano",
         "Određen tim",
-        "Određeni pojedinac",
-        "Drugo [tekstualni odgovor]"
+        "Određeni pojedinac"
     ],
     "required": false      
   },
@@ -113,8 +107,7 @@
     "options": [
         "Chatbot",
         "Asistent",
-        "Evidencija",
-        "Drugo [tekstualni odgovor]"
+        "Evidencija"
     ],
     "required": false
   },
@@ -124,8 +117,7 @@
     "options": [
       "Informativne",
       "Edukativne",
-      "Prodajne",
-      "Drugo [tekstualni odgovor]"
+      "Prodajne"
     ],
     "required": true
   },
@@ -136,8 +128,7 @@
 
       "Da",
       "Ne",
-      "Zavisi od situacije",
-      "Drugo [tekstualni odgovor]"
+      "Zavisi od situacije"
     ],
     "required": true
   },
@@ -160,8 +151,7 @@
     "options": [
 
       "Usmeravanje na online komunikacione kanale",
-      "Komunikacija uživo",
-      "Drugo [tekstualni odgovor]"
+      "Komunikacija uživo"
     ],
     "required": true
   },
@@ -172,8 +162,7 @@
 
       "Pozitivno",
       "Negativno",
-      "Neutralno",
-      "Drugo [tekstualni odgovor]"
+      "Neutralno"
     ],
     "required": true
   },
@@ -193,8 +182,7 @@
       ".txt",
       ".pdf",
       ".sql",
-      "Vektorska baza",
-      "Drugo [tekstualni odgovor]"
+      "Vektorska baza"
     ],
     "required": true
   },
@@ -214,8 +202,7 @@
             "Poboljšanje korisničkih usluga",
             "Smanjenje vremena odziva",
             "Podrška prodaji",
-            "Automatizacija rutinskih zadataka",
-            "Drugo [tekstualni odgovor]"
+            "Automatizacija rutinskih zadataka"
         ],
         "required": false
   },
@@ -233,8 +220,7 @@
         "options": [
             
             "Web site",
-            "Interni software",
-            "Drugo [tekstualni odgovor]"
+            "Interni software"
         ],
         "required": true
   }

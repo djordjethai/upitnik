@@ -57,8 +57,8 @@ def odgovori(opcija):
 
         # Handling different types of questions
         if answer_type == 'choice':
-            responses[question_text] = st.radio(question_text, options[:-1], index=None)
-            if responses[question_text] == None:
+            responses[question_text] = st.radio(question_text, options, index=None)
+            if responses[question_text] == "Drugo [tekstualni odgovor]":
                 responses[question_text] = st.text_input(f"Upisite odgovor na prethodno pitanje", key=f"odgovor {index}", placeholder="Upišite odgovor ovde")
         elif answer_type == 'multichoice':
             
@@ -66,7 +66,7 @@ def odgovori(opcija):
             #########
             current_answers = []
             st.write(question_text)  # Optional, for displaying the question
-            for option in options[:-1]:
+            for option in options:
                 # Create a checkbox for each option
                 if st.checkbox(option, key=f"{question_text}_{option}_{index}"):
                     # If the checkbox is checked, append the option to the current answers list
@@ -76,19 +76,20 @@ def odgovori(opcija):
                 responses[question_text] = current_answers
             
             #########
-            responses[question_text].append(st.text_input(f"Navedite dodatni odgovor na prethodno pitanje", key=f"dodatni odgovor {index}", placeholder="Upišite odgovor ovde"))
+            responses[question_text].append(st.text_input(f"Opciono mozete navesti dodatni odgovor na prethodno pitanje", key=f"dodatni odgovor {index}", placeholder="Upišite odgovor ovde"))
         elif answer_type == 'opis':
             responses[question_text] = st.text_area(question_text, placeholder="Upišite odgovor ovde")
 
     # Email input and submit action
     email = st.text_input("Unesite email * :")
-
-    if st.button('Submit') and is_valid_email(email) and check_reqQ(responses, requirement_statuses):
+    potvrda = st.button('Submit')
+    if  potvrda and is_valid_email(email) and check_reqQ(responses, requirement_statuses):
         with st.expander("Odgovori"):
             st.write(responses)
         # Further processing or saving the responses can be added here
         return responses, email
     else:
-        st.info("Niste popunili sva obavezna polja")
+        if potvrda:
+            st.error("Odabrali ste Submit, a niste popunili sva obavezna polja. Molim vas popunite sva polja obelezena sa *")
         return {}, email
         
