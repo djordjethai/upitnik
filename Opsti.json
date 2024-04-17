@@ -1,200 +1,253 @@
 [
     {
-        "question_text": "Kako biste opisali poslovnu strategiju vaše kompanije?",
+        "question_text": "1. Koliko godina je vaša kompanija aktivna na tržištu?",
         "answer_type": "choice",
         "options": [
-            "- Jasno definisana i dokumentovana",
-            "- Usmeno dogovorena među menadžmentom",
-            "- Ne postoji formalna strategija"
+            "- Manje od godinu dana",
+            "- 1-3 godine",
+            "- 3-5 godina",
+            "- Više od 5 godina"
         ],
-    "required": false
+        "required": "false"
     },
     {
-        "question_text": "Koliko često revizirate svoju poslovnu strategiju?",
+        "question_text": "2. U kojoj industriji vaša kompanija posluje?",
+        "answer_type": "opis",
+        "options": [
+            "- [Tekstualni odgovor]"
+        ],
+        "required": "false"
+    },
+    {
+        "question_text": "3. Koliko zaposlenih trenutno ima u vašoj kompaniji?",
         "answer_type": "choice",
         "options": [
-            "- Jednom godišnje",
-            "- Na svake 2 do 3 godine",
+            "- 1-10",
+            "- 11-50",
+            "- 51-200",
+            "- Više od 200"
+        ],
+        "required": "false"
+    },
+    {
+        "question_text": "4. Koja je glavna misija vaše kompanije?",
+        "answer_type": "opis",
+        "options": [
+            "- [Tekstualni odgovor]"
+        ],
+        "required": "false"
+    },
+    {
+        "question_text": "5. Kako biste ocenili trenutni nivo digitalizacije vaše kompanije?",
+        "answer_type": "choice",
+        "options": [
+            "- Početnik",
+            "- Napredni",
+            "- Ekspert", 
+			"Drugo"
+        ],
+        "required": "false"
+    },
+    {
+        "question_text": "6. Da li vaša kompanija ima jasno definisanu dugoročnu poslovnu strategiju?",
+        "answer_type": "choice",
+        "options": [
+            "- Da",
+            "- Ne",
+            "- Nisam siguran/a"
+        ],
+        "required": "false"
+    },
+    {
+        "question_text": "7. Kako se odlučujete o pokretanju novih projekata ili proširenju poslovanja?",
+        "answer_type": "choice",
+        "options": [
+            "- Intuitivno",
+            "- Na osnovu internih analiza",
+            "- Koristeći eksterne konsultante"
+        ],
+        "required": "false"
+    },
+    {
+        "question_text": "8. Da li su vaši poslovni procesi automatizovani?",
+        "answer_type": "choice",
+        "options": [
+            "- Da većinom",
+            "- Delimično",
+            "- Ne, ručno su"
+        ],
+        "required": "false"
+    },
+    {
+        "question_text": "9. Ocijenite nivo adaptacije vaše kompanije na promene na tržištu?",
+        "answer_type": "choice",
+        "options": [
+            "- Veoma brzo se prilagođavamo",
+            "- Prosečno se prilagođavamo",
+            "- Teško se prilagođavamo"
+        ],
+        "required": "false"
+    },
+    {
+        "question_text": "10. Da li vaša kompanija koristi ERP sistem?",
+        "answer_type": "choice",
+        "options": [
+            "- Da",
+            "- Ne",
+            "- U procesu implementacije"
+        ],
+        "required": "false"
+    },
+    {
+        "question_text": "11. Koliko često vršite analizu poslovnih podataka?",
+        "answer_type": "choice",
+        "options": [
+            "- Dnevno",
+            "- Nedeljno",
+            "- Mesečno",
             "- Retko ili nikada"
         ],
-    "required": false
+        "required": "false"
     },
     {
-        "question_text": "Da li imate jasno definisane poslovne ciljeve za narednu fiskalnu godinu?",
+        "question_text": "12. Da li se u vašoj kompaniji koristi BI (Business Intelligence) alati za podršku odlučivanju?",
         "answer_type": "choice",
         "options": [
             "- Da",
             "- Ne",
-            "- U procesu definisanja"
+            "- Nismo sigurni šta su to BI alati"
         ],
-    "required": false
+        "required": "false"
     },
     {
-        "question_text": "Kako merite napredak prema postizanju poslovnih ciljeva?",
+        "question_text": "13. Koliko vam je važno da imate integrisan sistem za upravljanje odnosima sa klijentima (CRM)?",
         "answer_type": "choice",
         "options": [
-            "- Kroz KPI (ključne pokazatelje učinka)",
-            "- Opštim procenama i povratnim informacijama",
-            "- Ne merimo napredak sistematično"
+            "- Veoma važno",
+            "- Srednje važno",
+            "- Nije važno"
         ],
-    "required": false
+        "required": "false"
     },
     {
-        "question_text": "Da li vaša kompanija poseduje jasno definisan proces za rukovođenje promenama?",
-        "answer_type": "choice",
-        "options": [
-            "- Da",
-            "- Ne",
-            "- U razvoju"
-        ],
-    "required": false
-    },
-    {
-        "question_text": "Kako se vaša kompanija odnosi prema riziku?",
-        "answer_type": "choice",
-        "options": [
-            "- Aktivno ga upravljamo i koristimo u strategijskom planiranju",
-            "- Razmotrimo povremeno ili u posebnim situacijama",
-            "- Ne korsitimo upravljanje rizikom"
-        ],
-    "required": false
-    },
-    {
-        "question_text": "Da li vaša kompanija primenjuje neku od metoda za unapređenje procesa (npr. Lean, Six Sigma)?",
+        "question_text": "14. Da li vaša kompanija redovno sprovodi edukacije o sajber bezbednosti za zaposlene?",
         "answer_type": "choice",
         "options": [
             "- Da",
             "- Ne",
-            "- Planiramo u budućnosti"
+            "- Ponekad"
         ],
-    "required": false
+        "required": "false"
     },
     {
-        "question_text": "Koliko često se organizuju interni treninzi za razvoj veština zaposlenih?",
+        "question_text": "15. Da li vaša kompanija ima implementiran firewall i antivirusnu zaštitu?",
+        "answer_type": "choice",
+        "options": [
+            "- Da",
+            "- Ne",
+            "- Nisam siguran/a"
+        ],
+        "required": "false"
+    },
+    {
+        "question_text": "16. Da li vaša kompanija ima uspostavljene procedure za upravljanje sajber incidentima?",
+        "answer_type": "choice",
+        "options": [
+            "- Da",
+            "- Ne",
+            "- U procesu uspostavljanja"
+        ],
+        "required": "false"
+    },
+    {
+        "question_text": "17. Koliko često se vrši provera sajber bezbednosti (npr. penetration testing)?",
         "answer_type": "choice",
         "options": [
             "- Redovno",
-            "- Povremeno",
-            "- Retko ili nikada"
+            "- Jednom godišnje",
+            "- Nikada"
         ],
-    "required": false
+        "required": "false"
     },
     {
-        "question_text": "Da li imate formalni sistem za upravljanje talentima i razvoj karijere zaposlenih?",
+        "question_text": "18. Kakve vrste servera koristi vaša kompanija?",
         "answer_type": "choice",
         "options": [
-            "- Da",
-            "- U razvoju",
-            "- Ne"
+            "- On-premise",
+            "- Cloud",
+            "- Hibrid"
         ],
-    "required": false
+        "required": "false"
     },
     {
-        "question_text": "Kako bi ocenili saradnju između različitih odeljenja unutar kompanije?",
+        "question_text": "19. Da li vaš IT sistem redovno dobija ažuriranja?",
         "answer_type": "choice",
         "options": [
-            "- Odlična",
-            "- Dobra sa prostorom za unapređenje",
-            "- Slaba ili inconsistentna"
+            "- Da, potpuno automatizovano",
+            "- Rukovodimo se prema potrebi",
+            "- Retko"
         ],
-    "required": false
+        "required": "false"
     },
     {
-        "question_text": "Da li postoji sistem za deljenje znanja unutar kompanije?",
-        "answer_type": "choice",
-        "options": [
-            "- Da, imamo platformu/softver za deljenje znanja",
-            "- Neformalno deljenje znanja",
-            "- Ne postoji sistem"
-        ],
-    "required": false
-    },
-    {
-        "question_text": "Kako ocenjujete kreativnost i inovativnost unutar vaše organizacije?",
-        "answer_type": "choice",
-        "options": [
-            "- Veoma kreativni i inovativni",
-            "- Ponekad pokazujemo inovativnost",
-            "- Skloni smo praćenju umesto inoviranju"
-        ],
-    "required": false
-    },
-    {
-        "question_text": "Koliko je vaša kompanija otvorena za promene ili nove ideje?",
-        "answer_type": "choice",
-        "options": [
-            "- Veoma otvorena",
-            "- Umereno otvorena s oprezom",
-            "- Otporna na promene"
-        ],
-    "required": false
-    },
-    {
-        "question_text": "Koju ulogu igra korporativna kultura u vašem poslovanju?",
-        "answer_type": "choice",
-        "options": [
-            "- Ključna je za naš uspeh",
-            "- Važna je, ali ne ključna",
-            "- Nije nam prioritet"
-        ],
-    "required": false
-    },
-    {
-        "question_text": "Da li kompanija implementira strategije za održavanje i unapređenje korporativne kulture?",
-        "answer_type": "choice",
-        "options": [
-            "- Da",
-            "- U razvoju",
-            "- Ne"
-        ],
-    "required": false
-    },
-    {
-        "question_text": "Kako upravljate zadovoljstvom i angažovanjem zaposlenih?",
-        "answer_type": "choice",
-        "options": [
-            "- Sistematskim anketama i akcionim planovima",
-            "- Povremeno, bez formalnog merenja",
-            "- Ne upravljamo aktivno"
-        ],
-    "required": false
-    },
-    {
-        "question_text": "Da li imate razvijen sistem za etičko ponašanje i usklađenost sa propisima u kompaniji?",
-        "answer_type": "choice",
-        "options": [
-            "- Da, imamo kod etike i redovno organizujemo treninge",
-            "- U razvoju / Razmatramo",
-            "- Ne postoji formalni sistem"
-        ],
-    "required": false
-    },
-    {
-        "question_text": "Kako ocenjujete efikasnost upravnog odbora ili rukovodstva u vođenju kompanije?",
+        "question_text": "20. Ocijenite efikasnost vašeg trenutnog sistema za bekapovanje podataka?",
         "answer_type": "choice",
         "options": [
             "- Veoma efikasan",
-            "- Efikasan s prostorom za poboljšanje",
+            "- Delimično efikasan",
             "- Neefikasan"
         ],
-    "required": false
+        "required": "false"
     },
     {
-        "question_text": "Da li postoji jasno definisan plan oporavka u slučaju poslovnih poremećaja?",
+        "question_text": "21. Da li vaša infrastruktura podržava rad na daljinu?",
         "answer_type": "choice",
         "options": [
-            "- Da, imamo detaljan i testiran plan oporavka",
-            "- U razmatranju / U razvoju",
+            "- Da",
+            "- Delimično",
             "- Ne"
         ],
-    "required": false
+        "required": "false"
     },
     {
-        "question_text": "Kojim izazovima se trenutno najviše suočava vaše poslovanje?",
-        "answer_type": "opis",
+        "question_text": "22. Da li vaša kompanija trenutno koristi AI alate u poslovanju?",
+        "answer_type": "choice",
         "options": [
-            "- "
+            "- Da",
+            "- Ne",
+            "- Razmatramo mogućnosti"
         ],
-    "required": false
+        "required": "false"
+    },
+    {
+        "question_text": "23. Koja funkcija AI alata bila bi vam najkorisnija?",
+        "answer_type": "multichoice",
+        "options": [
+            "- Optimizacija unutrašnjih procesa",
+            "- Analiza velikih setova podataka",
+            "- Unapređenje korisničke podrške",
+            "- Drugo [tekstualni odgovor]"
+        ],
+        "required": "false"
+    },
+    {
+        "question_text": "24. Da li ste zainteresovani za implementaciju AI chat bota na vašem webu?",
+        "answer_type": "choice",
+        "options": [
+            "- Da",
+            "- Ne",
+            "- Možda, potrebno više informacija"
+        ],
+        "required": "false"
+    },
+    {
+        "question_text": "25. Kako biste ocenili potencijalnu korist od AI asistenata za vaše zaposlene?",
+        "answer_type": "choice",
+        "options": [
+            "- Veoma korisno",
+            "- Potencijalno korisno",
+            "- Ne vidimo korist"
+        ],
+        "required": "false"
     }
 ]

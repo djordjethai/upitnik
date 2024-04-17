@@ -1,53 +1,51 @@
 [
-    {
-        "question_text": "1. Kako biste opisali poslovnu strategiju vaše kompanije? ",
+	{
+        "question_text": "1. Koliko godina je vaša kompanija aktivna na tržištu?",
         "answer_type": "choice",
         "options": [
-            "- Jasno definisana i dokumentovana",
-            "- Usmeno dogovorena među menadžmentom",
-            "- Ne postoji formalna strategija"
+            "- Manje od godinu dana",
+            "- 1-3 godine",
+            "- 3-5 godina",
+            "- Više od 5 godina"
         ],
-    "required": false
+        "required": "false"
     },
     {
-        "question_text": "2. Koliko često revizirate svoju poslovnu strategiju? ",
-        "answer_type": "choice",
+        "question_text": "2. U kojoj industriji vaša kompanija posluje?",
+        "answer_type": "opis",
         "options": [
-            "- Jednom godišnje",
-            "- Na svake 2 do 3 godine",
-            "- Rijetko ili nikada"
+            "- [Tekstualni odgovor]"
         ],
-    "required": false
+        "required": "false"
     },
     {
-        "question_text": "3. Da li imate jasno definisane poslovne ciljeve za narednu fiskalnu godinu? ",
+        "question_text": "3. Koliko zaposlenih trenutno ima u vašoj kompaniji?",
         "answer_type": "choice",
         "options": [
-            "- Da",
-            "- Ne",
-            "- U procesu definisanja"
+            "- 1-10",
+            "- 11-50",
+            "- 51-200",
+            "- Više od 200"
         ],
-    "required": false
+        "required": "false"
     },
     {
-        "question_text": "4. Kako merite napredak prema postizanju poslovnih ciljeva? ",
-        "answer_type": "choice",
+        "question_text": "4. Koja je glavna misija vaše kompanije?",
+        "answer_type": "opis",
         "options": [
-            "- Kroz KPI (ključne pokazatelje učinka)",
-            "- Opštim procenama i povratnim informacijama",
-            "- Ne merimo napredak sistematično"
+            "- [Tekstualni odgovor]"
         ],
-    "required": false
+        "required": "false"
     },
     {
-        "question_text": "5. Da li vaša kompanija poseduje jasno definisan proces za rukovođenje promenama? ",
+        "question_text": "5. Kako biste ocenili trenutni nivo digitalizacije vaše kompanije?",
         "answer_type": "choice",
         "options": [
-            "- Da",
-            "- Ne",
-            "- U razvoju"
+            "- Početnik",
+            "- Napredni",
+            "- Ekspert"
         ],
-    "required": false
+        "required": "false"
     },
     {
         "question_text": "6. Kako se vaša kompanija odnosi prema riziku? ",
