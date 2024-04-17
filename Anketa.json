@@ -38,7 +38,7 @@
     "required": true
   },
   {
-    "question_text": "5. Kako vršite internu komunikaciju unutar kompanije? (selektujte opcije po prioritetu)",
+    "question_text": "5. Kako vršite internu komunikaciju unutar kompanije? (odaberite opcije po prioritetu)",
     "answer_type": "multichoice",
     "options": [
         "Telefonski poziv",
@@ -49,7 +49,7 @@
     "required": false
   },
   {
-    "question_text": "6. Kako vršite komunikaciju sa klijentima? (selektujte opcije po prioritetu)",
+    "question_text": "6. Kako vršite komunikaciju sa klijentima? (odaberite opcije po prioritetu)",
     "answer_type": "multichoice",
     "options": [
         "Telefonski poziv",
@@ -146,7 +146,7 @@
     "required": true
   },
   {
-    "question_text": "15. Koju vrstu komunikacije sa klijentima preferirate? (selektujte opcije po prioritetu) * ",
+    "question_text": "15. Koju vrstu komunikacije sa klijentima preferirate? (odaberite opcije po prioritetu) * ",
     "answer_type": "multichoice",
     "options": [
 
@@ -175,7 +175,7 @@
     "required": true
   },
   {
-    "question_text": "18. Koji formati vaših podataka su vam dostupni? (možete selektovati više opcija) * ",
+    "question_text": "18. Koji formati vaših podataka su vam dostupni? (možete odabrati više opcija) * ",
     "answer_type": "multichoice",
     "options": [
 
@@ -215,7 +215,7 @@
     "required": true
   },
   {
-        "question_text": "22. Gde planirate implementaciju AI bota? (možete selektovati više opcija) * ",
+        "question_text": "22. Gde planirate implementaciju AI bota? (možete odabrati više opcija) * ",
         "answer_type": "multichoice",
         "options": [
             

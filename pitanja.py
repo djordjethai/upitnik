@@ -38,7 +38,7 @@ def check_reqQ(responses, requirement_statuses):
 # Streamlit app layout - universal form
 def odgovori(opcija):
     st.subheader(opcija)
-    st.caption("Polja obelezena * su obavezna za unos")
+    st.caption("Polja obeležena * su obavezna za unos")
     questions = load_questions(opcija)
     # Dictionaries to store answers and requirement statuses
     responses = {}
@@ -58,7 +58,7 @@ def odgovori(opcija):
             st.write(question_text)
             responses[question_text] = st.radio("", options, index=None, label_visibility="collapsed")
             if responses[question_text] == "Drugo [tekstualni odgovor]":
-                responses[question_text] = st.text_input(f"Upisite odgovor na prethodno pitanje", key=f"odgovor {index}", placeholder="Upišite odgovor ovde")
+                responses[question_text] = st.text_input(f"Upišite odgovor na prethodno pitanje", key=f"odgovor {index}", placeholder="Upišite odgovor ovde")
         elif answer_type == 'multichoice':
             
             #responses[question_text] = st.multiselect(question_text, options[:-1], placeholder="Možete odabrati više opcija i upisati nove ")
@@ -75,14 +75,14 @@ def odgovori(opcija):
                 responses[question_text] = current_answers
             
             #########
-            responses[question_text].append(st.text_input(f"Opciono mozete navesti dodatni odgovor na prethodno pitanje", key=f"dodatni odgovor {index}", placeholder="Upišite odgovor ovde"))
+            responses[question_text].append(st.text_input(f"Opciono možete navesti dodatni odgovor na prethodno pitanje", key=f"dodatni odgovor {index}", placeholder="Upišite odgovor ovde"))
         elif answer_type == 'opis':
             st.write(question_text)
             responses[question_text] = st.text_area("", placeholder="Upišite odgovor ovde", key=f"{index}_text_area", label_visibility="collapsed")
 
     # Email input and submit action
     email = st.text_input("Unesite email * :")
-    potvrda = st.button('Submit')
+    potvrda = st.button('Pošalji')
     if potvrda and is_valid_email(email) and check_reqQ(responses, requirement_statuses):
         with st.expander("Odgovori"):
             st.write(responses)
@@ -90,6 +90,6 @@ def odgovori(opcija):
         return responses, email
     else:
         if potvrda:
-            st.error("Odabrali ste Submit, a niste popunili sva obavezna polja. Molim vas popunite sva polja obelezena sa *")
+            st.error("Niste popunili sva obavezna polja. Molim vas popunite sva polja obeležena sa *")
         return {}, email
         
