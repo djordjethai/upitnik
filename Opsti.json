@@ -57,7 +57,7 @@
             "- Razmotrimo povremeno ili u posebnim situacijama",
             "- Ne korsitimo upravljanje rizikom"
         ],
-    "required": true,
+    "required": true
     },
     {
         "question_text": "Da li vaša kompanija primenjuje neku od metoda za unapređenje procesa (npr. Lean, Six Sigma)?",
