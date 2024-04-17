@@ -76,7 +76,7 @@
       "Trenutno nedefinisano",
       "Određen tim",
       "Određeni pojedinac",
-      "Drugo [tekstualni odgovor]"
+      "Drugo"
     ],
     "required": false
   },
@@ -141,7 +141,7 @@
       "Opušteno profesionalan",
       "Prijateljski",
       "Neutralan",
-      "Drugo [tekstualni odgovor]"
+      "Drugo"
     ],
     "required": true
   },
@@ -167,7 +167,18 @@
     "required": true
   },
   {
-    "question_text": "17. Na kom jeziku očekujete da AI komunicira sa publikom? * ",
+    "question_text": "17. Kakve odgovore preferirate da AI generiše? * ",
+    "answer_type": "choice",
+    "options": [
+
+      "Deskriptivne",
+      "Koncizne",
+      "Drugo"
+    ],
+    "required": true
+  },
+  {
+    "question_text": "18. Na kom jeziku očekujete da AI komunicira sa publikom? * ",
     "answer_type": "opis",
     "options": [
       "Jezik [tekstualni odgovor]"
@@ -175,7 +186,7 @@
     "required": true
   },
   {
-    "question_text": "18. Koji formati vaših podataka su vam dostupni? (možete odabrati više opcija) * ",
+    "question_text": "19. Koji formati vaših podataka su vam dostupni? (možete odabrati više opcija) * ",
     "answer_type": "multichoice",
     "options": [
 
@@ -187,7 +198,7 @@
     "required": true
   },
   {
-    "question_text": "19. Gde se trenutno nalaze vaši podaci? * ",
+    "question_text": "20. Gde se trenutno nalaze vaši podaci? * ",
     "answer_type": "opis",
     "options": [
       "[Tekstualni odgovor]"
@@ -195,19 +206,19 @@
     "required": true
   },
   {
-        "question_text": "20. Po kojim kriterijumima ćete prepoznati unapređenje?",
-        "answer_type": "multichoice",
-        "options": [
-            
-            "Poboljšanje korisničkih usluga",
-            "Smanjenje vremena odziva",
-            "Podrška prodaji",
-            "Automatizacija rutinskih zadataka"
-        ],
-        "required": false
+    "question_text": "21. Po kojim kriterijumima ćete prepoznati unapređenje?",
+    "answer_type": "multichoice",
+    "options": [
+      
+      "Poboljšanje korisničkih usluga",
+      "Smanjenje vremena odziva",
+      "Podrška prodaji",
+      "Automatizacija rutinskih zadataka"
+    ],
+    "required": false
   },
   {
-    "question_text": "21. Postoje li određeni rokovi ili termini važni za implementaciju AI-a? * ",
+    "question_text": "22. Postoje li određeni rokovi ili termini važni za implementaciju AI-a? * ",
     "answer_type": "opis",
     "options": [
       "[Tekstualni odgovor]"
@@ -215,13 +226,12 @@
     "required": true
   },
   {
-        "question_text": "22. Gde planirate implementaciju AI bota? (možete odabrati više opcija) * ",
-        "answer_type": "multichoice",
-        "options": [
-            
-            "Web site",
-            "Interni software"
-        ],
-        "required": true
+    "question_text": "23. Gde planirate implementaciju AI bota? (možete odabrati više opcija) * ",
+    "answer_type": "multichoice",
+    "options": [     
+      "Web site",
+      "Interni software"
+    ],
+    "required": true
   }
 ]

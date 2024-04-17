@@ -72,8 +72,8 @@ def posalji_mail(email, gap_analiza, image_path, filename="Anketa.docx"):
 
     # Assuming your send_email function can handle attachments and is defined as shown previously
     send_email(
-        subject="Gap Analiza",
-        message="Please find attached the gap analysis document, which includes the radar chart.",
+        subject="AI upitnik",
+        message="Please find attached AI questionnaire.",
         from_addr="azure.test@positive.rs",
         to_addr=email,
         smtp_server="smtp.office365.com",

@@ -57,7 +57,7 @@ def odgovori(opcija):
         if answer_type == 'choice':
             st.write(question_text)
             responses[question_text] = st.radio("", options, index=None, label_visibility="collapsed")
-            if responses[question_text] == "Drugo [tekstualni odgovor]":
+            if responses[question_text] == "Drugo":
                 responses[question_text] = st.text_input(f"Upišite odgovor na prethodno pitanje", key=f"odgovor {index}", placeholder="Upišite odgovor ovde")
         elif answer_type == 'multichoice':
             
@@ -90,6 +90,6 @@ def odgovori(opcija):
         return responses, email
     else:
         if potvrda:
-            st.error("Niste popunili sva obavezna polja. Molim vas popunite sva polja obeležena sa *")
+            st.error("Niste popunili sva obavezna polja. Molim Vas popunite sva polja obeležena sa *")
         return {}, email
         
