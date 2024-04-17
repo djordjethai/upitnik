@@ -56,7 +56,7 @@ def odgovori(opcija):
         # Handling different types of questions
         if answer_type == 'choice':
             st.write(question_text)
-            responses[question_text] = st.radio("", options, index=None, label_visibility="collapsed")
+            responses[question_text] = st.radio(f"q{index}", options, index=None, label_visibility="collapsed")
             if responses[question_text] == "Drugo":
                 responses[question_text] = st.text_input(f"Upišite odgovor na prethodno pitanje", key=f"odgovor {index}", placeholder="Upišite odgovor ovde")
         elif answer_type == 'multichoice':
@@ -78,7 +78,7 @@ def odgovori(opcija):
             responses[question_text].append(st.text_input(f"Opciono možete navesti dodatni odgovor na prethodno pitanje", key=f"dodatni odgovor {index}", placeholder="Upišite odgovor ovde"))
         elif answer_type == 'opis':
             st.write(question_text)
-            responses[question_text] = st.text_area("", placeholder="Upišite odgovor ovde", key=f"{index}_text_area", label_visibility="collapsed")
+            responses[question_text] = st.text_area(f"q{index}", placeholder="Upišite odgovor ovde", key=f"{index}_text_area", label_visibility="collapsed")
 
     # Email input and submit action
     email = st.text_input("Unesite email * :")
