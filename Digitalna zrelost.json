@@ -7,7 +7,7 @@
             "- Usmeno dogovorena među menadžmentom",
             "- Ne postoji formalna strategija"
         ],
-    "required": true
+    "required": false
     },
     {
         "question_text": "2. Koliko često revizirate svoju poslovnu strategiju?",
@@ -17,7 +17,7 @@
             "- Na svake 2 do 3 godine",
             "- Rijetko ili nikada"
         ],
-    "required": true
+    "required": false
     },
     {
         "question_text": "3. Da li imate jasno definisane poslovne ciljeve za narednu fiskalnu godinu?",
@@ -27,7 +27,7 @@
             "- Ne",
             "- U procesu definisanja"
         ],
-    "required": true
+    "required": false
     },
     {
         "question_text": "4. Kako merite napredak prema postizanju poslovnih ciljeva?",
@@ -37,7 +37,7 @@
             "- Opštim procenama i povratnim informacijama",
             "- Ne merimo napredak sistematično"
         ],
-    "required": true
+    "required": false
     },
     {
         "question_text": "5. Da li vaša kompanija poseduje jasno definisan proces za rukovođenje promenama?",
@@ -47,7 +47,7 @@
             "- Ne",
             "- U razvoju"
         ],
-    "required": true
+    "required": false
     },
     {
         "question_text": "Koji digitalni alati su trenutno u upotrebi u vašoj kompaniji? ",
@@ -60,7 +60,7 @@
             "- BI (Business Intelligence) alati",
             "- Ostalo [Molimo navedite]"
         ],
-    "required": true
+    "required": false
     },
     {
         "question_text": "2. U kojoj meri vaše trenutno IT okruženje podržava integraciju novih digitalnih alata?",
@@ -70,7 +70,7 @@
             "- Delimično spremno, sa određenim limitacijama",
             "- Nije spremno ili potrebna su značajna ulaganja"
         ],
-    "required": true
+    "required": false
     },
     {
         "question_text": "3. Kako ocenjujete zrelost vaše kompanije u primeni digitalnih alata i tehnologija?",
@@ -80,7 +80,7 @@
             "- Napredovali smo, ali imamo prostora za unapređenje",
             "- Smatramo se liderima u digitalizaciji unutar naše industrije"
         ],
-    "required": true
+    "required": false
     },
     {
         "question_text": "4. Kako procenjujete efikasnost digitalnih alata koje trenutno koristite?",
@@ -90,7 +90,7 @@
             "- Delimično efikasne",
             "- Neefikasne i zahtevaju zamenu ili unapređenje"
         ],
-    "required": true
+    "required": false
     },
     {
         "question_text": "5. Da li vaša kompanija koristi ERP sistem? Ako da, koliko ste zadovoljni njegovim performansama? ",
@@ -100,7 +100,7 @@
             "- Da, ali nije potpuno prilagođen našim potrebama",
             "- Ne koristimo ERP sistem"
         ],
-    "required": true
+    "required": false
     },
     {
         "question_text": "6. Kako rukovodstvo vaše kompanije gleda na ulaganje u digitalnu transformaciju? ",
@@ -110,7 +110,7 @@
             "- Kao na neophodnost, ali s ograničenim resursima",
             "- Skeptično ili s ograničenim razumevanjem značaja"
         ],
-    "required": true
+    "required": false
     },
     {
         "question_text": "7. Koliko često vaša kompanija vrši analizu poslovnog procesa s ciljem implementacije digitalnih rešenja? ",
@@ -120,7 +120,7 @@
             "- Jednom godišnje",
             "- Retko ili nikada"
         ],
-    "required": true
+    "required": false
     },
     {
         "question_text": "8. Da li koristite BI alate kako biste analizirali i vizualizovali podatke? ",
@@ -130,7 +130,7 @@
             "- Povremeno, kada je to potrebno",
             "- Ne koristimo BI alate"
         ],
-    "required": true
+    "required": false
     },
     {
         "question_text": "9. Da li vaša kompanija ima strategiju prikupljanja i analize velikih podataka (Big Data)? ",
@@ -140,7 +140,7 @@
             "- U početnoj fazi smo razvoja",
             "- Ne, ali razumemo značaj i planiramo razvoj"
         ],
-    "required": true
+    "required": false
     },
     {
         "question_text": "10. Kako vaša kompanija upravlja klijentima i njihovim iskustvom putem digitalnih kanala? ",
@@ -150,7 +150,7 @@
             "- Povremeno koristimo email i društvene mreže",
             "- Nismo fokusirani na digitalno upravljanje klijentima"
         ],
-    "required": true
+    "required": false
     },
     {
         "question_text": "11. Da li su vaši sistemi i alati dostupni na daljinu zaposlenima? ",
@@ -160,7 +160,7 @@
             "- Delimično, sa određenim ograničenjima",
             "- Ne, naši sistemi nisu prilagođeni za rad na daljinu"
         ],
-    "required": true
+    "required": false
     },
     {
         "question_text": "12. Da li razmišljate o implementaciji veštačke inteligencije u poslovnim procesima? ",
@@ -170,7 +170,7 @@
             "- Zainteresovani smo, ali trenutno bez konkretne akcije",
             "- Ne razmatramo trenutno"
         ],
-    "required": true
+    "required": false
     },
     {
         "question_text": "13. Kako merite ROI (povraćaj investicije) za digitalne alate i tehnologije koje implementirate? ",
@@ -180,7 +180,7 @@
             "- Osnovnim metrikama i kratkoročnim praćenjem",
             "- Ne merimo aktivno ROI"
         ],
-    "required": true
+    "required": false
     },
     {
         "question_text": "14. Da li vaša kompanija ima posebno odelenje ili tim posvećen digitalnoj transformaciji? ",
@@ -190,7 +190,7 @@
             "- U procesu formiranja",
             "- Ne"
         ],
-    "required": true
+    "required": false
     },
     {
         "question_text": "15. Koji su glavni izazovi s kojima se suočavate prilikom digitalizacije poslovanja? ",
@@ -198,7 +198,7 @@
         "options": [
             "- "
         ],
-    "required": true
+    "required": false
     },
     {
         "question_text": "16. Kako se obučavaju zaposleni za korišćenje novih digitalnih alata? ",
@@ -208,7 +208,7 @@
             "- Online kursevima i profesionalnim razvojem",
             "- Ne postoji formalni proces obuke"
         ],
-    "required": true
+    "required": false
     },
     {
         "question_text": "17. Da li vaša kompanija koristi cloud usluge? ",
@@ -218,7 +218,7 @@
             "- Delimično koristimo cloud usluge",
             "- Ne koristimo cloud usluge"
         ],
-    "required": true
+    "required": false
     },
     {
         "question_text": "18. Kako pristupate održavanju i ažuriranju vaših digitalnih alata? ",
@@ -228,7 +228,7 @@
             "- Kada se pojavi potreba ili problem",
             "- Retko ili nikako"
         ],
-    "required": true
+    "required": false
     },
     {
         "question_text": "19. Koje digitalne alate planirate implementirati u narednih 12 meseci? ",
@@ -236,7 +236,7 @@
         "options": [
             "- "
         ],
-    "required": true
+    "required": false
     },
     {
         "question_text": "20. Kako ocenjujete potrebu za digitalnom transformacijom u vašoj industriji? ",
@@ -246,6 +246,6 @@
             "- Važna, ali ne hitna",
             "- Nisko na listi prioriteta"
         ],
-    "required": true
+    "required": false
     }
 ]
