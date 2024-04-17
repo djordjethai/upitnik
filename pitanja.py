@@ -38,14 +38,13 @@ def check_reqQ(responses, requirement_statuses):
 # Streamlit app layout - universal form
 def odgovori(opcija):
     st.subheader(opcija)
+    st.caption("Polja obelezena * su obavezna za unos")
     questions = load_questions(opcija)
 
     # Dictionaries to store answers and requirement statuses
     responses = {}
     requirement_statuses = {}
     email = ""
-    counter = 0
-
     # Iterating through each question to create the form
     for index, question in enumerate(questions, start=1):
         question_text = question['question_text']
@@ -58,17 +57,32 @@ def odgovori(opcija):
 
         # Handling different types of questions
         if answer_type == 'choice':
-            responses[question_text] = st.selectbox(question_text, options[:-1], index=None, placeholder="Odaberite jednu opciju ")
+            responses[question_text] = st.radio(question_text, options[:-1], index=None)
+            if responses[question_text] == None:
+                responses[question_text] = st.text_input(f"Upisite odgovor na prethodno pitanje", key=f"odgovor {index}", placeholder="Upišite odgovor ovde")
         elif answer_type == 'multichoice':
-            counter += 1
-            responses[question_text] = st.multiselect(question_text, options[:-1], placeholder="Možete odabrati više opcija i upisati nove ")
-            responses[question_text].append(st.text_input(f"Navedite dodatni odgovor na prethodno pitanje", key=f"dodatni odgovor {counter}", placeholder="Upišite odgovor ovde"))
+            
+            #responses[question_text] = st.multiselect(question_text, options[:-1], placeholder="Možete odabrati više opcija i upisati nove ")
+            #########
+            current_answers = []
+            st.write(question_text)  # Optional, for displaying the question
+            for option in options[:-1]:
+                # Create a checkbox for each option
+                if st.checkbox(option, key=f"{question_text}_{option}_{index}"):
+                    # If the checkbox is checked, append the option to the current answers list
+                    current_answers.append(option)
+    
+                # Store the collected answers in the responses dictionary
+                responses[question_text] = current_answers
+            
+            #########
+            responses[question_text].append(st.text_input(f"Navedite dodatni odgovor na prethodno pitanje", key=f"dodatni odgovor {index}", placeholder="Upišite odgovor ovde"))
         elif answer_type == 'opis':
             responses[question_text] = st.text_area(question_text, placeholder="Upišite odgovor ovde")
 
     # Email input and submit action
-    email = st.text_input("Unesite email (obavezno polje):")
-    print(responses)
+    email = st.text_input("Unesite email * :")
+
     if st.button('Submit') and is_valid_email(email) and check_reqQ(responses, requirement_statuses):
         with st.expander("Odgovori"):
             st.write(responses)
@@ -77,4 +91,4 @@ def odgovori(opcija):
     else:
         st.info("Niste popunili sva obavezna polja")
         return {}, email
-    
+        
