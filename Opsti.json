@@ -6,7 +6,8 @@
             "- Jasno definisana i dokumentovana",
             "- Usmeno dogovorena među menadžmentom",
             "- Ne postoji formalna strategija"
-        ]
+        ],
+    "required": true
     },
     {
         "question_text": "Koliko često revizirate svoju poslovnu strategiju?",
@@ -15,7 +16,8 @@
             "- Jednom godišnje",
             "- Na svake 2 do 3 godine",
             "- Retko ili nikada"
-        ]
+        ],
+    "required": true
     },
     {
         "question_text": "Da li imate jasno definisane poslovne ciljeve za narednu fiskalnu godinu?",
@@ -24,7 +26,8 @@
             "- Da",
             "- Ne",
             "- U procesu definisanja"
-        ]
+        ],
+    "required": true
     },
     {
         "question_text": "Kako merite napredak prema postizanju poslovnih ciljeva?",
@@ -33,7 +36,8 @@
             "- Kroz KPI (ključne pokazatelje učinka)",
             "- Opštim procenama i povratnim informacijama",
             "- Ne merimo napredak sistematično"
-        ]
+        ],
+    "required": true
     },
     {
         "question_text": "Da li vaša kompanija poseduje jasno definisan proces za rukovođenje promenama?",
@@ -42,7 +46,8 @@
             "- Da",
             "- Ne",
             "- U razvoju"
-        ]
+        ],
+    "required": true
     },
     {
         "question_text": "Kako se vaša kompanija odnosi prema riziku?",
@@ -51,7 +56,8 @@
             "- Aktivno ga upravljamo i koristimo u strategijskom planiranju",
             "- Razmotrimo povremeno ili u posebnim situacijama",
             "- Ne korsitimo upravljanje rizikom"
-        ]
+        ],
+    "required": true,
     },
     {
         "question_text": "Da li vaša kompanija primenjuje neku od metoda za unapređenje procesa (npr. Lean, Six Sigma)?",
@@ -60,7 +66,8 @@
             "- Da",
             "- Ne",
             "- Planiramo u budućnosti"
-        ]
+        ],
+    "required": true
     },
     {
         "question_text": "Koliko često se organizuju interni treninzi za razvoj veština zaposlenih?",
@@ -69,7 +76,8 @@
             "- Redovno",
             "- Povremeno",
             "- Retko ili nikada"
-        ]
+        ],
+    "required": true
     },
     {
         "question_text": "Da li imate formalni sistem za upravljanje talentima i razvoj karijere zaposlenih?",
@@ -78,7 +86,8 @@
             "- Da",
             "- U razvoju",
             "- Ne"
-        ]
+        ],
+    "required": true
     },
     {
         "question_text": "Kako bi ocenili saradnju između različitih odeljenja unutar kompanije?",
@@ -87,7 +96,8 @@
             "- Odlična",
             "- Dobra sa prostorom za unapređenje",
             "- Slaba ili inconsistentna"
-        ]
+        ],
+    "required": true
     },
     {
         "question_text": "Da li postoji sistem za deljenje znanja unutar kompanije?",
@@ -96,7 +106,8 @@
             "- Da, imamo platformu/softver za deljenje znanja",
             "- Neformalno deljenje znanja",
             "- Ne postoji sistem"
-        ]
+        ],
+    "required": true
     },
     {
         "question_text": "Kako ocenjujete kreativnost i inovativnost unutar vaše organizacije?",
@@ -105,7 +116,8 @@
             "- Veoma kreativni i inovativni",
             "- Ponekad pokazujemo inovativnost",
             "- Skloni smo praćenju umesto inoviranju"
-        ]
+        ],
+    "required": true
     },
     {
         "question_text": "Koliko je vaša kompanija otvorena za promene ili nove ideje?",
@@ -114,7 +126,8 @@
             "- Veoma otvorena",
             "- Umereno otvorena s oprezom",
             "- Otporna na promene"
-        ]
+        ],
+    "required": true
     },
     {
         "question_text": "Koju ulogu igra korporativna kultura u vašem poslovanju?",
@@ -123,7 +136,8 @@
             "- Ključna je za naš uspeh",
             "- Važna je, ali ne ključna",
             "- Nije nam prioritet"
-        ]
+        ],
+    "required": true
     },
     {
         "question_text": "Da li kompanija implementira strategije za održavanje i unapređenje korporativne kulture?",
@@ -132,7 +146,8 @@
             "- Da",
             "- U razvoju",
             "- Ne"
-        ]
+        ],
+    "required": true
     },
     {
         "question_text": "Kako upravljate zadovoljstvom i angažovanjem zaposlenih?",
@@ -141,7 +156,8 @@
             "- Sistematskim anketama i akcionim planovima",
             "- Povremeno, bez formalnog merenja",
             "- Ne upravljamo aktivno"
-        ]
+        ],
+    "required": true
     },
     {
         "question_text": "Da li imate razvijen sistem za etičko ponašanje i usklađenost sa propisima u kompaniji?",
@@ -150,7 +166,8 @@
             "- Da, imamo kod etike i redovno organizujemo treninge",
             "- U razvoju / Razmatramo",
             "- Ne postoji formalni sistem"
-        ]
+        ],
+    "required": true
     },
     {
         "question_text": "Kako ocenjujete efikasnost upravnog odbora ili rukovodstva u vođenju kompanije?",
@@ -159,7 +176,8 @@
             "- Veoma efikasan",
             "- Efikasan s prostorom za poboljšanje",
             "- Neefikasan"
-        ]
+        ],
+    "required": true
     },
     {
         "question_text": "Da li postoji jasno definisan plan oporavka u slučaju poslovnih poremećaja?",
@@ -168,13 +186,15 @@
             "- Da, imamo detaljan i testiran plan oporavka",
             "- U razmatranju / U razvoju",
             "- Ne"
-        ]
+        ],
+    "required": true
     },
     {
         "question_text": "Kojim izazovima se trenutno najviše suočava vaše poslovanje?",
         "answer_type": "opis",
         "options": [
             "- "
-        ]
+        ],
+    "required": true
     }
 ]
