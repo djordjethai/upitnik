@@ -1,6 +1,4 @@
-﻿import matplotlib.pyplot as plt
-import numpy as np
-import os
+﻿import os
 import streamlit as st
 import json
 from docx import Document
@@ -9,20 +7,22 @@ from email import encoders
 from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-from openai import OpenAI
 from pitanja import odgovori
 from smtplib import SMTP
-
-from myfunc.retrievers import HybridQueryProcessor
-
-#from myfunc.mojafunkcija import send_email
-
-client=OpenAI()
-avatar_ai="bot.png" 
-
+#
+# program sakuplja odgovore ankete i salje ih kao word fajl n aodabrani email
+def format_json_to_text(data):
+    output = []
+    for key, value in data.items():
+        if isinstance(value, list):  # If the value is a list, format it into a comma-separated string
+            value = ", ".join(value)
+        # Append the formatted string to the output list
+        output.append(f"{key}: '\n' {value}")
+    # Join all items in the output list with newlines to create the final string
+    return "\n\n".join(output)
 
 # docx koji sadrzi formatirani tekst (i grafikon)
-def create_docx(content, image_path=None, filename="formatted_document.docx"):
+def create_docx(content, image_path=None, filename="Anketa.docx"):
     doc = Document()
     # Define custom styles for document if not already present
     styles = doc.styles
@@ -66,9 +66,9 @@ def create_docx(content, image_path=None, filename="formatted_document.docx"):
 
 
 # salje mejl
-def posalji_mail(email, gap_analiza, image_path):
+def posalji_mail(email, gap_analiza, image_path, filename="Anketa.docx"):
     st.info(f"Šaljem email na adresu {email}")
-    doc_path = create_docx(gap_analiza, image_path)  # Now also passing the image path
+    doc_path = create_docx(gap_analiza, image_path, filename)  # Now also passing the image path
 
     # Assuming your send_email function can handle attachments and is defined as shown previously
     send_email(
@@ -130,95 +130,20 @@ def send_email(subject, message, from_addr, to_addr, smtp_server, smtp_port, use
     server.send_message(msg)  # Recommended to use send_message() as it handles message encoding issues.
     server.quit()
 
-
-# agent llm odgovara na razlicite upite - treba u myfunc
-def positive_agent(messages):
-    with st.chat_message("assistant", avatar=avatar_ai):
-        message_placeholder = st.empty()
-        full_response = ""
-        for response in client.chat.completions.create(
-            model="gpt-4-turbo-preview",
-            messages=messages,
-            stream=True,
-        ):
-            full_response += (response.choices[0].delta.content or "")
-            message_placeholder.markdown(full_response + "▌")
-        message_placeholder.markdown(full_response)
-        
-    return full_response
-
-
-# privremeni grafikon
-def create_radar_chart(data, labels, num_vars):
-    angles = np.linspace(0, 2 * np.pi, num_vars, endpoint=False).tolist()
-    data += data[:1]
-    angles += angles[:1]
-
-    fig, ax = plt.subplots(figsize=(6, 6), subplot_kw=dict(polar=True))
-    ax.fill(angles, data, color='red', alpha=0.25)
-    ax.plot(angles, data, color='red', linewidth=2)  # Draw the outline
-    ax.set_yticklabels([])
-    ax.set_xticks(angles[:-1])
-    ax.set_xticklabels(labels)
-    return fig
-
-
-# cuva grafikon
-def show_graph():
-    st.title('Polar Chart Example')
-    labels = ['Poslovna zrelostt', 'Digitalna zrelost', 'Upotreba AI', 'Sajber bezbednost', 'IT infrastruktura']
-    data = [4, 3, 4, 2, 5]
-    num_vars = len(data)
-    # Plotting
-    radar_fig = create_radar_chart(data, labels, num_vars)
-    radar_fig.savefig('radar_chart.png', bbox_inches='tight')
-    # Display in Streamlit
-    st.pyplot(radar_fig)
-    return 'radar_chart.png'
-
- 
-# RAG pretrazuje index za preporuke    
-def recommended(full_response):
-    processor = HybridQueryProcessor(namespace="positive", top_k=3)
-    return processor.process_query_results(full_response)
-
-
 # glavni program
 def main():
+    filename = "Anketa_popunjena.docx"
     with st.sidebar:
-        st.caption("Ver. 16.04.24" )
+        st.caption("Ver. 17.04.24" )
         st.subheader("Demo Anketa i slanje maila ")
         opcija = "Anketa" 
     if opcija !="":  # Check if the result is not None
         result, email = odgovori(opcija)
         if result:
-            # prva faza citanje odgovora i komentar
-            #gap_message=[
-         #       {"role": "system", "content": """[Use only the Serbian language] You are an expert in business data analysis. \
-         #        Analyze the document. Think critically and do business analysis of the company. The accent is on GAP analysis. """},
-#
-#                {"role": "user", "content": f"Write your GAP analysis report based on this input: {result}"}
-#            ]
-            #full_response = positive_agent(gap_message)
-            #predlozi = recommended(full_response)
-            # druga faza preporuke na osnovu portfolia
-            #recommend_message=[
-            #            {"role": "system", "content": """[Use only the Serbian Language] \
-            #             You are an experienced digital transformation consultant. \
-            #             You are working for company Positive doo, the leader in Digital Transformation services in Serbia."""},
-#
-#                        {"role": "user", "content": f"""Based on previous GAP analysis: {full_response}, \
-#                         make suggestions for business improvement of the descibed business process. \
-###                         Be sure to suggest solutions in the form of the proposal (offer) \
-#                         based on the text from portfolio of your company Positive doo: {predlozi}"""}
-        #    ]
-            #recommendation_response = positive_agent(recommend_message)    
-            # treca faza kreiranje dokumenta
-            #grafikon = show_graph()
-            gap_analiza = json.dumps(result, indent=4, ensure_ascii=False) 
-            # cetvrta faza slanje maila
-            posalji_mail(email, gap_analiza, None)
-            os.remove("formatted_document.docx")
+            gap_analiza = format_json_to_text(result)
+            # slanje maila
+            posalji_mail(email, gap_analiza, None, filename)
+            os.remove(filename)
                 
 if __name__ == "__main__":
     main()

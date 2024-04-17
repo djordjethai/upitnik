@@ -1,219 +1,212 @@
 [
-    {
-        "question_text": "1. Čime se vaša kompanija bavi?",
-        "answer_type": "opis",
-        "options": [
-            "[Tekstualni odgovor]"
-        ],
-        "required": true
-    },
-    {
-        "question_text": "2. Kako vidite trenutno poslovanje i gde su vam najveći izazovi u radu?",
-        "answer_type": "opis",
-        "options": [
-            "[Tekstualni odgovor]"
-        ],
-        "required": true
-    },
-    {
-        "question_text": "3. Da li se često susrećete sa upitima koji se tiču detalja operativne prirode?",
-        "answer_type": "choice",
-        "options": [
-            
-            "Da",
-            "Ne",
-            "Ponekad",
-            "Drugo [tekstualni odgovor]"  
-        ],
-        "required": false
-    },
-    {
-        "question_text": "4. Koliki je trenutni broj zaposlenih u vašoj kompaniji?",
-        "answer_type": "choice",
-        "options": [
-            
-            "1-10",
-            "11-50",
-            "51-200",
-            "201-500",
-            "500+"
-        ],
-        "required": true
-    },
-    {
-        "question_text": "5. Kako vršite internu komunikaciju unutar kompanije? (selektujte opcije po prioritetu)",
-        "answer_type": "multichoice",
-        "options": [
-            
-            "Telefonski poziv",
-            "Mail",
-            "Chit-chat aplikacije",
-            "Project Management sistem",
-            "Drugo [tekstualni odgovor]"
-        ],
-        "required": false
-    },
-    {
-        "question_text": "6. Kako vršite komunikaciju sa klijentima? (selektujte opcije po prioritetu)",
-        "answer_type": "multichoice",
-        "options": [
-            
-            "Telefonski poziv",
-            "Mail",
-            "Chit-chat aplikacije",
-            "Video sastanci",
-            "Drugo [tekstualni odgovor]"
-        ],
-        "required": false
-    },
-    {
-        "question_text": "7. Koji tipovi upita su najčešći?",
-        "answer_type": "multichoice",
-        "options": [
-            
-            "Web site",
-            "Webshop",
-            "Društvene mreže",
-            "Drugo [tekstualni odgovor]"
-        ],
-        "required": false
-    },
-    {
-        "question_text": "8. Ko je zadužen za praćenje i odgovaranje na te upite?",
-        "answer_type": "choice",
-        "options": [
-            
-            "Trenutno nedefinisano",
-            "Određen tim",
-            "Određeni pojedinac",
-            "Drugo [tekstualni odgovor]"
-        ],
-        "required": false
-    },
-    {
-        "question_text": "9. Da li imate naloge na društvenim mrežama?",
-        "answer_type": "multichoice",
-        "options": [
-            "",
-            "Instagram",
-            "Facebook",
-            "LinkedIn",
-            "Ne",
-            "Drugo [tekstualni odgovor]"
-        ],
-        "required": false
-    },
-    {
-        "question_text": "10. Ko je zadužen za interakciju na njima?",
-        "answer_type": "choice",
-        "options": [
-            
-            "Trenutno nedefinisano",
-            "Određen tim",
-            "Određeni pojedinac",
-            "Drugo [tekstualni odgovor]"
-        ],
-        "required": false      
-    },
-    {
-        "question_text": "11. Koju vrstu podrške od AI-a očekujete?",
-        "answer_type": "multichoice",
-        "options": [
-            
-            "Chatbot",
-            "Asistent",
-            "Evidencija",
-            "Drugo [tekstualni odgovor]"
-        ],
-        "required": false
-    },
-    {
-        "question_text": "12. Koje prirode bi AI trebalo da bude?",
-        "answer_type": "multichoice",
-        "options": [
-            
-            "Informativne",
-            "Edukativne",
-            "Prodajne",
-            "Drugo [tekstualni odgovor]"
-        ],
-        "required": true
-    },
-    {
-        "question_text": "13. Šta mislite o pružanju dodatnog sadržaja putem AI-a (linkovi, brošure, mailovi, brojevi telefona itd.)?",
-        "answer_type": "choice",
-        "options": [
-            
-            "Da",
-            "Ne",
-            "Zavisi od situacije"
-        ],
-        "required": true
-    },
-    {
-        "question_text": "14. Kakav stil komunikacije očekujete od AI-a?",
-        "answer_type": "choice",
-        "options": [
-            
-            "Strogo profesionalan",
-            "Opušteno profesionalan",
-            "Prijateljski",
-            "Neutralan"
-        ],
-        "required": true
-    },
-    {
-        "question_text": "15. Koju vrstu komunikacije sa klijentima preferirate? (selektujte opcije po prioritetu)",
-        "answer_type": "multichoice",
-        "options": [
-            
-            "Usmeravanje na online komunikacione kanale",
-            "Komunikacija uživo",
-            "Drugo [tekstualni odgovor]"
-        ],
-        "required": true
-    },
-    {
-        "question_text": "16. Kako biste ocenili AI koji postavlja dodatna pitanja kako bi održao interakciju?",
-        "answer_type": "choice",
-        "options": [
-            
-            "Pozitivno",
-            "Negativno",
-            "Neutralno"
-        ],
-        "required": true
-    },
-    {
-        "question_text": "17. Na kom jeziku očekujete da AI komunicira sa publikom?",
-        "answer_type": "opis",
-        "options": [
-            "Jezik [tekstualni odgovor]"
-        ],
-        "required": true
-    },
-    {
-        "question_text": "18. Koji formati vaših podataka su vam dostupni? (možete selektovati više opcija)",
-        "answer_type": "multichoice",
-        "options": [
-            
-            ".txt",
-            ".pdf",
-            ".sql",
-            "Vektorska baza",
-            "Drugo [tekstualni odgovor]"
-        ],
-        "required": true
-    },
-    {
-        "question_text": "19. Gde se trenutno nalaze vaši podaci?",
-        "answer_type": "opis",
-        "options": [
-            "[Tekstualni odgovor]"
-        ],
-        "required": true
-    },
-    {
+  {
+    "question_text": "1. Čime se vaša kompanija bavi? * ",
+    "answer_type": "opis",
+    "options": [
+        "[Tekstualni odgovor]"
+    ],
+    "required": true
+  },
+  {
+    "question_text": "2. Kako vidite trenutno poslovanje i gde su vam najveći izazovi u radu? * ",
+    "answer_type": "opis",
+    "options": [
+      "[Tekstualni odgovor]"
+    ],
+    "required": true
+  },
+  {
+    "question_text": "3. Da li se često susrećete sa upitima koji se tiču detalja operativne prirode?",
+    "answer_type": "choice",
+    "options": [
+        "Da",
+        "Ne",
+        "Ponekad",
+        "Drugo [tekstualni odgovor]"  
+    ],
+    "required": false
+  },
+  {
+    "question_text": "4. Koliki je trenutni broj zaposlenih u vašoj kompaniji? * ",
+    "answer_type": "choice",
+    "options": [
+      "1-10",
+      "11-50",
+      "51-200",
+      "201-500",
+      "Drugo [tekstualni odgovor]"
+    ],
+    "required": true
+  },
+  {
+    "question_text": "5. Kako vršite internu komunikaciju unutar kompanije? (selektujte opcije po prioritetu)",
+    "answer_type": "multichoice",
+    "options": [
+        "Telefonski poziv",
+        "Mail",
+        "Chit-chat aplikacije",
+        "Project Management sistem",
+        "Drugo [tekstualni odgovor]"
+    ],
+    "required": false
+  },
+  {
+    "question_text": "6. Kako vršite komunikaciju sa klijentima? (selektujte opcije po prioritetu)",
+    "answer_type": "multichoice",
+    "options": [
+        "Telefonski poziv",
+        "Mail",
+        "Chit-chat aplikacije",
+        "Video sastanci",
+        "Drugo [tekstualni odgovor]"
+    ],
+    "required": false
+  },
+  {
+    "question_text": "7. Koji tipovi upita su najčešći?",
+    "answer_type": "multichoice",
+    "options": [
+        "Web site",
+        "Webshop",
+        "Društvene mreže",
+        "Drugo [tekstualni odgovor]"
+    ],
+    "required": false
+  },
+  {
+    "question_text": "8. Ko je zadužen za praćenje i odgovaranje na te upite?",
+    "answer_type": "choice",
+    "options": [
+        "Trenutno nedefinisano",
+        "Određen tim",
+        "Određeni pojedinac",
+        "Drugo [tekstualni odgovor]"
+    ],
+    "required": false
+  },
+  {
+    "question_text": "9. Da li imate naloge na društvenim mrežama?",
+    "answer_type": "multichoice",
+    "options": [
+        "Instagram",
+        "Facebook",
+        "LinkedIn",
+        "Ne",
+        "Drugo [tekstualni odgovor]"
+    ],
+    "required": false
+  },
+  {
+    "question_text": "10. Ko je zadužen za interakciju na njima?",
+    "answer_type": "choice",
+    "options": [
+        "Trenutno nedefinisano",
+        "Određen tim",
+        "Određeni pojedinac",
+        "Drugo [tekstualni odgovor]"
+    ],
+    "required": false      
+  },
+  {
+    "question_text": "11. Koju vrstu podrške od AI-a očekujete?",
+    "answer_type": "multichoice",
+    "options": [
+        "Chatbot",
+        "Asistent",
+        "Evidencija",
+        "Drugo [tekstualni odgovor]"
+    ],
+    "required": false
+  },
+  {
+    "question_text": "12. Koje prirode bi AI trebalo da bude? * ",
+    "answer_type": "multichoice",
+    "options": [
+      "Informativne",
+      "Edukativne",
+      "Prodajne",
+      "Drugo [tekstualni odgovor]"
+    ],
+    "required": true
+  },
+  {
+    "question_text": "13. Šta mislite o pružanju dodatnog sadržaja putem AI-a (linkovi, brošure, mailovi, brojevi telefona itd.)? * ",
+    "answer_type": "choice",
+    "options": [
+
+      "Da",
+      "Ne",
+      "Zavisi od situacije",
+      "Drugo [tekstualni odgovor]"
+    ],
+    "required": true
+  },
+  {
+    "question_text": "14. Kakav stil komunikacije očekujete od AI-a? * ",
+    "answer_type": "choice",
+    "options": [
+
+      "Strogo profesionalan",
+      "Opušteno profesionalan",
+      "Prijateljski",
+      "Neutralan",
+      "Drugo [tekstualni odgovor]"
+    ],
+    "required": true
+  },
+  {
+    "question_text": "15. Koju vrstu komunikacije sa klijentima preferirate? (selektujte opcije po prioritetu) * ",
+    "answer_type": "multichoice",
+    "options": [
+
+      "Usmeravanje na online komunikacione kanale",
+      "Komunikacija uživo",
+      "Drugo [tekstualni odgovor]"
+    ],
+    "required": true
+  },
+  {
+    "question_text": "16. Kako biste ocenili AI koji postavlja dodatna pitanja kako bi održao interakciju? * ",
+    "answer_type": "choice",
+    "options": [
+
+      "Pozitivno",
+      "Negativno",
+      "Neutralno",
+      "Drugo [tekstualni odgovor]"
+    ],
+    "required": true
+  },
+  {
+    "question_text": "17. Na kom jeziku očekujete da AI komunicira sa publikom? * ",
+    "answer_type": "opis",
+    "options": [
+      "Jezik [tekstualni odgovor]"
+    ],
+    "required": true
+  },
+  {
+    "question_text": "18. Koji formati vaših podataka su vam dostupni? (možete selektovati više opcija) * ",
+    "answer_type": "multichoice",
+    "options": [
+
+      ".txt",
+      ".pdf",
+      ".sql",
+      "Vektorska baza",
+      "Drugo [tekstualni odgovor]"
+    ],
+    "required": true
+  },
+  {
+    "question_text": "19. Gde se trenutno nalaze vaši podaci? * ",
+    "answer_type": "opis",
+    "options": [
+      "[Tekstualni odgovor]"
+    ],
+    "required": true
+  },
+  {
         "question_text": "20. Po kojim kriterijumima ćete prepoznati unapređenje?",
         "answer_type": "multichoice",
         "options": [
@@ -225,17 +218,17 @@
             "Drugo [tekstualni odgovor]"
         ],
         "required": false
-    },
-    {
-        "question_text": "21. Postoje li određeni rokovi ili termini važni za implementaciju AI-a?",
-        "answer_type": "opis",
-        "options": [
-            "[Tekstualni odgovor]"
-        ],
-        "required": true
-    },
-    {
-        "question_text": "22. Gde planirate implementaciju AI bota? (možete selektovati više opcija)",
+  },
+  {
+    "question_text": "21. Postoje li određeni rokovi ili termini važni za implementaciju AI-a? * ",
+    "answer_type": "opis",
+    "options": [
+      "[Tekstualni odgovor]"
+    ],
+    "required": true
+  },
+  {
+        "question_text": "22. Gde planirate implementaciju AI bota? (možete selektovati više opcija) * ",
         "answer_type": "multichoice",
         "options": [
             
@@ -244,5 +237,5 @@
             "Drugo [tekstualni odgovor]"
         ],
         "required": true
-    }
+  }
 ]
