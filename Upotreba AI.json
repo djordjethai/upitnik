@@ -8,7 +8,7 @@
             "- 3-5 godina",
             "- Više od 5 godina"
         ],
-        "required": "false"
+        "required": "true"
     },
     {
         "question_text": "2. U kojoj industriji vaša kompanija posluje?",
@@ -16,7 +16,7 @@
         "options": [
             "- [Tekstualni odgovor]"
         ],
-        "required": "false"
+        "required": "true"
     },
     {
         "question_text": "3. Koliko zaposlenih trenutno ima u vašoj kompaniji?",
@@ -27,7 +27,7 @@
             "- 51-200",
             "- Više od 200"
         ],
-        "required": "false"
+        "required": "true"
     },
     {
         "question_text": "4. Koja je glavna misija vaše kompanije?",
@@ -35,7 +35,7 @@
         "options": [
             "- [Tekstualni odgovor]"
         ],
-        "required": "false"
+        "required": "true"
     },
     {
         "question_text": "5. Kako biste ocenili trenutni nivo digitalizacije vaše kompanije?",
@@ -45,7 +45,7 @@
             "- Napredni",
             "- Ekspert"
         ],
-        "required": "false"
+        "required": "true"
     },
     {
         "question_text": "6. Da li trenutno koristite neke alate zasnovane na veštačkoj inteligenciji (AI) unutar vaše organizacije?",
@@ -55,7 +55,7 @@
             "- Ne",
             "- Planiramo u skorijoj budućnosti"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "7. Za koje poslovne funkcije vidite potencijal upotrebe AI? ",
@@ -68,7 +68,7 @@
             "- Lanac snabdevanja i logistika",
             "- Ostalo"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "8. Koliko ste upoznati sa prednostima koje AI može doneti vašem poslovanju? ",
@@ -78,7 +78,7 @@
             "- Donekle upoznati",
             "- Neupoznati"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "9. Da li smatrate da bi implementacija AI alata mogla unaprediti efikasnost vaših poslovnih procesa? ",
@@ -88,7 +88,7 @@
             "- Moguće",
             "- Ne"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "10. Koje su vaše primarne brige vezane za integraciju AI u vašem poslovanju? ",
@@ -100,7 +100,7 @@
             "- Otpor zaposlenih prema promenama",
             "- Ostalo"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "11. Da li biste bili zainteresovani za usluge poslovnog savetovanja kako bi bolje razumeli kako AI može biti primenjen u vašem poslu? ",
@@ -110,7 +110,7 @@
             "- Možda",
             "- Ne"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "12. Koje oblasti unutar vaše kompanije biste želeli prvo da transformišete kroz upotrebu AI? ",
@@ -122,7 +122,7 @@
             "- Procene rizika i donošenje odluka",
             "- Ostalo"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "13. Kako ocenjujete nivo tehničke spremnosti vaše kompanije za implementaciju AI? ",
@@ -132,7 +132,7 @@
             "- Srednji",
             "- Nizak"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "14. Da li ste ikada koristili AI za analizu velikih setova podataka (big data) radi donošenja informisanih odluka? ",
@@ -163,7 +163,7 @@
             "- Razmišljamo o tome",
             "- Ne"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "17. Kako biste ocenili važnost AI u budućem razvoju vaše industrije? ",
@@ -183,7 +183,7 @@
             "- Planiramo da formiramo tim",
             "- Ne"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "19. Koliko često pratite najnovije trendove i inovacije u AI tehnologiji? ",
@@ -221,7 +221,7 @@
         "options": [
             "- [Otvoreni tekstualni odgovor]"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "23. Kako planirate da edukujete svoje zaposlene o AI i njegovim mogućnostima? ",
@@ -231,7 +231,7 @@
             "- Partnerstvom sa stručnim organizacijama",
             "- Ne planiramo trenutno"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "24. Da li ste već iskusili neke izazove sa integracijom AI alata? Ako da, koje? ",
