@@ -63,18 +63,18 @@
         "options": [
             "- Redovno (najmanje jednom u 6 meseci)",
             "- Jednom godišnje",
-            "- Rijetko ili nikada"
+            "- Retko ili nikada"
         ],
     "required": false
     },
     {
-        "question_text": "8. Da li vaša kompanija koristi rešenja za firewall i antivirusnu zaštitu?",
+        "question_text": "8. Da li vaša kompanija koristi firewall i antivirusnu zaštitu?",
         "answer_type": "choice",
         "options": [
             "- Da, koristimo oba rešenja",
             "- Samo firewall",
             "- Samo antivirus",
-            "- Ne koristimo ni jedno"
+            "- Ne koristimo nijedno"
         ],
     "required": false
     },
@@ -84,7 +84,7 @@
         "options": [
             "- Da",
             "- Ne",
-            "- Ne znamo"
+            "- Ne znam"
         ],
     "required": false
     },
@@ -94,7 +94,7 @@
         "options": [
             "- Redovno (barem jednom kvartalno)",
             "- Jednom godišnje",
-            "- Rijetko ili nikada"
+            "- Retko ili nikada"
         ],
     "required": false
     },
@@ -114,7 +114,7 @@
         "options": [
             "- Pažljivim dodeljivanjem i redovnim preispitivanjem pristupnih prava",
             "- Dodeljivanjem pristupa na osnovu zahteva, bez redovnog preispitivanja",
-            "- Bez formalnog sistema za upravljanje pravima pristupa"
+            "- Ne postoji formalni sistem za upravljanje pravima pristupa"
         ],
     "required": false
     },
@@ -173,8 +173,8 @@
         "answer_type": "choice",
         "options": [
             "- Da",
-            "- Kada je to moguće",
-            "- Rijetko ili nikada"
+            "- Da, kada smo u mogućnosti",
+            "- Retko ili nikada"
         ],
     "required": false
     },
@@ -189,7 +189,7 @@
     "required": false
     },
     {
-        "question_text": "20. Da li ste razvili politike sajber higijene koje su obavezne za sve zaposlene? ",
+        "question_text": "20. Da li ste razvili politiku sajber higijene koja je obavezna za sve zaposlene? ",
         "answer_type": "choice",
         "options": [
             "- Da",
@@ -239,7 +239,7 @@
     "required": false
     },
     {
-        "question_text": "25. Da li posedujete certifikate ili standardizacije vezane za sajber bezbednost u poslovanju? (npr. ISO 27001) ",
+        "question_text": "25. Da li posedujete sertifikate ili standardizacije vezane za sajber bezbednost u poslovanju? (npr. ISO 27001) ",
         "answer_type": "choice",
         "options": [
             "- Da",

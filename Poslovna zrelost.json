@@ -51,9 +51,9 @@
         "question_text": "6. Kako se vaša kompanija odnosi prema riziku? ",
         "answer_type": "choice",
         "options": [
-            "- Aktivno ga upravljamo i koristimo u strategijskom planiranju",
+            "- Aktivno upravljamo i koristimo u strateškom planiranju",
             "- Razmotrimo povremeno ili u posebnim situacijama",
-            "- Izognemo se stilu upravljanja rizikom"
+            "- Nemamo definisanu srtategiju"
         ],
     "required": false
     },
@@ -91,9 +91,9 @@
         "question_text": "10. Kako bi ocenili saradnju između različitih odeljenja unutar kompanije? ",
         "answer_type": "choice",
         "options": [
-            "- Odlična",
-            "- Dobra sa prostorom za unapređenje",
-            "- Slaba ili inconsistentna"
+            "- Odlično",
+            "- Dobro sa prostorom za unapređenje",
+            "- Slabo"
         ],
     "required": false
     },
@@ -111,9 +111,9 @@
         "question_text": "12. Kako ocenjujete kreativnost i inovativnost unutar vaše organizacije? ",
         "answer_type": "choice",
         "options": [
-            "- Veoma kreativni i inovativni",
+            "- Visoko",
             "- Ponekad pokazujemo inovativnost",
-            "- Skloni smo praćenju umesto inoviranju"
+            "- Slabo"
         ],
     "required": false
     },
@@ -123,7 +123,7 @@
         "options": [
             "- Veoma otvorena",
             "- Umereno otvorena s oprezom",
-            "- Otporna na promene"
+            "- Slabo"
         ],
     "required": false
     },
@@ -133,7 +133,7 @@
         "options": [
             "- Ključna je za naš uspeh",
             "- Važna je, ali ne ključna",
-            "- Nije nam prioritet"
+            "- Ne obraćamo pažnju na to"
         ],
     "required": false
     },
@@ -161,9 +161,9 @@
         "question_text": "17. Da li imate razvijen sistem za etičko ponašanje i usklađenost sa propisima u kompaniji? ",
         "answer_type": "choice",
         "options": [
-            "- Da, imamo kod etike i redovno organizujemo treninge",
+            "- Da, imamo etički kodeks i redovno organizujemo treninge",
             "- U razvoju / Razmatramo",
-            "- Ne postoji formalni sistem"
+            "- Ne postoji sistem"
         ],
     "required": false
     },

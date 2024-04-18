@@ -84,9 +84,9 @@
         "question_text": "9. Kako procenjujete efikasnost digitalnih alata koje trenutno koristite?",
         "answer_type": "choice",
         "options": [
-            "- Veoma efikasne",
-            "- Delimično efikasne",
-            "- Neefikasne i zahtevaju zamenu ili unapređenje"
+            "- Veoma efikasni",
+            "- Delimično efikasni",
+            "- Neefikasni, zahtevaju zamenu ili unapređenje"
         ],
     "required": false
     },
@@ -219,7 +219,7 @@
     "required": false
     },
     {
-        "question_text": "23. Kako pristupate održavanju i ažuriranju vaših digitalnih alata? ",
+        "question_text": "23. Koliko često pristupate održavanju i ažuriranju vaših digitalnih alata? ",
         "answer_type": "choice",
         "options": [
             "- Redovno i proaktivno",

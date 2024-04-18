@@ -72,14 +72,14 @@
         "question_text": "8. Da li su vaši poslovni procesi automatizovani?",
         "answer_type": "choice",
         "options": [
-            "- Da većinom",
+            "- Da, većinom",
             "- Delimično",
-            "- Ne, ručno su"
+            "- Ne, ručni su"
         ],
         "required": "false"
     },
     {
-        "question_text": "9. Ocijenite nivo adaptacije vaše kompanije na promene na tržištu?",
+        "question_text": "9. Ocenite nivo adaptacije vaše kompanije na promene na tržištu?",
         "answer_type": "choice",
         "options": [
             "- Veoma brzo se prilagođavamo",
@@ -190,7 +190,7 @@
         "required": "false"
     },
     {
-        "question_text": "20. Ocijenite efikasnost vašeg trenutnog sistema za bekapovanje podataka?",
+        "question_text": "20. Ocenite efikasnost vašeg trenutnog sistema za bekapovanje podataka?",
         "answer_type": "choice",
         "options": [
             "- Veoma efikasan",

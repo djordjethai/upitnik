@@ -73,7 +73,7 @@
         "options": [
             "- Kontinuirano ili na godišnjem nivou",
             "- Na svake 2-3 godine",
-            "- Rijetko ili nikada"
+            "- Retko ili nikada"
         ],
     "required": false
     },
@@ -118,7 +118,7 @@
     "required": false
     },
     {
-        "question_text": "13. Da li koristite usluge vanjskog dobavljača za upravljanje nekim ili svim aspektima vaše IT infrastrukture? ",
+        "question_text": "13. Da li koristite usluge eksternog dobavljača za upravljanje nekim ili svim aspektima vaše IT infrastrukture? ",
         "answer_type": "choice",
         "options": [
             "- Da, za većinu ili sve usluge",
@@ -148,7 +148,7 @@
     "required": false
     },
     {
-        "question_text": "16. Da li vaša IT infrastruktura podržava skalabilnost i fleksibilnost potrebnu za brzi rast vaše kompanije? ",
+        "question_text": "16. Da li vaša IT infrastruktura podržava skalabilnost i fleksibilnost potrebnu za brži rast vaše kompanije? ",
         "answer_type": "choice",
         "options": [
             "- Da, u potpunosti",

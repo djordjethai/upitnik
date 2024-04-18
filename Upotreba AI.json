@@ -66,7 +66,7 @@
             "- Ljudski resursi",
             "- Finansije i računovodstvo",
             "- Lanac snabdevanja i logistika",
-            "- Ostalo [Molimo navedite]"
+            "- Ostalo"
         ],
     "required": false
     },
@@ -98,7 +98,7 @@
             "- Sigurnost podataka",
             "- Nedostatak stručnjaka za AI",
             "- Otpor zaposlenih prema promenama",
-            "- Ostalo [Molimo navedite]"
+            "- Ostalo"
         ],
     "required": false
     },
@@ -120,7 +120,7 @@
             "- Analitiku i obradu podataka",
             "- Unapređenje korisničkih iskustava",
             "- Procene rizika i donošenje odluka",
-            "- Ostalo [Molimo navedite]"
+            "- Ostalo"
         ],
     "required": false
     },
@@ -139,8 +139,7 @@
         "answer_type": "choice",
         "options": [
             "- Da",
-            "- Ne",
-            "- Nije primenljivo"
+            "- Ne"
         ],
     "required": false
     },
@@ -171,8 +170,8 @@
         "answer_type": "choice",
         "options": [
             "- Krucijalno važno",
-            "- Važno",
-            "- Ne tako važno"
+            "- Donekle važno",
+            "- Nije važno"
         ],
     "required": false
     },
@@ -211,7 +210,7 @@
         "answer_type": "choice",
         "options": [
             "- Da",
-            "- Moguće u budućnosti",
+            "- Možda u budućnosti",
             "- Ne"
         ],
     "required": false
@@ -243,7 +242,7 @@
     "required": false
     },
     {
-        "question_text": "25. Da li biste bili zainteresovani za workshopove ili seminare o primeni AI u vašoj specifičnoj industriji? ",
+        "question_text": "25. Da li biste bili zainteresovani za radionice ili seminare o primeni AI u vašoj industriji? ",
         "answer_type": "choice",
         "options": [
             "- Da",
