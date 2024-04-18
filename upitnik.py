@@ -191,7 +191,8 @@ def main():
             # prva faza citanje odgovora i komentar
             gap_message=[
                 {"role": "system", "content": """[Use only the Serbian language] You are an expert in business data analysis. \
-                 Analyze the document. Think critically and do business analysis of the company. The accent is on GAP analysis. """},
+                 Analyze the document. Think critically and do business analysis of the company. The accent is on GAP analysis, focusing on 
+                 generating sections Current state, Desired state. """},
 
                 {"role": "user", "content": f"Write your GAP analysis report based on this input: {result}"}
             ]
@@ -203,12 +204,13 @@ def main():
             recommend_message=[
                         {"role": "system", "content": """[Use only the Serbian Language] \
                          You are an experienced digital transformation consultant. \
-                         You are working for company Positive doo, the leader in Digital Transformation services in Serbia."""},
+                         You are working for company Positive doo, the leader in Digital Transformation services in Serbia.
+                         When making propositions, convince the client in a non-invasive way that hiring your company is the right choice."""},
 
                         {"role": "user", "content": f"""Based on previous GAP analysis: {full_response}, \
                          make suggestions for business improvement of the descibed business process. \
-                         Be sure to suggest solutions in the form of the proposal (offer) \
-                         based on the text from portfolio of your company Positive doo: {predlozi}"""}
+                         Write in potential, not in the future tense.
+                         Always suggest solutions in the form of the proposal (offer) based on the text from portfolio of your company Positive doo: {predlozi}!!!"""}
             ]
             recommendation_response = positive_agent(recommend_message)
             #recommendation_response = "xx"  
