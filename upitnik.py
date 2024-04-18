@@ -175,16 +175,20 @@ def recommended(full_response):
 
 # glavni program
 def main():
-    with st.sidebar:
-        st.caption("Ver. 17.04.24" )
-        st.subheader("Demo GAP sa grafikonon i slanjem maila ")
-        opcija = st.selectbox("Odaberite upitnik", ("",
-                                                    "Opsti", 
-                                                    "Poslovna zrelost", 
-                                                    "Digitalna zrelost", 
-                                                    "Sajber bezbednost", 
-                                                    "IT infrastruktura", 
-                                                    "Upotreba AI" ))
+    opcija = os.getenv("ANKETA", "Sve")
+
+    if opcija == "Sve":
+        with st.sidebar:
+            st.caption("Ver. 18.04.24" )
+            st.subheader("Demo GAP sa grafikonon i slanjem maila ")
+            opcija = st.selectbox("Odaberite upitnik", ("",
+                                                        "Opsti", 
+                                                        "Poslovna zrelost", 
+                                                        "Digitalna zrelost", 
+                                                        "Sajber bezbednost", 
+                                                        "IT infrastruktura", 
+                                                        "Upotreba AI" ))
+            
     if opcija !="":  # Check if the result is not None
         result, email = odgovori(opcija)
         if result:
