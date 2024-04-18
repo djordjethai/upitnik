@@ -8,7 +8,7 @@
             "- 3-5 godina",
             "- Više od 5 godina"
         ],
-        "required": "false"
+        "required": true
     },
     {
         "question_text": "2. U kojoj industriji vaša kompanija posluje?",
@@ -16,7 +16,7 @@
         "options": [
             "- [Tekstualni odgovor]"
         ],
-        "required": "false"
+        "required": true
     },
     {
         "question_text": "3. Koliko zaposlenih trenutno ima u vašoj kompaniji?",
@@ -27,7 +27,7 @@
             "- 51-200",
             "- Više od 200"
         ],
-        "required": "false"
+        "required": true
     },
     {
         "question_text": "4. Koja je glavna misija vaše kompanije?",
@@ -35,7 +35,7 @@
         "options": [
             "- [Tekstualni odgovor]"
         ],
-        "required": "false"
+        "required": true
     },
     {
         "question_text": "5. Kako biste ocenili trenutni nivo digitalizacije vaše kompanije?",
@@ -45,7 +45,7 @@
             "- Napredni",
             "- Ekspert"
         ],
-        "required": "false"
+        "required": true
     },
     {
         "question_text": "6. Da li vaša kompanija ima uspostavljen plan za upravljanje sajber incidentima? ",
@@ -55,7 +55,7 @@
             "- U procesu implementacije",
             "- Ne"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "7. Koliko često obučavate svoje zaposlene o sajber bezbednosti i prevenciji sajber napada? ",
@@ -65,7 +65,7 @@
             "- Jednom godišnje",
             "- Retko ili nikada"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "8. Da li vaša kompanija koristi firewall i antivirusnu zaštitu?",
@@ -76,7 +76,7 @@
             "- Samo antivirus",
             "- Ne koristimo nijedno"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "9. Da li ste imali sajber sigurnosni incident u poslednjih godinu dana? ",
@@ -86,7 +86,7 @@
             "- Ne",
             "- Ne znam"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "10. Koliko često obavljate sigurnosne provere i procene ranjivosti vaše IT infrastrukture? ",
@@ -96,7 +96,7 @@
             "- Jednom godišnje",
             "- Retko ili nikada"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "11. Da li ste implementirali dvofaktorsku autentifikaciju (2FA) za pristup osetljivim sistemima i podacima? ",
@@ -106,7 +106,7 @@
             "- U procesu implementacije",
             "- Ne"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "12. Kako upravljate pravima pristupa za zaposlene i treće strane do vaših sistema i podataka? ",
@@ -116,7 +116,7 @@
             "- Dodeljivanjem pristupa na osnovu zahteva, bez redovnog preispitivanja",
             "- Ne postoji formalni sistem za upravljanje pravima pristupa"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "13. Da li vaša kompanija ima rezervni plan (backup) i strategiju za oporavak podataka u slučaju sajber napada?",
@@ -126,7 +126,7 @@
             "- Da, ali bez redovnog testiranja",
             "- Ne"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "14. Da li koristite enkripciju za zaštitu osetljivih podataka pri skladištenju i prenosu? ",
@@ -136,10 +136,10 @@
             "- Delimično",
             "- Ne"
         ],
-    "required": false
+    "required": true
     },
     {
-        "question_text": "15. Kako bi ocenili svest vaših zaposlenih o značaju sajber bezbednosti? ",
+        "question_text": "15. Kako biste ocenili svest vaših zaposlenih o značaju sajber bezbednosti? ",
         "answer_type": "choice",
         "options": [
             "- Visoka",
@@ -156,7 +156,7 @@
             "- Ne, ali planiramo angažovanje",
             "- Ne, oslanjamo se isključivo na interne resurse"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "17. Da li vaša kompanija koristi usluge sajber bezbednosnog osiguranja? ",
@@ -166,7 +166,7 @@
             "- Razmatramo",
             "- Ne"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "18. Da li praktikujete redovno ažuriranje softvera i sistema kao deo vaše strategije sajber bezbednosti? ",
@@ -176,7 +176,7 @@
             "- Da, kada smo u mogućnosti",
             "- Retko ili nikada"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "19. Koliko često se sprovode penetration testovi na vašoj IT infrastrukturi? ",
@@ -186,7 +186,7 @@
             "- Povremeno",
             "- Nikada"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "20. Da li ste razvili politiku sajber higijene koja je obavezna za sve zaposlene? ",
@@ -206,7 +206,7 @@
             "- Delimično",
             "- Ne"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "22. Koliko često preispitujete svoje politike i procedure sajber bezbednosti? ",
@@ -216,7 +216,7 @@
             "- Jednom u nekoliko godina",
             "- Rijetko ili nikada"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "23. Da li ste u poslednjih godinu dana učestvovali u simulaciji sajber napada ili vežbi oporavka? ",
@@ -226,7 +226,7 @@
             "- Ne, ali planiramo",
             "- Ne"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "24. Kako vaša kompanija upravlja uređajima zaposlenih koji pristupaju korporativnoj mreži? (BYOD - Bring Your Own Device politika)",
@@ -236,7 +236,7 @@
             "- Radimo na razvoju politike",
             "- Nemamo politiku za BYOD"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "25. Da li posedujete sertifikate ili standardizacije vezane za sajber bezbednost u poslovanju? (npr. ISO 27001) ",
@@ -246,6 +246,6 @@
             "- U procesu sticanja",
             "- Ne"
         ],
-    "required": false
+    "required": true
     }
 ]

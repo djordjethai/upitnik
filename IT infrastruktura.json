@@ -8,7 +8,7 @@
             "- 3-5 godina",
             "- Više od 5 godina"
         ],
-        "required": "false"
+        "required": true
     },
     {
         "question_text": "2. U kojoj industriji vaša kompanija posluje?",
@@ -16,7 +16,7 @@
         "options": [
             "- [Tekstualni odgovor]"
         ],
-        "required": "false"
+        "required": true
     },
     {
         "question_text": "3. Koliko zaposlenih trenutno ima u vašoj kompaniji?",
@@ -27,7 +27,7 @@
             "- 51-200",
             "- Više od 200"
         ],
-        "required": "false"
+        "required": true
     },
     {
         "question_text": "4. Koja je glavna misija vaše kompanije?",
@@ -35,7 +35,7 @@
         "options": [
             "- [Tekstualni odgovor]"
         ],
-        "required": "false"
+        "required": true
     },
     {
         "question_text": "5. Kako biste ocenili trenutni nivo digitalizacije vaše kompanije?",
@@ -45,7 +45,7 @@
             "- Napredni",
             "- Ekspert"
         ],
-        "required": "false"
+        "required": true
     },
     {
         "question_text": "6. Kakav tip IT infrastrukture trenutno koristite? ",
@@ -55,7 +55,7 @@
             "- Cloud rešenja",
             "- Hibridna rešenja"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "7. Da li ste zadovoljni brzinom i pouzdanošću vaše trenutne IT infrastrukture? ",
@@ -75,7 +75,7 @@
             "- Na svake 2-3 godine",
             "- Retko ili nikada"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "9. Da li vaša IT infrastruktura podržava trenutne i buduće potrebe poslovanja? ",
@@ -85,7 +85,7 @@
             "- Delimično, postoje izazovi",
             "- Ne, zaostajemo iza potreba"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "10. Kako upravljate bezbednošću svoje IT infrastrukture? ",
@@ -95,7 +95,7 @@
             "- Osnovne bezbednosne mere",
             "- Imamo značajne nedostatke u bezbednosti"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "11. Koliko često vršite backup vaših ključnih podataka i sistema? ",
@@ -105,7 +105,7 @@
             "- Nedeljno",
             "- Mesečno ili ređe"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "12. Da li imate plan oporavka u slučaju katastrofe (Disaster Recovery Plan) za vašu IT infrastrukturu? ",
@@ -115,7 +115,7 @@
             "- Da, ali ga retko ili nikad ne testiramo",
             "- Ne"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "13. Da li koristite usluge eksternog dobavljača za upravljanje nekim ili svim aspektima vaše IT infrastrukture? ",
@@ -125,7 +125,7 @@
             "- Samo za specifične usluge",
             "- Ne, sve usluge upravljamo internim timom"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "14. Da li vaša kompanija ima poseban budžet za održavanje i unapređenje IT infrastrukture? ",
@@ -135,7 +135,7 @@
             "- Ne",
             "- Ne znam"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "15. Kako ocenjujete zrelost vaše kompanije u pogledu IT infrastrukture? ",
@@ -155,7 +155,7 @@
             "- Delimično, postoje ograničenja",
             "- Ne"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "17. Da li ste nedavno doživeli bilo kakve značajne prekide usluga povezane sa IT infrastrukturom? ",
@@ -165,7 +165,7 @@
             "- Ne",
             "- Ne znam"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "18. Da li planirate migraciju vaše IT infrastrukture ili ključnih komponenti u cloud u bliskoj budućnosti? ",
@@ -175,7 +175,7 @@
             "- Možda, razmatramo opcije",
             "- Ne"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "19. Koje alate koristite za monitoring i upravljanje performansama vaše IT infrastrukture? ",
@@ -185,7 +185,7 @@
             "- Osnovne alate za monitoring",
             "- Ne koristimo alate za monitoring"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "20. Da li vaša kompanija ima definisane standarde za hardver i softver koji se koristi unutar organizacije? ",
@@ -195,7 +195,7 @@
             "- Delimično",
             "- Ne"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "21. Kako adresirate pitanje redundancije sistema i podataka unutar vaše IT infrastrukture? ",
@@ -205,7 +205,7 @@
             "- Imamo osnovni nivo redundancije",
             "- Ne obraćamo pažnju na redundanciju"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "22. Da li vaša kompanija redovno sprovodi revizije IT infrastrukture da bi se osigurala usklađenost sa internim i eksternim standardima? ",
@@ -215,7 +215,7 @@
             "- Povremeno",
             "- Ne"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "23. Kakav je vaš pristup unapređenju energetske i ekološke efikasnosti IT infrastrukture? ",
@@ -235,7 +235,7 @@
             "- Planiramo u budućnosti",
             "- Ne"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "25. Kako procenjujete vašu sposobnost da ostanete u toku sa najnovijim tehnološkim trendovima i inovacijama unutar IT infrastrukture? ",
@@ -245,6 +245,6 @@
             "- Dobro, ali postoji prostor za poboljšanje",
             "- Slabo, zaostajemo za novim tehnologijama"
         ],
-    "required": false
+    "required": true
     }
 ]

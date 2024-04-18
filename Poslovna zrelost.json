@@ -8,7 +8,7 @@
             "- 3-5 godina",
             "- Više od 5 godina"
         ],
-        "required": "false"
+        "required": true
     },
     {
         "question_text": "2. U kojoj industriji vaša kompanija posluje?",
@@ -16,7 +16,7 @@
         "options": [
             "- [Tekstualni odgovor]"
         ],
-        "required": "false"
+        "required": true
     },
     {
         "question_text": "3. Koliko zaposlenih trenutno ima u vašoj kompaniji?",
@@ -27,7 +27,7 @@
             "- 51-200",
             "- Više od 200"
         ],
-        "required": "false"
+        "required": true
     },
     {
         "question_text": "4. Koja je glavna misija vaše kompanije?",
@@ -35,7 +35,7 @@
         "options": [
             "- [Tekstualni odgovor]"
         ],
-        "required": "false"
+        "required": true
     },
     {
         "question_text": "5. Kako biste ocenili trenutni nivo digitalizacije vaše kompanije?",
@@ -45,7 +45,7 @@
             "- Napredni",
             "- Ekspert"
         ],
-        "required": "false"
+        "required": true
     },
     {
         "question_text": "6. Kako se vaša kompanija odnosi prema riziku? ",
@@ -55,7 +55,7 @@
             "- Razmotrimo povremeno ili u posebnim situacijama",
             "- Nemamo definisanu srtategiju"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "7. Da li vaša kompanija primenjuje neku od metoda za unapređenje procesa (npr. Lean, Six Sigma)? ",
@@ -65,7 +65,7 @@
             "- Ne",
             "- Planiramo u budućnosti"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "8. Koliko često se organizuju interni treninzi za razvoj veština zaposlenih? ",
@@ -75,7 +75,7 @@
             "- Povremeno",
             "- Retko ili nikada"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "9. Da li imate formalni sistem za upravljanje talentima i razvoj karijere zaposlenih? ",
@@ -85,7 +85,7 @@
             "- U razvoju",
             "- Ne"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "10. Kako bi ocenili saradnju između različitih odeljenja unutar kompanije? ",
@@ -95,7 +95,7 @@
             "- Dobro sa prostorom za unapređenje",
             "- Slabo"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "11. Da li postoji sistem za deljenje znanja unutar kompanije? ",
@@ -105,7 +105,7 @@
             "- Neformalno deljenje znanja",
             "- Ne postoji sistem"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "12. Kako ocenjujete kreativnost i inovativnost unutar vaše organizacije? ",
@@ -115,7 +115,7 @@
             "- Ponekad pokazujemo inovativnost",
             "- Slabo"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "13. Koliko je vaša kompanija otvorena za promene ili nove ideje? ",
@@ -125,7 +125,7 @@
             "- Umereno otvorena s oprezom",
             "- Slabo"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "14. Koju ulogu igra korporativna kultura u vašem poslovanju? ",
@@ -135,7 +135,7 @@
             "- Važna je, ali ne ključna",
             "- Ne obraćamo pažnju na to"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "15. Da li kompanija implementira strategije za održavanje i unapređenje korporativne kulture? ",
@@ -145,7 +145,7 @@
             "- U razvoju",
             "- Ne"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "16. Kako upravljate zadovoljstvom i angažovanjem zaposlenih? ",
@@ -155,7 +155,7 @@
             "- Povremeno, bez formalnog merenja",
             "- Ne upravljamo aktivno"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "17. Da li imate razvijen sistem za etičko ponašanje i usklađenost sa propisima u kompaniji? ",
@@ -165,7 +165,7 @@
             "- U razvoju / Razmatramo",
             "- Ne postoji sistem"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "18. Kako ocenjujete efikasnost upravnog odbora ili rukovodstva u vođenju kompanije? ",
@@ -175,7 +175,7 @@
             "- Efikasan s prostorom za poboljšanje",
             "- Neefikasan"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "19. Da li postoji jasno definisan plan oporavka u slučaju poslovnih poremećaja? ",
@@ -185,7 +185,7 @@
             "- U razmatranju / U razvoju",
             "- Ne"
         ],
-    "required": false
+    "required": true
     },
     {
         "question_text": "20. Kojim izazovima se trenutno najviše suočava vaše poslovanje? ",
@@ -193,6 +193,6 @@
         "options": [
             "- "
         ],
-    "required": false
+    "required": true
     }
 ]

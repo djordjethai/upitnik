@@ -8,7 +8,7 @@
             "- 3-5 godina",
             "- Više od 5 godina"
         ],
-        "required": "false"
+        "required": true
     },
     {
         "question_text": "2. U kojoj industriji vaša kompanija posluje?",
@@ -16,7 +16,7 @@
         "options": [
             "- [Tekstualni odgovor]"
         ],
-        "required": "false"
+        "required": true
     },
     {
         "question_text": "3. Koliko zaposlenih trenutno ima u vašoj kompaniji?",
@@ -27,7 +27,7 @@
             "- 51-200",
             "- Više od 200"
         ],
-        "required": "false"
+        "required": true
     },
     {
         "question_text": "4. Koja je glavna misija vaše kompanije?",
@@ -35,7 +35,7 @@
         "options": [
             "- [Tekstualni odgovor]"
         ],
-        "required": "false"
+        "required": true
     },
     {
         "question_text": "5. Kako biste ocenili trenutni nivo digitalizacije vaše kompanije?",
@@ -46,7 +46,7 @@
             "- Ekspert", 
 			"Drugo"
         ],
-        "required": "false"
+        "required": true
     },
     {
         "question_text": "6. Da li vaša kompanija ima jasno definisanu dugoročnu poslovnu strategiju?",
@@ -56,7 +56,7 @@
             "- Ne",
             "- Nisam siguran/a"
         ],
-        "required": "false"
+        "required": true
     },
     {
         "question_text": "7. Kako se odlučujete o pokretanju novih projekata ili proširenju poslovanja?",
@@ -66,7 +66,7 @@
             "- Na osnovu internih analiza",
             "- Koristeći eksterne konsultante"
         ],
-        "required": "false"
+        "required": true
     },
     {
         "question_text": "8. Da li su vaši poslovni procesi automatizovani?",
@@ -76,7 +76,7 @@
             "- Delimično",
             "- Ne, ručni su"
         ],
-        "required": "false"
+        "required": true
     },
     {
         "question_text": "9. Ocenite nivo adaptacije vaše kompanije na promene na tržištu?",
@@ -86,7 +86,7 @@
             "- Prosečno se prilagođavamo",
             "- Teško se prilagođavamo"
         ],
-        "required": "false"
+        "required": true
     },
     {
         "question_text": "10. Da li vaša kompanija koristi ERP sistem?",
@@ -96,7 +96,7 @@
             "- Ne",
             "- U procesu implementacije"
         ],
-        "required": "false"
+        "required": true
     },
     {
         "question_text": "11. Koliko često vršite analizu poslovnih podataka?",
@@ -107,7 +107,7 @@
             "- Mesečno",
             "- Retko ili nikada"
         ],
-        "required": "false"
+        "required": true
     },
     {
         "question_text": "12. Da li se u vašoj kompaniji koristi BI (Business Intelligence) alati za podršku odlučivanju?",
@@ -117,7 +117,7 @@
             "- Ne",
             "- Nismo sigurni šta su to BI alati"
         ],
-        "required": "false"
+        "required": true
     },
     {
         "question_text": "13. Koliko vam je važno da imate integrisan sistem za upravljanje odnosima sa klijentima (CRM)?",
@@ -127,7 +127,7 @@
             "- Srednje važno",
             "- Nije važno"
         ],
-        "required": "false"
+        "required": true
     },
     {
         "question_text": "14. Da li vaša kompanija redovno sprovodi edukacije o sajber bezbednosti za zaposlene?",
@@ -137,7 +137,7 @@
             "- Ne",
             "- Ponekad"
         ],
-        "required": "false"
+        "required": true
     },
     {
         "question_text": "15. Da li vaša kompanija ima implementiran firewall i antivirusnu zaštitu?",
@@ -147,7 +147,7 @@
             "- Ne",
             "- Nisam siguran/a"
         ],
-        "required": "false"
+        "required": true
     },
     {
         "question_text": "16. Da li vaša kompanija ima uspostavljene procedure za upravljanje sajber incidentima?",
@@ -157,7 +157,7 @@
             "- Ne",
             "- U procesu uspostavljanja"
         ],
-        "required": "false"
+        "required": true
     },
     {
         "question_text": "17. Koliko često se vrši provera sajber bezbednosti (npr. penetration testing)?",
@@ -167,7 +167,7 @@
             "- Jednom godišnje",
             "- Nikada"
         ],
-        "required": "false"
+        "required": true
     },
     {
         "question_text": "18. Kakve vrste servera koristi vaša kompanija?",
@@ -177,7 +177,7 @@
             "- Cloud",
             "- Hibrid"
         ],
-        "required": "false"
+        "required": true
     },
     {
         "question_text": "19. Da li vaš IT sistem redovno dobija ažuriranja?",
@@ -187,7 +187,7 @@
             "- Rukovodimo se prema potrebi",
             "- Retko"
         ],
-        "required": "false"
+        "required": true
     },
     {
         "question_text": "20. Ocenite efikasnost vašeg trenutnog sistema za bekapovanje podataka?",
@@ -197,7 +197,7 @@
             "- Delimično efikasan",
             "- Neefikasan"
         ],
-        "required": "false"
+        "required": true
     },
     {
         "question_text": "21. Da li vaša infrastruktura podržava rad na daljinu?",
@@ -207,7 +207,7 @@
             "- Delimično",
             "- Ne"
         ],
-        "required": "false"
+        "required": true
     },
     {
         "question_text": "22. Da li vaša kompanija trenutno koristi AI alate u poslovanju?",
@@ -217,7 +217,7 @@
             "- Ne",
             "- Razmatramo mogućnosti"
         ],
-        "required": "false"
+        "required": true
     },
     {
         "question_text": "23. Koja funkcija AI alata bila bi vam najkorisnija?",
@@ -228,7 +228,7 @@
             "- Unapređenje korisničke podrške",
             "- Drugo [tekstualni odgovor]"
         ],
-        "required": "false"
+        "required": true
     },
     {
         "question_text": "24. Da li ste zainteresovani za implementaciju AI chat bota na vašem webu?",
@@ -238,7 +238,7 @@
             "- Ne",
             "- Možda, potrebno više informacija"
         ],
-        "required": "false"
+        "required": true
     },
     {
         "question_text": "25. Kako biste ocenili potencijalnu korist od AI asistenata za vaše zaposlene?",
@@ -248,6 +248,6 @@
             "- Potencijalno korisno",
             "- Ne vidimo korist"
         ],
-        "required": "false"
+        "required": true
     }
 ]

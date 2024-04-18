@@ -35,7 +35,7 @@
         "options": [
             "- [Tekstualni odgovor]"
         ],
-        "required": "true"
+        "required": true
     },
     {
         "question_text": "5. Kako biste ocenili trenutni nivo digitalizacije vaše kompanije?",
@@ -45,7 +45,7 @@
             "- Napredni",
             "- Ekspert"
         ],
-        "required": "true"
+        "required": true
     },
     {
         "question_text": "6. Da li trenutno koristite neke alate zasnovane na veštačkoj inteligenciji (AI) unutar vaše organizacije?",
