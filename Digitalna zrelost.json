@@ -1,6 +1,6 @@
 [
 	{
-        "question_text": "1. Koliko godina je vaša kompanija aktivna na tržištu?",
+        "question_text": "1. Koliko godina je vaša kompanija aktivna na tržištu? * ",
         "answer_type": "choice",
         "options": [
             "- Manje od godinu dana",
@@ -11,7 +11,7 @@
         "required": true
     },
     {
-        "question_text": "2. U kojoj industriji vaša kompanija posluje?",
+        "question_text": "2. U kojoj industriji vaša kompanija posluje? * ",
         "answer_type": "opis",
         "options": [
             "- [Tekstualni odgovor]"
@@ -19,7 +19,7 @@
         "required": true
     },
     {
-        "question_text": "3. Koliko zaposlenih trenutno ima u vašoj kompaniji?",
+        "question_text": "3. Koliko zaposlenih trenutno ima u vašoj kompaniji? * ",
         "answer_type": "choice",
         "options": [
             "- 1-10",
@@ -30,7 +30,7 @@
         "required": true
     },
     {
-        "question_text": "4. Koja je glavna misija vaše kompanije?",
+        "question_text": "4. Koja je glavna misija vaše kompanije? * ",
         "answer_type": "opis",
         "options": [
             "- [Tekstualni odgovor]"
@@ -38,7 +38,7 @@
         "required": true
     },
     {
-        "question_text": "5. Kako biste ocenili trenutni nivo digitalizacije vaše kompanije?",
+        "question_text": "5. Kako biste ocenili trenutni nivo digitalizacije vaše kompanije? * ",
         "answer_type": "choice",
         "options": [
             "- Početnik",
@@ -48,7 +48,7 @@
         "required": true
     },
     {
-        "question_text": "6. Koji digitalni alati su trenutno u upotrebi u vašoj kompaniji? ",
+        "question_text": "6. Koji digitalni alati su trenutno u upotrebi u vašoj kompaniji? * ",
         "answer_type": "multichoice",
         "options": [
             "- Email i komunikacioni alati",
@@ -61,7 +61,7 @@
     "required": true
     },
     {
-        "question_text": "7. U kojoj meri vaše trenutno IT okruženje podržava integraciju novih digitalnih alata?",
+        "question_text": "7. U kojoj meri vaše trenutno IT okruženje podržava integraciju novih digitalnih alata? * ",
         "answer_type": "choice",
         "options": [
             "- Potpuno je spremno za integraciju",
@@ -71,7 +71,7 @@
     "required": true
     },
     {
-        "question_text": "8. Kako ocenjujete zrelost vaše kompanije u primeni digitalnih alata i tehnologija?",
+        "question_text": "8. Kako ocenjujete zrelost vaše kompanije u primeni digitalnih alata i tehnologija? * ",
         "answer_type": "choice",
         "options": [
             "- Na početku smo digitalne transformacije",
@@ -81,7 +81,7 @@
     "required": true
     },
     {
-        "question_text": "9. Kako procenjujete efikasnost digitalnih alata koje trenutno koristite?",
+        "question_text": "9. Kako procenjujete efikasnost digitalnih alata koje trenutno koristite? * ",
         "answer_type": "choice",
         "options": [
             "- Veoma efikasni",
@@ -91,7 +91,7 @@
     "required": true
     },
     {
-        "question_text": "10. Da li vaša kompanija koristi ERP sistem? Ako da, koliko ste zadovoljni njegovim performansama? ",
+        "question_text": "10. Da li vaša kompanija koristi ERP sistem? Ako da, koliko ste zadovoljni njegovim performansama? * ",
         "answer_type": "choice",
         "options": [
             "- Da, veoma smo zadovoljni",
@@ -101,7 +101,7 @@
     "required": true
     },
     {
-        "question_text": "11. Kako rukovodstvo vaše kompanije gleda na ulaganje u digitalnu transformaciju? ",
+        "question_text": "11. Kako rukovodstvo vaše kompanije gleda na ulaganje u digitalnu transformaciju? * ",
         "answer_type": "choice",
         "options": [
             "- Kao na prioritet i ključan faktor uspeha",
@@ -111,7 +111,7 @@
     "required": true
     },
     {
-        "question_text": "12. Koliko često vaša kompanija vrši analizu poslovnog procesa s ciljem implementacije digitalnih rešenja? ",
+        "question_text": "12. Koliko često vaša kompanija vrši analizu poslovnog procesa s ciljem implementacije digitalnih rešenja? * ",
         "answer_type": "choice",
         "options": [
             "- Kontinuirano",
@@ -121,7 +121,7 @@
     "required": true
     },
     {
-        "question_text": "13. Da li koristite BI alate kako biste analizirali i vizualizovali podatke? ",
+        "question_text": "13. Da li koristite BI alate kako biste analizirali i vizualizovali podatke? * ",
         "answer_type": "choice",
         "options": [
             "- Da, redovno",
@@ -131,7 +131,7 @@
     "required": true
     },
     {
-        "question_text": "14. Da li vaša kompanija ima strategiju prikupljanja i analize velikih podataka (Big Data)? ",
+        "question_text": "14. Da li vaša kompanija ima strategiju prikupljanja i analize velikih podataka (Big Data)? * ",
         "answer_type": "choice",
         "options": [
             "- Da, imamo razvijenu strategiju i alate",
@@ -141,7 +141,7 @@
     "required": true
     },
     {
-        "question_text": "15. Kako vaša kompanija upravlja klijentima i njihovim iskustvom putem digitalnih kanala? ",
+        "question_text": "15. Kako vaša kompanija upravlja klijentima i njihovim iskustvom putem digitalnih kanala? * ",
         "answer_type": "choice",
         "options": [
             "- Uvođenjem CRM sistema i prilagođenim digitalnim kampanjama",
@@ -151,7 +151,7 @@
     "required": true
     },
     {
-        "question_text": "16. Da li su vaši sistemi i alati dostupni na daljinu zaposlenima? ",
+        "question_text": "16. Da li su vaši sistemi i alati dostupni na daljinu zaposlenima? * ",
         "answer_type": "choice",
         "options": [
             "- Da, imamo potpuno funkcionalno radno okruženje na daljinu",
@@ -161,7 +161,7 @@
     "required": true
     },
     {
-        "question_text": "17. Da li razmišljate o implementaciji veštačke inteligencije u poslovnim procesima? ",
+        "question_text": "17. Da li razmišljate o implementaciji veštačke inteligencije u poslovnim procesima? * ",
         "answer_type": "choice",
         "options": [
             "- Da, aktivno razmatramo i istražujemo mogućnosti",
@@ -171,7 +171,7 @@
     "required": true
     },
     {
-        "question_text": "18. Kako merite ROI (povraćaj investicije) za digitalne alate i tehnologije koje implementirate? ",
+        "question_text": "18. Kako merite ROI (povraćaj investicije) za digitalne alate i tehnologije koje implementirate? * ",
         "answer_type": "choice",
         "options": [
             "- Preciznim metrikama i dugoročnim praćenjem",
@@ -181,7 +181,7 @@
     "required": true
     },
     {
-        "question_text": "19. Da li vaša kompanija ima posebno odelenje ili tim posvećen digitalnoj transformaciji? ",
+        "question_text": "19. Da li vaša kompanija ima posebno odelenje ili tim posvećen digitalnoj transformaciji? * ",
         "answer_type": "choice",
         "options": [
             "- Da",
@@ -191,7 +191,7 @@
     "required": true
     },
     {
-        "question_text": "20. Koji su glavni izazovi s kojima se suočavate prilikom digitalizacije poslovanja? ",
+        "question_text": "20. Koji su glavni izazovi s kojima se suočavate prilikom digitalizacije poslovanja? * ",
         "answer_type": "opis",
         "options": [
             "- "
@@ -199,7 +199,7 @@
     "required": true
     },
     {
-        "question_text": "21. Kako se obučavaju zaposleni za korišćenje novih digitalnih alata? ",
+        "question_text": "21. Kako se obučavaju zaposleni za korišćenje novih digitalnih alata? * ",
         "answer_type": "choice",
         "options": [
             "- Internim treningom i radionicama",
@@ -209,7 +209,7 @@
     "required": true
     },
     {
-        "question_text": "22. Da li vaša kompanija koristi cloud usluge? ",
+        "question_text": "22. Da li vaša kompanija koristi cloud usluge? * ",
         "answer_type": "choice",
         "options": [
             "- Da, u velikoj meri koristimo cloud",
@@ -219,7 +219,7 @@
     "required": true
     },
     {
-        "question_text": "23. Koliko često pristupate održavanju i ažuriranju vaših digitalnih alata? ",
+        "question_text": "23. Koliko često pristupate održavanju i ažuriranju vaših digitalnih alata? * ",
         "answer_type": "choice",
         "options": [
             "- Redovno i proaktivno",
@@ -229,7 +229,7 @@
     "required": true
     },
     {
-        "question_text": "24. Koje digitalne alate planirate implementirati u narednih 12 meseci? ",
+        "question_text": "24. Koje digitalne alate planirate implementirati u narednih 12 meseci? * ",
         "answer_type": "opis",
         "options": [
             "- "
@@ -237,7 +237,7 @@
     "required": true
     },
     {
-        "question_text": "25. Kako ocenjujete potrebu za digitalnom transformacijom u vašoj industriji? ",
+        "question_text": "25. Kako ocenjujete potrebu za digitalnom transformacijom u vašoj industriji? * ",
         "answer_type": "choice",
         "options": [
             "- Veoma visoka i urgentna",

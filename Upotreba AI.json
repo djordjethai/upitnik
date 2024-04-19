@@ -1,6 +1,6 @@
 [
 	{
-        "question_text": "1. Koliko godina je vaša kompanija aktivna na tržištu?",
+        "question_text": "1. Koliko godina je vaša kompanija aktivna na tržištu? * ",
         "answer_type": "choice",
         "options": [
             "- Manje od godinu dana",
@@ -8,29 +8,10 @@
             "- 3-5 godina",
             "- Više od 5 godina"
         ],
-        "required": "true"
+        "required": true
     },
     {
-        "question_text": "2. U kojoj industriji vaša kompanija posluje?",
-        "answer_type": "opis",
-        "options": [
-            "- [Tekstualni odgovor]"
-        ],
-        "required": "true"
-    },
-    {
-        "question_text": "3. Koliko zaposlenih trenutno ima u vašoj kompaniji?",
-        "answer_type": "choice",
-        "options": [
-            "- 1-10",
-            "- 11-50",
-            "- 51-200",
-            "- Više od 200"
-        ],
-        "required": "true"
-    },
-    {
-        "question_text": "4. Koja je glavna misija vaše kompanije?",
+        "question_text": "2. U kojoj industriji vaša kompanija posluje? * ",
         "answer_type": "opis",
         "options": [
             "- [Tekstualni odgovor]"
@@ -38,7 +19,26 @@
         "required": true
     },
     {
-        "question_text": "5. Kako biste ocenili trenutni nivo digitalizacije vaše kompanije?",
+        "question_text": "3. Koliko zaposlenih trenutno ima u vašoj kompaniji? * ",
+        "answer_type": "choice",
+        "options": [
+            "- 1-10",
+            "- 11-50",
+            "- 51-200",
+            "- Više od 200"
+        ],
+        "required": true
+    },
+    {
+        "question_text": "4. Koja je glavna misija vaše kompanije? * ",
+        "answer_type": "opis",
+        "options": [
+            "- [Tekstualni odgovor]"
+        ],
+        "required": true
+    },
+    {
+        "question_text": "5. Kako biste ocenili trenutni nivo digitalizacije vaše kompanije? * ",
         "answer_type": "choice",
         "options": [
             "- Početnik",
@@ -48,7 +48,7 @@
         "required": true
     },
     {
-        "question_text": "6. Da li trenutno koristite neke alate zasnovane na veštačkoj inteligenciji (AI) unutar vaše organizacije?",
+        "question_text": "6. Da li trenutno koristite neke alate zasnovane na veštačkoj inteligenciji (AI) unutar vaše organizacije? * ",
         "answer_type": "choice",
         "options": [
             "- Da",
@@ -58,7 +58,7 @@
     "required": true
     },
     {
-        "question_text": "7. Za koje poslovne funkcije vidite potencijal upotrebe AI? ",
+        "question_text": "7. Za koje poslovne funkcije vidite potencijal upotrebe AI? * ",
         "answer_type": "multichoice",
         "options": [
             "- Prodaja i marketing",
@@ -71,7 +71,7 @@
     "required": true
     },
     {
-        "question_text": "8. Koliko ste upoznati sa prednostima koje AI može doneti vašem poslovanju? ",
+        "question_text": "8. Koliko ste upoznati sa prednostima koje AI može doneti vašem poslovanju? * ",
         "answer_type": "choice",
         "options": [
             "- Veoma upoznati",
@@ -81,7 +81,7 @@
     "required": true
     },
     {
-        "question_text": "9. Da li smatrate da bi implementacija AI alata mogla unaprediti efikasnost vaših poslovnih procesa? ",
+        "question_text": "9. Da li smatrate da bi implementacija AI alata mogla unaprediti efikasnost vaših poslovnih procesa? * ",
         "answer_type": "choice",
         "options": [
             "- Da",
@@ -91,7 +91,7 @@
     "required": true
     },
     {
-        "question_text": "10. Koje su vaše primarne brige vezane za integraciju AI u vašem poslovanju? ",
+        "question_text": "10. Koje su vaše primarne brige vezane za integraciju AI u vašem poslovanju? * ",
         "answer_type": "multichoice",
         "options": [
             "- Troškovi i ROI",
@@ -103,7 +103,7 @@
     "required": true
     },
     {
-        "question_text": "11. Da li biste bili zainteresovani za usluge poslovnog savetovanja kako bi bolje razumeli kako AI može biti primenjen u vašem poslu? ",
+        "question_text": "11. Da li biste bili zainteresovani za usluge poslovnog savetovanja kako bi bolje razumeli kako AI može biti primenjen u vašem poslu? * ",
         "answer_type": "choice",
         "options": [
             "- Da",
@@ -113,7 +113,7 @@
     "required": true
     },
     {
-        "question_text": "12. Koje oblasti unutar vaše kompanije biste želeli prvo da transformišete kroz upotrebu AI? ",
+        "question_text": "12. Koje oblasti unutar vaše kompanije biste želeli prvo da transformišete kroz upotrebu AI? * ",
         "answer_type": "multichoice",
         "options": [
             "- Automatizaciju rutinskih zadataka",
@@ -125,7 +125,7 @@
     "required": true
     },
     {
-        "question_text": "13. Kako ocenjujete nivo tehničke spremnosti vaše kompanije za implementaciju AI? ",
+        "question_text": "13. Kako ocenjujete nivo tehničke spremnosti vaše kompanije za implementaciju AI? * ",
         "answer_type": "choice",
         "options": [
             "- Visok",
@@ -156,7 +156,7 @@
     "required": false
     },
     {
-        "question_text": "16. Da li razmišljate o razvoju personalizovanih AI alata specifičnih za potrebe vaše industrije? ",
+        "question_text": "16. Da li razmišljate o razvoju personalizovanih AI alata specifičnih za potrebe vaše industrije? * ",
         "answer_type": "choice",
         "options": [
             "- Da",
@@ -176,7 +176,7 @@
     "required": false
     },
     {
-        "question_text": "18. Da li trenutno imate tim stručnjaka posvećenih AI projektima ili planirate njihovo angažovanje? ",
+        "question_text": "18. Da li trenutno imate tim stručnjaka posvećenih AI projektima ili planirate njihovo angažovanje? * ",
         "answer_type": "choice",
         "options": [
             "- Da, imamo tim",
@@ -216,7 +216,7 @@
     "required": false
     },
     {
-        "question_text": "22. Na kojim projektima biste trenutno razmotrili upotrebu AI? ",
+        "question_text": "22. Na kojim projektima biste trenutno razmotrili upotrebu AI? * ",
         "answer_type": "opis",
         "options": [
             "- [Otvoreni tekstualni odgovor]"
@@ -224,7 +224,7 @@
     "required": true
     },
     {
-        "question_text": "23. Kako planirate da edukujete svoje zaposlene o AI i njegovim mogućnostima? ",
+        "question_text": "23. Kako planirate da edukujete svoje zaposlene o AI i njegovim mogućnostima? * ",
         "answer_type": "choice",
         "options": [
             "- Internim treninzima",
