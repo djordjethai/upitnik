@@ -16,12 +16,25 @@ from openai import OpenAI
 from pitanja import odgovori
 from smtplib import SMTP
 
+from myfunc.prompts import PromptDatabase
 from myfunc.retrievers import HybridQueryProcessor
 from myfunc.varvars_dicts import work_vars
 
 client=OpenAI()
 avatar_ai="bot.png" 
 pdf_file = "analysis_report.pdf"
+
+
+if "init_prompts" not in st.session_state:
+    st.session_state.init_prompts = 42
+    with PromptDatabase() as db:
+        prompt_map = db.get_prompts_by_names(["gap_ba_expert", "gap_dt_consultant", "gap_service_suggestion", "gap_write_report"], 
+                                             [os.getenv("GAP_BA_EXPERT"), os.getenv("GAP_DT_CONSULTANT"), os.getenv("GAP_SERVICE_SUGGESTION"), os.getenv("GAP_WRITE_REPORT")])
+        st.session_state.gap_ba_expert = prompt_map.get("gap_ba_expert", "You are helpful assistant that always writes in Serbian.")
+        st.session_state.gap_dt_consultant = prompt_map.get("gap_dt_consultant", "You are helpful assistant that always writes in Serbian.")
+        st.session_state.gap_service_suggestion = prompt_map.get("gap_service_suggestion", "You are helpful assistant that always writes in Serbian.")
+        st.session_state.gap_write_report = prompt_map.get("gap_write_report", "You are helpful assistant that always writes in Serbian.")
+
 
 # modifikovano iz myfunc.mojafunkcija (umesto downlaod ide save pdf)
 def sacuvaj_dokument_upitnik(content, file_name):
@@ -194,11 +207,8 @@ def main():
         if result:
             # prva faza citanje odgovora i komentar
             gap_message=[
-                {"role": "system", "content": """[Use only the Serbian language] You are an expert in business data analysis. \
-                 Analyze the document. Think critically and do business analysis of the company. The accent is on GAP analysis, focusing on 
-                 generating sections Current state, Desired state. """},
-
-                {"role": "user", "content": f"Write your GAP analysis report based on this input: {result}"}
+                {"role": "system", "content": st.session_state.gap_ba_expert},
+                {"role": "user", "content": st.session_state.gap_write_report.format(result=result)}
             ]
             full_response = positive_agent(gap_message)
             predlozi = recommended(full_response)
@@ -206,16 +216,8 @@ def main():
             #predlozi = "xx"
             # druga faza preporuke na osnovu portfolia
             recommend_message=[
-                        {"role": "system", "content": """[Use only the Serbian Language] \
-                         You are an experienced digital transformation consultant. \
-                         You are working for company Positive doo, the leader in Digital Transformation services in Serbia.
-                         When making propositions, convince the client in a non-invasive way that hiring Positive is the right choice!!
-                         Always suggest the user to fill out another questionnaire for more detailed analysis."""},
-
-                        {"role": "user", "content": f"""Based on previous GAP analysis: {full_response}, \
-                         make suggestions for business improvement of the descibed business process. \
-                         Write in potential, not in the future tense.
-                         Always suggest solutions in the form of the proposal (offer) based on the text from portfolio of your company Positive doo: {predlozi}!!!"""}
+                        {"role": "system", "content": st.session_state.gap_dt_consultant},
+                        {"role": "user", "content": st.session_state.gap_service_suggestion.format(full_response=full_response, predlozi=predlozi)}
             ]
             recommendation_response = positive_agent(recommend_message)
             #recommendation_response = "xx"  
