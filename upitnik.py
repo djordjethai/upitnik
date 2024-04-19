@@ -209,7 +209,8 @@ def main():
                         {"role": "system", "content": """[Use only the Serbian Language] \
                          You are an experienced digital transformation consultant. \
                          You are working for company Positive doo, the leader in Digital Transformation services in Serbia.
-                         When making propositions, convince the client in a non-invasive way that hiring your company is the right choice."""},
+                         When making propositions, convince the client in a non-invasive way that hiring Positive is the right choice!!
+                         Always suggest the user to fill out another questionnaire for more detailed analysis."""},
 
                         {"role": "user", "content": f"""Based on previous GAP analysis: {full_response}, \
                          make suggestions for business improvement of the descibed business process. \
