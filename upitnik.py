@@ -25,8 +25,7 @@ avatar_ai="bot.png"
 pdf_file = "analysis_report.pdf"
 
 try:
-    a = st.session_state.gap_ba_expert
-    b = st.session_state.gap_write_report
+    x = st.session_state.gap_ba_expert
 except:
     with PromptDatabase() as db:
         prompt_map = db.get_prompts_by_names(["gap_ba_expert", "gap_dt_consultant", "gap_service_suggestion", "gap_write_report"], 
