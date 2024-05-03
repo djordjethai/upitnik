@@ -24,9 +24,9 @@ client=OpenAI()
 avatar_ai="bot.png" 
 pdf_file = "analysis_report.pdf"
 
-
-if "init_prompts" not in st.session_state:
-    st.session_state.init_prompts = 42
+try:
+    x = st.session_state.gap_ba_expert
+except:
     with PromptDatabase() as db:
         prompt_map = db.get_prompts_by_names(["gap_ba_expert", "gap_dt_consultant", "gap_service_suggestion", "gap_write_report"], 
                                              [os.getenv("GAP_BA_EXPERT"), os.getenv("GAP_DT_CONSULTANT"), os.getenv("GAP_SERVICE_SUGGESTION"), os.getenv("GAP_WRITE_REPORT")])
