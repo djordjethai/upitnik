@@ -1,9 +1,33 @@
 [
   {
+    "question_text": "Unesite ime i prezime * ",
+    "answer_type": "opis",
+    "options": [
+      "[Tekstualni odgovor]"
+    ],
+    "required": true
+  },
+  {
+    "question_text": "Koju poziciju zauzimate u organizaciji? * ",
+    "answer_type": "opis",
+    "options": [
+      "[Tekstualni odgovor]"
+    ],
+    "required": true
+  },
+  {
+    "question_text": "Upisite naziv organizacije * ",
+    "answer_type": "opis",
+    "options": [
+      "[Tekstualni odgovor]"
+    ],
+    "required": true
+  },
+  {
     "question_text": "1. Čime se vaša kompanija bavi? * ",
     "answer_type": "opis",
     "options": [
-        "[Tekstualni odgovor]"
+      "[Tekstualni odgovor]"
     ],
     "required": true
   },
@@ -19,9 +43,9 @@
     "question_text": "3. Da li se često susrećete sa upitima koji se tiču detalja operativne prirode?",
     "answer_type": "choice",
     "options": [
-        "Da",
-        "Ne",
-        "Ponekad"
+      "Da",
+      "Ne",
+      "Ponekad"
     ],
     "required": false
   },
@@ -41,10 +65,10 @@
     "question_text": "5. Kako vršite internu komunikaciju unutar kompanije? (odaberite opcije po prioritetu)",
     "answer_type": "multichoice",
     "options": [
-        "Telefonski poziv",
-        "Mail",
-        "Chit-chat aplikacije",
-        "Project Management sistem"
+      "Telefonski poziv",
+      "Mail",
+      "Chit-chat aplikacije",
+      "Project Management sistem"
     ],
     "required": false
   },
@@ -52,10 +76,10 @@
     "question_text": "6. Kako vršite komunikaciju sa klijentima? (odaberite opcije po prioritetu)",
     "answer_type": "multichoice",
     "options": [
-        "Telefonski poziv",
-        "Mail",
-        "Chit-chat aplikacije",
-        "Video sastanci"
+      "Telefonski poziv",
+      "Mail",
+      "Chit-chat aplikacije",
+      "Video sastanci"
     ],
     "required": false
   },
@@ -63,9 +87,9 @@
     "question_text": "7. Koji tipovi upita su najčešći?",
     "answer_type": "multichoice",
     "options": [
-        "Web site",
-        "Webshop",
-        "Društvene mreže"
+      "Web site",
+      "Webshop",
+      "Društvene mreže"
     ],
     "required": false
   },
@@ -84,10 +108,10 @@
     "question_text": "9. Da li imate naloge na društvenim mrežama?",
     "answer_type": "multichoice",
     "options": [
-        "Instagram",
-        "Facebook",
-        "LinkedIn",
-        "Ne"
+      "Instagram",
+      "Facebook",
+      "LinkedIn",
+      "Ne"
     ],
     "required": false
   },
@@ -95,19 +119,19 @@
     "question_text": "10. Ko je zadužen za interakciju na njima?",
     "answer_type": "choice",
     "options": [
-        "Trenutno nedefinisano",
-        "Određen tim",
-        "Određeni pojedinac"
+      "Trenutno nedefinisano",
+      "Određen tim",
+      "Određeni pojedinac"
     ],
-    "required": false      
+    "required": false
   },
   {
     "question_text": "11. Koju vrstu podrške od AI-a očekujete?",
     "answer_type": "multichoice",
     "options": [
-        "Chatbot",
-        "Asistent",
-        "Evidencija"
+      "Chatbot",
+      "Asistent",
+      "Evidencija"
     ],
     "required": false
   },
@@ -209,7 +233,7 @@
     "question_text": "21. Po kojim kriterijumima ćete prepoznati unapređenje?",
     "answer_type": "multichoice",
     "options": [
-      
+
       "Poboljšanje korisničkih usluga",
       "Smanjenje vremena odziva",
       "Podrška prodaji",
@@ -228,7 +252,7 @@
   {
     "question_text": "23. Gde planirate implementaciju AI bota? (možete odabrati više opcija) * ",
     "answer_type": "multichoice",
-    "options": [     
+    "options": [
       "Web site",
       "Interni software"
     ],

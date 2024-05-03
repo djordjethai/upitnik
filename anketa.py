@@ -73,6 +73,17 @@ def posalji_mail(email, gap_analiza, image_path, filename="Anketa.docx"):
     # Assuming your send_email function can handle attachments and is defined as shown previously
     send_email(
         subject="AI upitnik",
+        message="Odgovor se nalaze u prilogu.",
+        from_addr="azure.test@positive.rs",
+        to_addr="djordje.medakovic@positive.rs",
+        smtp_server="smtp.office365.com",
+        smtp_port=587,
+        username="azure.test@positive.rs",
+        password=os.getenv("PRAVNIK_PASS"),
+        attachments=[doc_path]  # Only the document needs to be attached now, as it includes the image
+    )
+    send_email(
+        subject="AI upitnik",
         message="Please find attached AI questionnaire.",
         from_addr="azure.test@positive.rs",
         to_addr=email,
