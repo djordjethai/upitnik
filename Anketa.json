@@ -1,5 +1,13 @@
 [
   {
+    "question_text": "Upisite naziv organizacije * ",
+    "answer_type": "opis",
+    "options": [
+      "[Tekstualni odgovor]"
+    ],
+    "required": true
+  },
+  {
     "question_text": "Unesite ime i prezime * ",
     "answer_type": "opis",
     "options": [
@@ -9,14 +17,6 @@
   },
   {
     "question_text": "Koju poziciju zauzimate u organizaciji? * ",
-    "answer_type": "opis",
-    "options": [
-      "[Tekstualni odgovor]"
-    ],
-    "required": true
-  },
-  {
-    "question_text": "Upisite naziv organizacije * ",
     "answer_type": "opis",
     "options": [
       "[Tekstualni odgovor]"

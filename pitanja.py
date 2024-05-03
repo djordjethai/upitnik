@@ -82,14 +82,15 @@ def odgovori(opcija):
 
     # Email input and submit action
     email = st.text_input("Unesite email * :")
+    ime = st.text_input("Unesite ime * ")
     potvrda = st.button('Pošalji')
-    if potvrda and is_valid_email(email) and check_reqQ(responses, requirement_statuses):
+    if potvrda and is_valid_email(email) and check_reqQ(responses, requirement_statuses) and ime !="":
         with st.expander("Odgovori"):
             st.write(responses)
         # Further processing or saving the responses can be added here
-        return responses, email
+        return responses, email, ime
     else:
         if potvrda:
             st.error("Niste popunili sva obavezna polja. Molim Vas popunite sva polja obeležena sa *")
-        return {}, email
+        return {}, email, ime
         

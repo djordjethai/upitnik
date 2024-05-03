@@ -63,15 +63,15 @@ def sacuvaj_dokument_upitnik(content, file_name):
     # Adding the image to the markdown content
     cwd = os.getcwd()
 
-    # Specify your file name
-    file_name = 'radar_chart.png'
+    # # Specify your file name
+    # file_name = 'radar_chart.png'
 
-    # Join the current working directory with the file name
-    image_path = os.path.join(cwd, file_name)
-    #image_path = os.path.abspath(r'C:\Users\nemanja.perunicic\OneDrive - Positive doo\Desktop\allIn1\upitnik\radar_chart.png')
+    # # Join the current working directory with the file name
+    # image_path = os.path.join(cwd, file_name)
+    # #image_path = os.path.abspath(r'C:\Users\nemanja.perunicic\OneDrive - Positive doo\Desktop\allIn1\upitnik\radar_chart.png')
 
-    image_html = f'<img src="{image_path}" alt="Radar Chart">'
-    html = markdown.markdown(content) + image_html
+    # image_html = f'<img src="{image_path}" alt="Radar Chart">'
+    html = markdown.markdown(content) # + image_html
 
     # Convert HTML to DOCX
     buf = html2docx(html, title="Content")
@@ -90,16 +90,27 @@ def sacuvaj_dokument_upitnik(content, file_name):
  
 
 # Function to send email, adjusted for the new PDF generation
-def posalji_mail(email):
+def posalji_mail(email, ime):
     st.info(f"Sending email to {email}")
     cwd = os.getcwd()
     pdf_path = os.path.join(cwd, pdf_file)
     #pdf_path = pdf_file
     send_email(
-        subject="Gap Analysis Report",
-        message="Please find attached the gap analysis report, which includes the radar chart.",
+        subject="Izveštaj - Gap Analiza",
+        message=f"Poštovani {ime}, izveštaj se nalazi u prilogu ovog maila",
         from_addr="azure.test@positive.rs",
         to_addr=email,
+        smtp_server="smtp.office365.com",
+        smtp_port=587,
+        username="azure.test@positive.rs",
+        password=os.getenv("PRAVNIK_PASS"),
+        attachments=[pdf_path]
+    )
+    send_email(
+        subject="Izveštaj - Gap Analiza",
+        message=f"Poštovani {ime}, izveštaj se nalazi u prilogu ovog maila",
+        from_addr="azure.test@positive.rs",
+        to_addr="prodaja@positive.rs",
         smtp_server="smtp.office365.com",
         smtp_port=587,
         username="azure.test@positive.rs",
@@ -192,7 +203,7 @@ def main():
 
     if opcija == "Sve":
         with st.sidebar:
-            st.caption("Ver. 18.04.24" )
+            st.caption("Ver. 03.05.24" )
             st.subheader("Demo GAP sa grafikonon i slanjem maila ")
             opcija = st.selectbox("Odaberite upitnik", ("",
                                                         "Opsti", 
@@ -202,8 +213,11 @@ def main():
                                                         "IT infrastruktura", 
                                                         "Upotreba AI" ))
             
+
+
+#### Dodati u pdf i pitanja i odgovore !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! #############################
     if opcija !="":  # Check if the result is not None
-        result, email = odgovori(opcija)
+        result, email, ime = odgovori(opcija)
         if result:
             # prva faza citanje odgovora i komentar
             gap_message=[
@@ -222,11 +236,11 @@ def main():
             recommendation_response = positive_agent(recommend_message)
             #recommendation_response = "xx"  
             # treca faza kreiranje dokumenta
-            show_graph()
+            # show_graph()
             gap_analiza = full_response + "\n\n" + recommendation_response + "\n\n"
             sacuvaj_dokument_upitnik(gap_analiza, pdf_file)
             # cetvrta faza slanje maila
-            posalji_mail(email)
+            posalji_mail(email, ime)
             try:    
                 os.remove(pdf_file)
             except:

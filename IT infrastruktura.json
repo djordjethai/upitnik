@@ -1,250 +1,266 @@
 [
-	{
-        "question_text": "1. Koliko godina je vaša kompanija aktivna na tržištu? * ",
-        "answer_type": "choice",
-        "options": [
-            "- Manje od godinu dana",
-            "- 1-3 godine",
-            "- 3-5 godina",
-            "- Više od 5 godina"
-        ],
-        "required": true
-    },
-    {
-        "question_text": "2. U kojoj industriji vaša kompanija posluje? * ",
-        "answer_type": "opis",
-        "options": [
-            "- [Tekstualni odgovor]"
-        ],
-        "required": true
-    },
-    {
-        "question_text": "3. Koliko zaposlenih trenutno ima u vašoj kompaniji? * ",
-        "answer_type": "choice",
-        "options": [
-            "- 1-10",
-            "- 11-50",
-            "- 51-200",
-            "- Više od 200"
-        ],
-        "required": true
-    },
-    {
-        "question_text": "4. Koja je glavna misija vaše kompanije? * ",
-        "answer_type": "opis",
-        "options": [
-            "- [Tekstualni odgovor]"
-        ],
-        "required": true
-    },
-    {
-        "question_text": "5. Kako biste ocenili trenutni nivo digitalizacije vaše kompanije? * ",
-        "answer_type": "choice",
-        "options": [
-            "- Početnik",
-            "- Napredni",
-            "- Ekspert"
-        ],
-        "required": true
-    },
-    {
-        "question_text": "6. Kakav tip IT infrastrukture trenutno koristite? * ",
-        "answer_type": "choice",
-        "options": [
-            "- On-premise rešenja",
-            "- Cloud rešenja",
-            "- Hibridna rešenja"
-        ],
+  {
+    "question_text": "Upisite naziv organizacije * ",
+    "answer_type": "opis",
+    "options": [
+      "[Tekstualni odgovor]"
+    ],
     "required": true
-    },
-    {
-        "question_text": "7. Da li ste zadovoljni brzinom i pouzdanošću vaše trenutne IT infrastrukture? ",
-        "answer_type": "choice",
-        "options": [
-            "- Veoma zadovoljni",
-            "- Uglavnom zadovoljni",
-            "- Nezadovoljni"
-        ],
+  },
+  {
+    "question_text": "Koju poziciju zauzimate u organizaciji? * ",
+    "answer_type": "opis",
+    "options": [
+      "[Tekstualni odgovor]"
+    ],
+    "required": true
+  },
+  {
+    "question_text": "1. Koliko godina je vaša kompanija aktivna na tržištu? * ",
+    "answer_type": "choice",
+    "options": [
+      "- Manje od godinu dana",
+      "- 1-3 godine",
+      "- 3-5 godina",
+      "- Više od 5 godina"
+    ],
+    "required": true
+  },
+  {
+    "question_text": "2. U kojoj industriji vaša kompanija posluje? * ",
+    "answer_type": "opis",
+    "options": [
+      "- [Tekstualni odgovor]"
+    ],
+    "required": true
+  },
+  {
+    "question_text": "3. Koliko zaposlenih trenutno ima u vašoj kompaniji? * ",
+    "answer_type": "choice",
+    "options": [
+      "- 1-10",
+      "- 11-50",
+      "- 51-200",
+      "- Više od 200"
+    ],
+    "required": true
+  },
+  {
+    "question_text": "4. Koja je glavna misija vaše kompanije? * ",
+    "answer_type": "opis",
+    "options": [
+      "- [Tekstualni odgovor]"
+    ],
+    "required": true
+  },
+  {
+    "question_text": "5. Kako biste ocenili trenutni nivo digitalizacije vaše kompanije? * ",
+    "answer_type": "choice",
+    "options": [
+      "- Početnik",
+      "- Napredni",
+      "- Ekspert"
+    ],
+    "required": true
+  },
+  {
+    "question_text": "6. Kakav tip IT infrastrukture trenutno koristite? * ",
+    "answer_type": "choice",
+    "options": [
+      "- On-premise rešenja",
+      "- Cloud rešenja",
+      "- Hibridna rešenja"
+    ],
+    "required": true
+  },
+  {
+    "question_text": "7. Da li ste zadovoljni brzinom i pouzdanošću vaše trenutne IT infrastrukture? ",
+    "answer_type": "choice",
+    "options": [
+      "- Veoma zadovoljni",
+      "- Uglavnom zadovoljni",
+      "- Nezadovoljni"
+    ],
     "required": false
-    },
-    {
-        "question_text": "8. Koliko često nadograđujete ili ažurirate vašu IT infrastrukturu? * ",
-        "answer_type": "choice",
-        "options": [
-            "- Kontinuirano ili na godišnjem nivou",
-            "- Na svake 2-3 godine",
-            "- Retko ili nikada"
-        ],
+  },
+  {
+    "question_text": "8. Koliko često nadograđujete ili ažurirate vašu IT infrastrukturu? * ",
+    "answer_type": "choice",
+    "options": [
+      "- Kontinuirano ili na godišnjem nivou",
+      "- Na svake 2-3 godine",
+      "- Retko ili nikada"
+    ],
     "required": true
-    },
-    {
-        "question_text": "9. Da li vaša IT infrastruktura podržava trenutne i buduće potrebe poslovanja? * ",
-        "answer_type": "choice",
-        "options": [
-            "- Da, u potpunosti",
-            "- Delimično, postoje izazovi",
-            "- Ne, zaostajemo iza potreba"
-        ],
+  },
+  {
+    "question_text": "9. Da li vaša IT infrastruktura podržava trenutne i buduće potrebe poslovanja? * ",
+    "answer_type": "choice",
+    "options": [
+      "- Da, u potpunosti",
+      "- Delimično, postoje izazovi",
+      "- Ne, zaostajemo iza potreba"
+    ],
     "required": true
-    },
-    {
-        "question_text": "10. Kako upravljate bezbednošću svoje IT infrastrukture? * ",
-        "answer_type": "choice",
-        "options": [
-            "- Upotreba naprednih bezbednosnih mera i alata",
-            "- Osnovne bezbednosne mere",
-            "- Imamo značajne nedostatke u bezbednosti"
-        ],
+  },
+  {
+    "question_text": "10. Kako upravljate bezbednošću svoje IT infrastrukture? * ",
+    "answer_type": "choice",
+    "options": [
+      "- Upotreba naprednih bezbednosnih mera i alata",
+      "- Osnovne bezbednosne mere",
+      "- Imamo značajne nedostatke u bezbednosti"
+    ],
     "required": true
-    },
-    {
-        "question_text": "11. Koliko često vršite backup vaših ključnih podataka i sistema? * ",
-        "answer_type": "choice",
-        "options": [
-            "- Dnevno",
-            "- Nedeljno",
-            "- Mesečno ili ređe"
-        ],
+  },
+  {
+    "question_text": "11. Koliko često vršite backup vaših ključnih podataka i sistema? * ",
+    "answer_type": "choice",
+    "options": [
+      "- Dnevno",
+      "- Nedeljno",
+      "- Mesečno ili ređe"
+    ],
     "required": true
-    },
-    {
-        "question_text": "12. Da li imate plan oporavka u slučaju katastrofe (Disaster Recovery Plan) za vašu IT infrastrukturu? * ",
-        "answer_type": "choice",
-        "options": [
-            "- Da, i redovno ga testiramo",
-            "- Da, ali ga retko ili nikad ne testiramo",
-            "- Ne"
-        ],
+  },
+  {
+    "question_text": "12. Da li imate plan oporavka u slučaju katastrofe (Disaster Recovery Plan) za vašu IT infrastrukturu? * ",
+    "answer_type": "choice",
+    "options": [
+      "- Da, i redovno ga testiramo",
+      "- Da, ali ga retko ili nikad ne testiramo",
+      "- Ne"
+    ],
     "required": true
-    },
-    {
-        "question_text": "13. Da li koristite usluge eksternog dobavljača za upravljanje nekim ili svim aspektima vaše IT infrastrukture? * ",
-        "answer_type": "choice",
-        "options": [
-            "- Da, za većinu ili sve usluge",
-            "- Samo za specifične usluge",
-            "- Ne, sve usluge upravljamo internim timom"
-        ],
+  },
+  {
+    "question_text": "13. Da li koristite usluge eksternog dobavljača za upravljanje nekim ili svim aspektima vaše IT infrastrukture? * ",
+    "answer_type": "choice",
+    "options": [
+      "- Da, za većinu ili sve usluge",
+      "- Samo za specifične usluge",
+      "- Ne, sve usluge upravljamo internim timom"
+    ],
     "required": true
-    },
-    {
-        "question_text": "14. Da li vaša kompanija ima poseban budžet za održavanje i unapređenje IT infrastrukture? * ",
-        "answer_type": "choice",
-        "options": [
-            "- Da",
-            "- Ne",
-            "- Ne znam"
-        ],
+  },
+  {
+    "question_text": "14. Da li vaša kompanija ima poseban budžet za održavanje i unapređenje IT infrastrukture? * ",
+    "answer_type": "choice",
+    "options": [
+      "- Da",
+      "- Ne",
+      "- Ne znam"
+    ],
     "required": true
-    },
-    {
-        "question_text": "15. Kako ocenjujete zrelost vaše kompanije u pogledu IT infrastrukture? ",
-        "answer_type": "choice",
-        "options": [
-            "- Veoma zrelo, prednjačimo u industriji",
-            "- Zrelo, ali sa prostorom za poboljšanje",
-            "- Nedovoljno zrelo, zaostajemo"
-        ],
+  },
+  {
+    "question_text": "15. Kako ocenjujete zrelost vaše kompanije u pogledu IT infrastrukture? ",
+    "answer_type": "choice",
+    "options": [
+      "- Veoma zrelo, prednjačimo u industriji",
+      "- Zrelo, ali sa prostorom za poboljšanje",
+      "- Nedovoljno zrelo, zaostajemo"
+    ],
     "required": false
-    },
-    {
-        "question_text": "16. Da li vaša IT infrastruktura podržava skalabilnost i fleksibilnost potrebnu za brži rast vaše kompanije? * ",
-        "answer_type": "choice",
-        "options": [
-            "- Da, u potpunosti",
-            "- Delimično, postoje ograničenja",
-            "- Ne"
-        ],
+  },
+  {
+    "question_text": "16. Da li vaša IT infrastruktura podržava skalabilnost i fleksibilnost potrebnu za brži rast vaše kompanije? * ",
+    "answer_type": "choice",
+    "options": [
+      "- Da, u potpunosti",
+      "- Delimično, postoje ograničenja",
+      "- Ne"
+    ],
     "required": true
-    },
-    {
-        "question_text": "17. Da li ste nedavno doživeli bilo kakve značajne prekide usluga povezane sa IT infrastrukturom? * ",
-        "answer_type": "choice",
-        "options": [
-            "- Da",
-            "- Ne",
-            "- Ne znam"
-        ],
+  },
+  {
+    "question_text": "17. Da li ste nedavno doživeli bilo kakve značajne prekide usluga povezane sa IT infrastrukturom? * ",
+    "answer_type": "choice",
+    "options": [
+      "- Da",
+      "- Ne",
+      "- Ne znam"
+    ],
     "required": true
-    },
-    {
-        "question_text": "18. Da li planirate migraciju vaše IT infrastrukture ili ključnih komponenti u cloud u bliskoj budućnosti? * ",
-        "answer_type": "choice",
-        "options": [
-            "- Da",
-            "- Možda, razmatramo opcije",
-            "- Ne"
-        ],
+  },
+  {
+    "question_text": "18. Da li planirate migraciju vaše IT infrastrukture ili ključnih komponenti u cloud u bliskoj budućnosti? * ",
+    "answer_type": "choice",
+    "options": [
+      "- Da",
+      "- Možda, razmatramo opcije",
+      "- Ne"
+    ],
     "required": true
-    },
-    {
-        "question_text": "19. Koje alate koristite za monitoring i upravljanje performansama vaše IT infrastrukture? * ",
-        "answer_type": "choice",
-        "options": [
-            "- Napredne alate za upravljanje performansama",
-            "- Osnovne alate za monitoring",
-            "- Ne koristimo alate za monitoring"
-        ],
+  },
+  {
+    "question_text": "19. Koje alate koristite za monitoring i upravljanje performansama vaše IT infrastrukture? * ",
+    "answer_type": "choice",
+    "options": [
+      "- Napredne alate za upravljanje performansama",
+      "- Osnovne alate za monitoring",
+      "- Ne koristimo alate za monitoring"
+    ],
     "required": true
-    },
-    {
-        "question_text": "20. Da li vaša kompanija ima definisane standarde za hardver i softver koji se koristi unutar organizacije? * ",
-        "answer_type": "choice",
-        "options": [
-            "- Da",
-            "- Delimično",
-            "- Ne"
-        ],
+  },
+  {
+    "question_text": "20. Da li vaša kompanija ima definisane standarde za hardver i softver koji se koristi unutar organizacije? * ",
+    "answer_type": "choice",
+    "options": [
+      "- Da",
+      "- Delimično",
+      "- Ne"
+    ],
     "required": true
-    },
-    {
-        "question_text": "21. Kako adresirate pitanje redundancije sistema i podataka unutar vaše IT infrastrukture? * ",
-        "answer_type": "choice",
-        "options": [
-            "- Imamo visok stepen redundancije",
-            "- Imamo osnovni nivo redundancije",
-            "- Ne obraćamo pažnju na redundanciju"
-        ],
+  },
+  {
+    "question_text": "21. Kako adresirate pitanje redundancije sistema i podataka unutar vaše IT infrastrukture? * ",
+    "answer_type": "choice",
+    "options": [
+      "- Imamo visok stepen redundancije",
+      "- Imamo osnovni nivo redundancije",
+      "- Ne obraćamo pažnju na redundanciju"
+    ],
     "required": true
-    },
-    {
-        "question_text": "22. Da li vaša kompanija redovno sprovodi revizije IT infrastrukture da bi se osigurala usklađenost sa internim i eksternim standardima? * ",
-        "answer_type": "choice",
-        "options": [
-            "- Da",
-            "- Povremeno",
-            "- Ne"
-        ],
+  },
+  {
+    "question_text": "22. Da li vaša kompanija redovno sprovodi revizije IT infrastrukture da bi se osigurala usklađenost sa internim i eksternim standardima? * ",
+    "answer_type": "choice",
+    "options": [
+      "- Da",
+      "- Povremeno",
+      "- Ne"
+    ],
     "required": true
-    },
-    {
-        "question_text": "23. Kakav je vaš pristup unapređenju energetske i ekološke efikasnosti IT infrastrukture? ",
-        "answer_type": "choice",
-        "options": [
-            "- Aktivno radimo na unapređenju efikasnosti i održivosti",
-            "- Imamo u planu inicijative za unapređenje",
-            "- Ne razmatramo energetsku i ekološku efikasnost"
-        ],
+  },
+  {
+    "question_text": "23. Kakav je vaš pristup unapređenju energetske i ekološke efikasnosti IT infrastrukture? ",
+    "answer_type": "choice",
+    "options": [
+      "- Aktivno radimo na unapređenju efikasnosti i održivosti",
+      "- Imamo u planu inicijative za unapređenje",
+      "- Ne razmatramo energetsku i ekološku efikasnost"
+    ],
     "required": false
-    },
-    {
-        "question_text": "24. Da li uključujete IT infrastrukturne inicijative u vaše opšte korporativne strategije održivog razvoja? * ",
-        "answer_type": "choice",
-        "options": [
-            "- Da",
-            "- Planiramo u budućnosti",
-            "- Ne"
-        ],
+  },
+  {
+    "question_text": "24. Da li uključujete IT infrastrukturne inicijative u vaše opšte korporativne strategije održivog razvoja? * ",
+    "answer_type": "choice",
+    "options": [
+      "- Da",
+      "- Planiramo u budućnosti",
+      "- Ne"
+    ],
     "required": true
-    },
-    {
-        "question_text": "25. Kako procenjujete vašu sposobnost da ostanete u toku sa najnovijim tehnološkim trendovima i inovacijama unutar IT infrastrukture? * ",
-        "answer_type": "choice",
-        "options": [
-            "- Odlično, stalno smo u toku",
-            "- Dobro, ali postoji prostor za poboljšanje",
-            "- Slabo, zaostajemo za novim tehnologijama"
-        ],
+  },
+  {
+    "question_text": "25. Kako procenjujete vašu sposobnost da ostanete u toku sa najnovijim tehnološkim trendovima i inovacijama unutar IT infrastrukture? * ",
+    "answer_type": "choice",
+    "options": [
+      "- Odlično, stalno smo u toku",
+      "- Dobro, ali postoji prostor za poboljšanje",
+      "- Slabo, zaostajemo za novim tehnologijama"
+    ],
     "required": true
-    }
+  }
 ]
