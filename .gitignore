@@ -14,8 +14,9 @@
 *.txt
 *.docx
 *.pdf
-! template.docx
-! requirements.txt
+!template.docx
+!requirements.txt
+!packages.txt
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
