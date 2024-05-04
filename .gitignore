@@ -11,9 +11,11 @@
 *.sln.docstates
 
 # common files
+*.txt
 *.docx
 *.pdf
-
+! template.docx
+! requirements.txt
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 

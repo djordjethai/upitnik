@@ -64,7 +64,70 @@ def create_docx(content, image_path=None, filename="Anketa.docx"):
     doc.save(filename)
     return filename
 
+def modify_docx(content, image_path=None, filename="Anketa.docx", template_path=None):
+    if template_path:
+        doc = Document(template_path)  # Open the template file
+    else:
+        doc = Document()  # Create a new document if no template is provided
 
+    # Define or use existing custom styles from the template
+    styles = doc.styles
+    if 'Heading 1' not in styles:
+        heading1 = styles.add_style('Heading 1', 1)
+        heading1.font.size = Pt(24)
+
+    if 'Heading 2' not in styles:
+        heading2 = styles.add_style('Heading 2', 1)
+        heading2.font.size = Pt(20)
+
+    # Parse Markdown and apply styles
+    lines = content.split('\n')
+    for line in lines:
+        if line.startswith('### '):
+            p = doc.add_paragraph(line[4:], style='Heading 1')
+        elif line.startswith('#### '):
+            p = doc.add_paragraph(line[5:], style='Heading 2')
+        elif line.startswith('- '):
+            p = doc.add_paragraph(line[2:], style='List Bullet')
+        elif '**' in line:
+            # Handle bold within line
+            p = doc.add_paragraph()
+            parts = line.split('**')
+            bold = False
+            for part in parts:
+                run = p.add_run(part)
+                if bold:
+                    run.bold = True
+                bold = not bold
+        else:
+            p = doc.add_paragraph(line)
+
+    # Add image if provided
+    if image_path:
+        doc.add_picture(image_path, width=Pt(300))  # Width is just an example
+
+    # Save the document with a new filename to avoid overwriting the template
+    doc.save(filename)
+    return filename
+def insert_paragraph_after_heading(doc, heading_text, new_paragraph_text):
+    paragraphs = list(doc.paragraphs)
+    for i, paragraph in enumerate(paragraphs):
+        if paragraph.text == heading_text:
+            # Add a new paragraph after the found heading
+            if i + 1 < len(paragraphs):
+                # Insert a new paragraph after the current one if not at the end
+                new_paragraph = doc.add_paragraph(new_paragraph_text, style='Body Text')
+                p_element = new_paragraph._element
+                p_element.addnext(paragraphs[i+1]._element)
+            else:
+                # Just add at the end if it is the last paragraph
+                doc.add_paragraph(new_paragraph_text, style='Body Text')
+            break
+
+# Example usage:
+doc = Document('template.docx')  # Open the template that already has some content
+insert_paragraph_after_heading(doc, 'Existing Heading', 'This is a new paragraph added after a specific heading.')
+doc.save('modified_document.docx')
 # salje mejl
 def posalji_mail(email, gap_analiza, image_path, filename="Anketa.docx"):
     st.info(f"Šaljem email na adresu {email}")
