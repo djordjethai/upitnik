@@ -9,6 +9,7 @@ from email.mime.text import MIMEText
 from openai import OpenAI
 from pitanja import odgovori
 from smtplib import SMTP
+from datetime import datetime
 
 from myfunc.prompts import PromptDatabase
 from myfunc.retrievers import HybridQueryProcessor
@@ -57,6 +58,9 @@ def sacuvaj_dokument_upitnik(content, file_name, template_path="template.docx", 
         doc = Document() 
     
     # Parse Markdown and apply styles
+    datum =  datetime.today().date()  
+    formatted_date = datum.strftime("%d.%m.%Y")
+
     lines = content.split('\n')
     for line in lines:
         if line.startswith('# '):
@@ -69,7 +73,8 @@ def sacuvaj_dokument_upitnik(content, file_name, template_path="template.docx", 
             add_markdown_paragraph(doc, line[5:], style='Heading 4')
         else:
             add_markdown_paragraph(doc, line)
-            
+    doc.add_paragraph(" ")    
+    doc.add_paragraph(f"Datum {formatted_date}")        
     doc.add_page_break()
     doc.add_paragraph(f"Anketa \n\n", style='Heading 2')
     lines = anketa.split('\n')
