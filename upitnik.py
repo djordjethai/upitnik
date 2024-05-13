@@ -91,22 +91,22 @@ def posalji_mail(email, ime, file_name):
     send_email(
         subject="Izveštaj - Gap Analiza",
         message=f"Poštovani {ime}, izveštaj se nalazi u prilogu ovog maila",
-        from_addr="prodaja@positive.rs",
+        from_addr="Aiupitnik@positive.rs",
         to_addr=email,
         smtp_server="smtp.office365.com",
         smtp_port=587,
-        username="prodaja@positive.rs",
+        username="Aiupitnik@positive.rs",
         password=os.getenv("PRAVNIK_PASS"),
         attachments=[file_path]
     )
     send_email(
         subject="Izveštaj - Gap Analiza",
         message=f"Poštovani {ime}, izveštaj se nalazi u prilogu ovog maila",
-        from_addr="prodaja@positive.rs",
+        from_addr="Aiupitnik@positive.rs",
         to_addr="prodaja@positive.rs",
         smtp_server="smtp.office365.com",
         smtp_port=587,
-        username="prodaja@positive.rs",
+        username="Aiupitnik@positive.rs",
         password=os.getenv("PRAVNIK_PASS"),
         attachments=[file_path]
     )
