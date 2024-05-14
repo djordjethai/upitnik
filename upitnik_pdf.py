@@ -1,5 +1,11 @@
-﻿import os
+﻿import matplotlib.pyplot as plt
+import numpy as np
+import os
 import streamlit as st
+import markdown
+from html2docx import html2docx
+import io
+import pdfkit
 from docx import Document
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from email import encoders
@@ -9,7 +15,6 @@ from email.mime.text import MIMEText
 from openai import OpenAI
 from pitanja import odgovori
 from smtplib import SMTP
-from datetime import datetime
 
 from myfunc.prompts import PromptDatabase
 from myfunc.retrievers import HybridQueryProcessor
@@ -17,7 +22,8 @@ from myfunc.varvars_dicts import work_vars
 
 client=OpenAI()
 avatar_ai="bot.png" 
-anketa= ""
+pdf_file = "analysis_report.pdf"
+
 try:
     x = st.session_state.gap_ba_expert
 except:
@@ -29,89 +35,90 @@ except:
         st.session_state.gap_service_suggestion = prompt_map.get("gap_service_suggestion", "You are helpful assistant that always writes in Serbian.")
         st.session_state.gap_write_report = prompt_map.get("gap_write_report", "You are helpful assistant that always writes in Serbian.")
 
-def format_json_to_text(data):
-    output = []
+
+# modifikovano iz myfunc.mojafunkcija (umesto downlaod ide save pdf)
+def sacuvaj_dokument_upitnik(content, file_name):
+    """
+    Saves a markdown content as a text, DOCX, and PDF file, providing options to download each format.
+    
+    Args:
+    content (str): The markdown content to be saved.
+    file_name (str): The base name for the output files.
+    image_path (str): Path to the image file to include in the document.
+
+    This function converts the markdown content into HTML, then into a DOCX document
+    and a PDF file. It justifies the paragraphs in the DOCX document. The function 
+    also provides Streamlit download buttons for each file format: text, DOCX, and PDF.
+    The function assumes an environment where Streamlit, markdown, html2docx, and pdfkit
+    libraries are available, and uses UTF-8 encoding for the text file.
+    """
+    st.info("Čuva dokument")
+    options = {
+        "enable-local-file-access": "",
+        "encoding": "UTF-8",
+        "no-outline": None,
+        "quiet": "",
+    }
+
+    # Adding the image to the markdown content
+    cwd = os.getcwd()
+
+    # # Specify your file name
+    # file_name = 'radar_chart.png'
+
+    # # Join the current working directory with the file name
+    # image_path = os.path.join(cwd, file_name)
+    # #image_path = os.path.abspath(r'C:\Users\nemanja.perunicic\OneDrive - Positive doo\Desktop\allIn1\upitnik\radar_chart.png')
+
+    # image_html = f'<img src="{image_path}" alt="Radar Chart">'
+    html = markdown.markdown(content) # + image_html
+
+    # Convert HTML to DOCX
+    buf = html2docx(html, title="Content")
+    doc = Document(io.BytesIO(buf.getvalue()))
+    for paragraph in doc.paragraphs:
+        paragraph.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
+    
+    doc_io = io.BytesIO()
+    doc.save(doc_io)
+    doc_io.seek(0)
+    pdf_file_name = os.path.join(cwd, "analysis_report.pdf")  # Use an absolute path
+    # Convert HTML to PDF with the image embedded
+    pdfkit.from_string(html, f"{pdf_file_name}", options=options)
+    if not os.path.exists(file_name):
+        raise Exception(f"Failed to create PDF file at {pdf_file_name}")
  
-    for key, value in data.items():
-        if isinstance(value, list):  
-            value = ", ".join(value)
-        output.append(f"{key} '\n\n' {value}")
-      
-    return "\n\n".join(output)
 
-
-def add_markdown_paragraph(doc, text, style=None):
-    p = doc.add_paragraph(style=style)
-    bold = False
-    parts = text.split('**')
-    for part in parts:
-        run = p.add_run(part)
-        if bold:
-            run.bold = True
-        bold = not bold
-    p.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
-        
-def sacuvaj_dokument_upitnik(content, file_name, template_path="template.docx", anketa=anketa):
-    if template_path:
-        doc = Document(template_path) 
-    else:
-        doc = Document() 
-    
-    # Parse Markdown and apply styles
-    datum =  datetime.today().date()  
-    formatted_date = datum.strftime("%d.%m.%Y")
-
-    lines = content.split('\n')
-    for line in lines:
-        if line.startswith('# '):
-            add_markdown_paragraph(doc, line[2:], style='Heading 1')
-        elif line.startswith('## '):
-            add_markdown_paragraph(doc, line[3:], style='Heading 2')
-        elif line.startswith('### '):
-            add_markdown_paragraph(doc, line[4:], style='Heading 3')    
-        elif line.startswith('#### '):
-            add_markdown_paragraph(doc, line[5:], style='Heading 4')
-        else:
-            add_markdown_paragraph(doc, line)
-    doc.add_paragraph(" ")    
-    doc.add_paragraph(f"Datum {formatted_date}")        
-    doc.add_page_break()
-    doc.add_paragraph(f"Anketa \n\n", style='Heading 2')
-    lines = anketa.split('\n')
-    for line in lines:
-        doc.add_paragraph(line)
-    doc.save(file_name)
-    
-# Function to send email
-def posalji_mail(email, ime, file_name):
+# Function to send email, adjusted for the new PDF generation
+def posalji_mail(email, ime):
     st.info(f"Sending email to {email}")
     cwd = os.getcwd()
-    file_path = os.path.join(cwd, file_name)
-
+    pdf_path = os.path.join(cwd, pdf_file)
+    #pdf_path = pdf_file
     send_email(
         subject="Izveštaj - Gap Analiza",
         message=f"Poštovani {ime}, izveštaj se nalazi u prilogu ovog maila",
-        from_addr="Aiupitnik@positive.rs",
+        from_addr="azure.test@positive.rs",
         to_addr=email,
         smtp_server="smtp.office365.com",
         smtp_port=587,
-        username="Aiupitnik@positive.rs",
+        username="azure.test@positive.rs",
         password=os.getenv("PRAVNIK_PASS"),
-        attachments=[file_path]
+        attachments=[pdf_path]
     )
     send_email(
         subject="Izveštaj - Gap Analiza",
         message=f"Poštovani {ime}, izveštaj se nalazi u prilogu ovog maila",
-        from_addr="Aiupitnik@positive.rs",
+        from_addr="azure.test@positive.rs",
         to_addr="prodaja@positive.rs",
         smtp_server="smtp.office365.com",
         smtp_port=587,
-        username="Aiupitnik@positive.rs",
+        username="azure.test@positive.rs",
         password=os.getenv("PRAVNIK_PASS"),
-        attachments=[file_path]
+        attachments=[pdf_path]
     )
     st.info(f"Email sent to {email}")
-    os.remove(file_path)  # Optionally remove the file after sending
+    os.remove(pdf_path)  # Optionally remove the file after sending
 
 
 # Adjusted mail sending function to attach PDF
@@ -153,6 +160,36 @@ def positive_agent(messages):
         message_placeholder.markdown(full_response)
         
     return full_response
+
+
+# privremeni grafikon
+def create_radar_chart(data, labels, num_vars):
+    angles = np.linspace(0, 2 * np.pi, num_vars, endpoint=False).tolist()
+    data += data[:1]
+    angles += angles[:1]
+
+    fig, ax = plt.subplots(figsize=(6, 6), subplot_kw=dict(polar=True))
+    ax.fill(angles, data, color='red', alpha=0.25)
+    ax.plot(angles, data, color='red', linewidth=2)  # Draw the outline
+    ax.set_yticklabels([])
+    ax.set_xticks(angles[:-1])
+    ax.set_xticklabels(labels)
+    return fig
+
+
+# cuva grafikon
+def show_graph():
+    st.title('Polar Chart Example')
+    labels = ['Poslovna zrelostt', 'Digitalna zrelost', 'Upotreba AI', 'Sajber bezbednost', 'IT infrastruktura']
+    data = [4, 3, 4, 2, 5]
+    num_vars = len(data)
+    # Plotting
+    radar_fig = create_radar_chart(data, labels, num_vars)
+    radar_fig.savefig('radar_chart.png', bbox_inches='tight')
+    # Display in Streamlit
+    st.pyplot(radar_fig)
+    return 'radar_chart.png'
+
  
 # RAG pretrazuje index za preporuke    
 def recommended(full_response):
@@ -166,8 +203,8 @@ def main():
 
     if opcija == "Sve":
         with st.sidebar:
-            st.caption("Ver. 04.05.24" )
-            st.subheader("Demo GAP Word i slanjem maila ")
+            st.caption("Ver. 03.05.24" )
+            st.subheader("Demo GAP sa grafikonon i slanjem maila ")
             opcija = st.selectbox("Odaberite upitnik", ("",
                                                         "Opsti", 
                                                         "Poslovna zrelost", 
@@ -175,12 +212,12 @@ def main():
                                                         "Sajber bezbednost", 
                                                         "IT infrastruktura", 
                                                         "Upotreba AI" ))
+            
 
+
+#### Dodati u pdf i pitanja i odgovore !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! #############################
     if opcija !="":  # Check if the result is not None
         result, email, ime = odgovori(opcija)
-        file_name = f"{opcija}.docx"
-        anketa = format_json_to_text(result).replace('*', '').replace("'", '')
-
         if result:
             # prva faza citanje odgovora i komentar
             gap_message=[
@@ -188,7 +225,7 @@ def main():
                 {"role": "user", "content": st.session_state.gap_write_report.format(result=result)}
             ]
             full_response = positive_agent(gap_message)
-            predlozi, x, y = recommended(full_response)
+            predlozi = recommended(full_response)
             #full_response = "xx"
             #predlozi = "xx"
             # druga faza preporuke na osnovu portfolia
@@ -197,13 +234,15 @@ def main():
                         {"role": "user", "content": st.session_state.gap_service_suggestion.format(full_response=full_response, predlozi=predlozi)}
             ]
             recommendation_response = positive_agent(recommend_message)
-            
-            gap_analiza = full_response + "\n\n" + recommendation_response
-            sacuvaj_dokument_upitnik(gap_analiza, file_name, anketa=anketa)
+            #recommendation_response = "xx"  
+            # treca faza kreiranje dokumenta
+            # show_graph()
+            gap_analiza = full_response + "\n\n" + recommendation_response + "\n\n"
+            sacuvaj_dokument_upitnik(gap_analiza, pdf_file)
             # cetvrta faza slanje maila
-            posalji_mail(email, ime, file_name)
+            posalji_mail(email, ime)
             try:    
-                os.remove(file_name)
+                os.remove(pdf_file)
             except:
                 pass
                 
