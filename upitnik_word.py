@@ -188,7 +188,7 @@ def main():
                 {"role": "user", "content": st.session_state.gap_write_report.format(result=result)}
             ]
             full_response = positive_agent(gap_message)
-            predlozi = recommended(full_response)
+            predlozi, x, y = recommended(full_response)
             
             # druga faza preporuke na osnovu portfolia
             recommend_message=[
