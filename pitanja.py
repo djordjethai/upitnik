@@ -57,12 +57,10 @@ def odgovori(opcija):
         if answer_type == 'choice':
             st.write(question_text)
             responses[question_text] = st.radio(f"q{index}", options, index=None, label_visibility="collapsed")
-            if responses[question_text] == "Drugo":
-                responses[question_text] = st.text_input(f"Upišite odgovor na prethodno pitanje", key=f"odgovor {index}", placeholder="Upišite odgovor ovde")
+            if responses[question_text]:
+                if "Drugo" in responses[question_text] or "Ostalo" in responses[question_text]:
+                    responses[question_text] = st.text_input(f"Upišite odgovor na prethodno pitanje", key=f"odgovor {index}", placeholder="Upišite odgovor ovde")
         elif answer_type == 'multichoice':
-            
-            #responses[question_text] = st.multiselect(question_text, options[:-1], placeholder="Možete odabrati više opcija i upisati nove ")
-            #########
             current_answers = []
             st.write(question_text)  # Optional, for displaying the question
             for option in options:
@@ -70,12 +68,13 @@ def odgovori(opcija):
                 if st.checkbox(option, key=f"{question_text}_{option}_{index}"):
                     # If the checkbox is checked, append the option to the current answers list
                     current_answers.append(option)
-    
                 # Store the collected answers in the responses dictionary
                 responses[question_text] = current_answers
+    
+            if any("Drugo" in answer for answer in current_answers) or any("Ostalo" in answer for answer in current_answers):
+                additional_answer = st.text_input(f"Opciono možete navesti dodatni odgovor na prethodno pitanje", key=f"dodatni odgovor {index}", placeholder="Upišite odgovor ovde")
+                responses[question_text].append(additional_answer)    
             
-            #########
-            responses[question_text].append(st.text_input(f"Opciono možete navesti dodatni odgovor na prethodno pitanje", key=f"dodatni odgovor {index}", placeholder="Upišite odgovor ovde"))
         elif answer_type == 'opis':
             st.write(question_text)
             responses[question_text] = st.text_area(f"q{index}", placeholder="Upišite odgovor ovde", key=f"{index}_text_area", label_visibility="collapsed")

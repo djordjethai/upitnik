@@ -82,7 +82,7 @@
       "- Ljudski resursi",
       "- Finansije i računovodstvo",
       "- Lanac snabdevanja i logistika",
-      "- Ostalo"
+      "Ostalo"
     ],
     "required": true
   },
@@ -114,7 +114,7 @@
       "- Sigurnost podataka",
       "- Nedostatak stručnjaka za AI",
       "- Otpor zaposlenih prema promenama",
-      "- Ostalo"
+      "Ostalo"
     ],
     "required": true
   },
@@ -136,7 +136,7 @@
       "- Analitiku i obradu podataka",
       "- Unapređenje korisničkih iskustava",
       "- Procene rizika i donošenje odluka",
-      "- Ostalo"
+      "Ostalo"
     ],
     "required": true
   },
@@ -167,7 +167,7 @@
       "- Obrada prirodnog jezika (NLP)",
       "- Prediktivna analitika",
       "- Robotska automatizacija procesa (RPA)",
-      "- Ostalo [Molimo navedite]"
+      "Ostalo"
     ],
     "required": false
   },

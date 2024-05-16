@@ -60,7 +60,7 @@
       "- Početnik",
       "- Napredni",
       "- Ekspert",
-      "Drugo"
+      "- Drugo [Upiši]"
     ],
     "required": true
   },
@@ -242,7 +242,7 @@
       "- Optimizacija unutrašnjih procesa",
       "- Analiza velikih setova podataka",
       "- Unapređenje korisničke podrške",
-      "- Drugo [tekstualni odgovor]"
+      "- Ostalo [Upiši]"
     ],
     "required": true
   },
