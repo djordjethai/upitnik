@@ -189,11 +189,11 @@ def recommended(full_response):
 
 # glavni program
 def main():
-    opcija = os.getenv("ANKETA", "Sve")
-
+   
+    opcija = st.query_params.get('opcija', "Sve")
     if opcija == "Sve":
         with st.sidebar:
-            st.caption("Ver. 15.05.24" )
+            st.caption("Ver. 17.05.24" )
             st.subheader("GAP analiza")
             opcija = st.selectbox("Odaberite upitnik", ("",
                                                         "Opsti", 
