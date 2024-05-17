@@ -98,26 +98,25 @@ def posalji_mail(email, file_name, new_file_path, poruka):
     send_email(
         subject="Izveštaj - Gap Analiza",
         message=poruka,
-        from_addr="azure.test@positive.rs",
+        from_addr="Aiupitnik@positive.rs",
         to_addr=email,
         smtp_server="smtp.office365.com",
         smtp_port=587,
-        #username="Aiupitnik@positive.rs",
-        username="azure.test@positive.rs",
+        username="Aiupitnik@positive.rs",
         password=os.getenv("PRAVNIK_PASS"),
-        attachments=[file_path, new_file_path]
+        attachments=[new_file_path]
     )
-    # send_email(
-    #     subject="Izveštaj - Gap Analiza",
-    #     message=poruka,
-    #     from_addr="Aiupitnik@positive.rs",
-    #     to_addr="prodaja@positive.rs",
-    #     smtp_server="smtp.office365.com",
-    #     smtp_port=587,
-    #     username="Aiupitnik@positive.rs",
-    #     password=os.getenv("PRAVNIK_PASS"),
-    #     attachments=[file_path, new_file_path]
-    # )
+    send_email(
+        subject="Izveštaj - Gap Analiza",
+        message=poruka,
+        from_addr="Aiupitnik@positive.rs",
+        to_addr="prodaja@positive.rs",
+        smtp_server="smtp.office365.com",
+        smtp_port=587,
+        username="Aiupitnik@positive.rs",
+        password=os.getenv("PRAVNIK_PASS"),
+        attachments=[new_file_path]
+    )
     st.info(f"Email sent to {email}")
     # Remove the files after sending
     os.remove(file_path) 
