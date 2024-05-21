@@ -195,7 +195,7 @@ def main():
             st.caption("Ver. 17.05.24" )
             st.subheader("GAP analiza")
             opcija = st.selectbox("Odaberite upitnik", ("",
-                                                        "Opsti", 
+                                                        "Opšti", 
                                                         "Poslovna zrelost", 
                                                         "Digitalna zrelost", 
                                                         "Sajber bezbednost", 
