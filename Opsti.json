@@ -1,0 +1,269 @@
+[
+  {
+    "question_text": "Upisite naziv organizacije * ",
+    "answer_type": "opis",
+    "options": [
+      "[Tekstualni odgovor]"
+    ],
+    "required": true
+  },
+  {
+    "question_text": "Koju poziciju zauzimate u organizaciji? * ",
+    "answer_type": "opis",
+    "options": [
+      "[Tekstualni odgovor]"
+    ],
+    "required": true
+  },
+  {
+    "question_text": "1. Koliko godina je vaša kompanija aktivna na tržištu? * ",
+    "answer_type": "choice",
+    "options": [
+      "- Manje od godinu dana",
+      "- 1-3 godine",
+      "- 3-5 godina",
+      "- Više od 5 godina"
+    ],
+    "required": true
+  },
+  {
+    "question_text": "2. U kojoj industriji vaša kompanija posluje? * ",
+    "answer_type": "opis",
+    "options": [
+      "- [Tekstualni odgovor]"
+    ],
+    "required": true
+  },
+  {
+    "question_text": "3. Koliko zaposlenih trenutno ima u vašoj kompaniji? * ",
+    "answer_type": "choice",
+    "options": [
+      "- 1-10",
+      "- 11-50",
+      "- 51-200",
+      "- Više od 200"
+    ],
+    "required": true
+  },
+  {
+    "question_text": "4. Koja je glavna misija vaše kompanije? * ",
+    "answer_type": "opis",
+    "options": [
+      "- [Tekstualni odgovor]"
+    ],
+    "required": true
+  },
+  {
+    "question_text": "5. Kako biste ocenili trenutni nivo digitalizacije vaše kompanije? * ",
+    "answer_type": "choice",
+    "options": [
+      "- Početnik",
+      "- Napredni",
+      "- Ekspert",
+      "- Drugo [Upiši]"
+    ],
+    "required": true
+  },
+  {
+    "question_text": "6. Da li vaša kompanija ima jasno definisanu dugoročnu poslovnu strategiju? * ",
+    "answer_type": "choice",
+    "options": [
+      "- Da",
+      "- Ne",
+      "- Nisam siguran/a"
+    ],
+    "required": true
+  },
+  {
+    "question_text": "7. Kako se odlučujete o pokretanju novih projekata ili proširenju poslovanja? * ",
+    "answer_type": "choice",
+    "options": [
+      "- Intuitivno",
+      "- Na osnovu internih analiza",
+      "- Koristeći eksterne konsultante"
+    ],
+    "required": true
+  },
+  {
+    "question_text": "8. Da li su vaši poslovni procesi automatizovani? * ",
+    "answer_type": "choice",
+    "options": [
+      "- Da, većinom",
+      "- Delimično",
+      "- Ne, ručni su"
+    ],
+    "required": true
+  },
+  {
+    "question_text": "9. Ocenite nivo adaptacije vaše kompanije na promene na tržištu? * ",
+    "answer_type": "choice",
+    "options": [
+      "- Veoma brzo se prilagođavamo",
+      "- Prosečno se prilagođavamo",
+      "- Teško se prilagođavamo"
+    ],
+    "required": true
+  },
+  {
+    "question_text": "10. Da li vaša kompanija koristi ERP sistem? * ",
+    "answer_type": "choice",
+    "options": [
+      "- Da",
+      "- Ne",
+      "- U procesu implementacije"
+    ],
+    "required": true
+  },
+  {
+    "question_text": "11. Koliko često vršite analizu poslovnih podataka? * ",
+    "answer_type": "choice",
+    "options": [
+      "- Dnevno",
+      "- Nedeljno",
+      "- Mesečno",
+      "- Retko ili nikada"
+    ],
+    "required": true
+  },
+  {
+    "question_text": "12. Da li se u vašoj kompaniji koristi BI (Business Intelligence) alati za podršku odlučivanju? * ",
+    "answer_type": "choice",
+    "options": [
+      "- Da",
+      "- Ne",
+      "- Nismo sigurni šta su to BI alati"
+    ],
+    "required": true
+  },
+  {
+    "question_text": "13. Koliko vam je važno da imate integrisan sistem za upravljanje odnosima sa klijentima (CRM)? * ",
+    "answer_type": "choice",
+    "options": [
+      "- Veoma važno",
+      "- Srednje važno",
+      "- Nije važno"
+    ],
+    "required": true
+  },
+  {
+    "question_text": "14. Da li vaša kompanija redovno sprovodi edukacije o sajber bezbednosti za zaposlene? * ",
+    "answer_type": "choice",
+    "options": [
+      "- Da",
+      "- Ne",
+      "- Ponekad"
+    ],
+    "required": true
+  },
+  {
+    "question_text": "15. Da li vaša kompanija ima implementiran firewall i antivirusnu zaštitu? * ",
+    "answer_type": "choice",
+    "options": [
+      "- Da",
+      "- Ne",
+      "- Nisam siguran/a"
+    ],
+    "required": true
+  },
+  {
+    "question_text": "16. Da li vaša kompanija ima uspostavljene procedure za upravljanje sajber incidentima? * ",
+    "answer_type": "choice",
+    "options": [
+      "- Da",
+      "- Ne",
+      "- U procesu uspostavljanja"
+    ],
+    "required": true
+  },
+  {
+    "question_text": "17. Koliko često se vrši provera sajber bezbednosti (npr. penetration testing)? * ",
+    "answer_type": "choice",
+    "options": [
+      "- Redovno",
+      "- Jednom godišnje",
+      "- Nikada"
+    ],
+    "required": true
+  },
+  {
+    "question_text": "18. Kakve vrste servera koristi vaša kompanija? * ",
+    "answer_type": "choice",
+    "options": [
+      "- On-premise",
+      "- Cloud",
+      "- Hibrid"
+    ],
+    "required": true
+  },
+  {
+    "question_text": "19. Da li vaš IT sistem redovno dobija ažuriranja? * ",
+    "answer_type": "choice",
+    "options": [
+      "- Da, potpuno automatizovano",
+      "- Rukovodimo se prema potrebi",
+      "- Retko"
+    ],
+    "required": true
+  },
+  {
+    "question_text": "20. Ocenite efikasnost vašeg trenutnog sistema za bekapovanje podataka? * ",
+    "answer_type": "choice",
+    "options": [
+      "- Veoma efikasan",
+      "- Delimično efikasan",
+      "- Neefikasan"
+    ],
+    "required": true
+  },
+  {
+    "question_text": "21. Da li vaša infrastruktura podržava rad na daljinu? * ",
+    "answer_type": "choice",
+    "options": [
+      "- Da",
+      "- Delimično",
+      "- Ne"
+    ],
+    "required": true
+  },
+  {
+    "question_text": "22. Da li vaša kompanija trenutno koristi AI alate u poslovanju? * ",
+    "answer_type": "choice",
+    "options": [
+      "- Da",
+      "- Ne",
+      "- Razmatramo mogućnosti"
+    ],
+    "required": true
+  },
+  {
+    "question_text": "23. Koja funkcija AI alata bila bi vam najkorisnija? * ",
+    "answer_type": "multichoice",
+    "options": [
+      "- Optimizacija unutrašnjih procesa",
+      "- Analiza velikih setova podataka",
+      "- Unapređenje korisničke podrške",
+      "- Ostalo [Upiši]"
+    ],
+    "required": true
+  },
+  {
+    "question_text": "24. Da li ste zainteresovani za implementaciju AI chat bota na vašem webu? * ",
+    "answer_type": "choice",
+    "options": [
+      "- Da",
+      "- Ne",
+      "- Možda, potrebno više informacija"
+    ],
+    "required": true
+  },
+  {
+    "question_text": "25. Kako biste ocenili potencijalnu korist od AI asistenata za vaše zaposlene? * ",
+    "answer_type": "choice",
+    "options": [
+      "- Veoma korisno",
+      "- Potencijalno korisno",
+      "- Ne vidimo korist"
+    ],
+    "required": true
+  }
+]
