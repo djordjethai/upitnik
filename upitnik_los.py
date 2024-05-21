@@ -10,7 +10,7 @@ from openai import OpenAI
 from pitanja import odgovori
 from smtplib import SMTP
 from datetime import datetime
-from docx2pdf import convert
+#from docx2pdf import convert
 from myfunc.prompts import PromptDatabase
 from myfunc.retrievers import HybridQueryProcessor
 from myfunc.varvars_dicts import work_vars
@@ -86,11 +86,11 @@ def sacuvaj_dokument_upitnik(content, file_name, template_path="template.docx", 
     for line in lines:
         doc.add_paragraph(line)
     doc.save(file_name)
-    new_filename = change_extension(file_name, ".pdf")
-    convert(file_name,new_filename)
+    # new_filename = change_extension(file_name, ".pdf")
+    # convert(file_name,new_filename)
     
 # Function to send email
-def posalji_mail(email, file_name, new_file_path, poruka):
+def posalji_mail(email, file_name, poruka):
     st.info(f"Sending email to {email}")
     cwd = os.getcwd()
     file_path = os.path.join(cwd, file_name)
@@ -104,7 +104,7 @@ def posalji_mail(email, file_name, new_file_path, poruka):
         smtp_port=587,
         username="Aiupitnik@positive.rs",
         password=os.getenv("PRAVNIK_PASS"),
-        attachments=[new_file_path]
+        attachments=[file_path]
     )
     send_email(
         subject="Izveštaj - Gap Analiza",
@@ -115,12 +115,12 @@ def posalji_mail(email, file_name, new_file_path, poruka):
         smtp_port=587,
         username="Aiupitnik@positive.rs",
         password=os.getenv("PRAVNIK_PASS"),
-        attachments=[new_file_path]
+        attachments=[file_path]
     )
     st.info(f"Email sent to {email}")
     # Remove the files after sending
     os.remove(file_path) 
-    os.remove(new_file_path)
+    #os.remove(new_file_path)
 
 # Adjusted mail sending function to attach PDF
 def send_email(subject, message, from_addr, to_addr, smtp_server, smtp_port, username, password, attachments=None):
@@ -205,7 +205,7 @@ def main():
     if opcija !="":  # Check if the result is not None
         result, email, ime = odgovori(opcija)
         file_name = f"{opcija}.docx"
-        new_filename = f"{opcija}.pdf"
+        #new_filename = f"{opcija}.pdf"
         anketa = format_json_to_text(result).replace('*', '').replace("'", '')
 
         if result:

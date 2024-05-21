@@ -10,7 +10,7 @@ from openai import OpenAI
 from pitanja import odgovori
 from smtplib import SMTP
 from datetime import datetime
-
+#from docx2pdf import convert
 from myfunc.prompts import PromptDatabase
 from myfunc.retrievers import HybridQueryProcessor
 from myfunc.varvars_dicts import work_vars
@@ -18,6 +18,11 @@ from myfunc.varvars_dicts import work_vars
 client=OpenAI()
 avatar_ai="bot.png" 
 anketa= ""
+
+def change_extension(filename, new_extension):
+    base = os.path.splitext(filename)[0]
+    return base + new_extension
+
 try:
     x = st.session_state.gap_ba_expert
 except:
@@ -39,23 +44,6 @@ def format_json_to_text(data):
       
     return "\n\n".join(output)
 
-def create_intro(name):
-     improve_message=[
-                        {"role": "system", "content": """You speak the Serbian language and you task is to adapt the sentence \ 
-                         I will give you by corerecting for Grammar and Gender. 
-                         Be careful with Serbian names double check if they are male or female names. 
-                         Here are some male names: Miljan, Dušan, Marko, Aleksandar, Siniša, Petar, Vladimir
-                         Here are some female names: Miljana, Dušanka, Aleksandra, Vlatka, Milica
-                         In the Serbian language we have gramatical case Vokativ (dozivanje, obracanje) \
-                         which is to be used it proposed sentence.
-                         DO NOT COMMENT only correct. """}, 
-                         {"role": "user", "content": f"Poštovani {name}, izveštaj je u prilogu."}
-                     ]
-     response = client.chat.completions.create(
-            model=work_vars["names"]["openai_model"],
-            messages=improve_message,
-         )
-     return response.choices[0].message.content
 
 def add_markdown_paragraph(doc, text, style=None):
     p = doc.add_paragraph(style=style)
@@ -98,6 +86,8 @@ def sacuvaj_dokument_upitnik(content, file_name, template_path="template.docx", 
     for line in lines:
         doc.add_paragraph(line)
     doc.save(file_name)
+    # new_filename = change_extension(file_name, ".pdf")
+    # convert(file_name,new_filename)
     
 # Function to send email
 def posalji_mail(email, file_name, poruka):
@@ -128,8 +118,9 @@ def posalji_mail(email, file_name, poruka):
         attachments=[file_path]
     )
     st.info(f"Email sent to {email}")
-    os.remove(file_path)  # Optionally remove the file after sending
-
+    # Remove the files after sending
+    os.remove(file_path) 
+    #os.remove(new_file_path)
 
 # Adjusted mail sending function to attach PDF
 def send_email(subject, message, from_addr, to_addr, smtp_server, smtp_port, username, password, attachments=None):
@@ -170,7 +161,25 @@ def positive_agent(messages):
         message_placeholder.markdown(full_response)
         
     return full_response
- 
+
+def create_intro(name):
+     improve_message=[
+                        {"role": "system", "content": """You speak the Serbian language and you task is to adapt the sentence \ 
+                         I will give you by corerecting for Grammar and Gender. 
+                         Be careful with Serbian names double check if they are male or female names. 
+                         Here are some male names: Miljan, Dušan, Marko, Aleksandar, Siniša, Petar, Vladimir
+                         Here are some female names: Miljana, Dušanka, Aleksandra, Vlatka, Milica
+                         In the Serbian language we have gramatical case Vokativ (dozivanje, obracanje) \
+                         which is to be used it proposed sentence.
+                         DO NOT COMMENT only correct. """}, 
+                         {"role": "user", "content": f"Poštovani {name}, izveštaj je u prilogu."}
+                     ]
+     response = client.chat.completions.create(
+            model=work_vars["names"]["openai_model"],
+            messages=improve_message,
+         )
+     return response.choices[0].message.content
+
 # RAG pretrazuje index za preporuke    
 def recommended(full_response):
     processor = HybridQueryProcessor(namespace="positive", top_k=3)
@@ -196,7 +205,7 @@ def main():
     if opcija !="":  # Check if the result is not None
         result, email, ime = odgovori(opcija)
         file_name = f"{opcija}.docx"
-       
+        #new_filename = f"{opcija}.pdf"
         anketa = format_json_to_text(result).replace('*', '').replace("'", '')
 
         if result:
@@ -221,12 +230,11 @@ def main():
             # cetvrta faza slanje maila
             poruka = create_intro(ime)
             st.info(poruka)
-            posalji_mail(email, file_name, poruka)
+            posalji_mail(email, file_name,  poruka)
             try:    
                 os.remove(file_name)
             except:
                 pass
-                
                 
 if __name__ == "__main__":
     main()
