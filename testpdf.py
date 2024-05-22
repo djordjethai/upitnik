@@ -109,8 +109,9 @@ def send_email(subject, message, from_addr, to_addr, smtp_server, smtp_port, use
     server.send_message(msg)
     server.quit()
 
-# Usage example
-content = "# Sample Markdown\nThis is a sample markdown content."
-file_name = "output"
-pdf_file_name = sacuvaj_dokument_upitnik(content, file_name)
-posalji_mail("nemanja.perun98@gmail.com", "Nemanja Perunicic", pdf_file_name)
+
+if st.button("start"):
+    content = "# Sample Markdown\nThis is a sample markdown content."
+    file_name = "output"
+    pdf_file_name = sacuvaj_dokument_upitnik(content, file_name)
+    posalji_mail("nemanja.perun98@gmail.com", "Nemanja Perunicic", pdf_file_name)
