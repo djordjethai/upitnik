@@ -12,12 +12,17 @@ uploaded_file = st.file_uploader("Upload a DOCX file", type="docx")
 
 if uploaded_file is not None:
     st.success("File uploaded successfully")
-    docx_file_path = os.path.join("temp", uploaded_file.name)
+    
+    # Ensure the 'temp' directory exists
+    temp_dir = "temp"
+    os.makedirs(temp_dir, exist_ok=True)
+    
+    docx_file_path = os.path.join(temp_dir, uploaded_file.name)
     
     with open(docx_file_path, "wb") as f:
         f.write(uploaded_file.getbuffer())
     
-    pdf_file_path = os.path.join("temp", f"{os.path.splitext(uploaded_file.name)[0]}.pdf")
+    pdf_file_path = os.path.join(temp_dir, f"{os.path.splitext(uploaded_file.name)[0]}.pdf")
 
     if st.button("Convert to PDF"):
         with st.spinner("Converting..."):
