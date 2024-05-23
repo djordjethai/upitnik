@@ -1,8 +1,8 @@
 import streamlit as st
 import subprocess
 import os
-from docx import Document
 
+# mozda nastaviti sa probavanjem razlicitih stavki u liniji 8
 def convert_docx_to_pdf(docx_file_path, pdf_file_path):
     # Use LibreOffice to convert the DOCX file to PDF
     result = subprocess.run(['libreoffice', '--headless', '--convert-to', 'pdf:writer_pdf_Export', docx_file_path, '--outdir', os.path.dirname(pdf_file_path)], check=True)
