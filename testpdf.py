@@ -3,8 +3,10 @@ import subprocess
 import os
 
 def convert_docx_to_pdf(docx_file_path, pdf_file_path):
-    # Use LibreOffice to convert the DOCX file to PDF
-    subprocess.run(['libreoffice', '--headless', '--convert-to', 'pdf', docx_file_path, '--outdir', os.path.dirname(pdf_file_path)], check=True)
+    # Use LibreOffice to convert the DOCX file to PDF with specific filter settings
+    result = subprocess.run(['libreoffice', '--headless', '--convert-to', 'pdf:writer_pdf_Export', docx_file_path, '--outdir', os.path.dirname(pdf_file_path)], check=True)
+    if result.returncode != 0:
+        raise subprocess.CalledProcessError(result.returncode, result.args)
 
 st.title("DOCX to PDF Converter")
 
