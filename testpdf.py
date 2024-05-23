@@ -16,6 +16,7 @@ def adjust_image_transparency(image, transparency_factor=0.5):
 
 def ensure_image_transparency(docx_file_path, transparency_factor=0.5):
     doc = Document(docx_file_path)
+    image_count = 0
     for rel in doc.part.rels.values():
         if "image" in rel.target_ref:
             image_part = rel.target_part
@@ -23,6 +24,7 @@ def ensure_image_transparency(docx_file_path, transparency_factor=0.5):
             image_stream = BytesIO(image_data)
             try:
                 img = Image.open(image_stream)
+                st.write(f"Processing image {image_count + 1} with size {img.size}")
                 img = adjust_image_transparency(img, transparency_factor)
 
                 img_data = BytesIO()
@@ -31,6 +33,7 @@ def ensure_image_transparency(docx_file_path, transparency_factor=0.5):
 
                 # Replace the image in the document
                 image_part._blob = img_data.read()
+                image_count += 1
 
             except Exception as e:
                 st.warning(f"Could not process an image: {e}")
@@ -38,6 +41,7 @@ def ensure_image_transparency(docx_file_path, transparency_factor=0.5):
     # Save the modified document
     temp_docx_path = os.path.join("temp", "modified_" + os.path.basename(docx_file_path))
     doc.save(temp_docx_path)
+    st.write(f"Total images processed: {image_count}")
     return temp_docx_path
 
 def convert_docx_to_pdf(docx_file_path):
