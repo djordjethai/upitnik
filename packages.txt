@@ -1,3 +1,4 @@
 pandoc
 poppler-utils
+texlive
 wkhtmltopdf
