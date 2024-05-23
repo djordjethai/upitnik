@@ -5,15 +5,14 @@ from docx import Document
 from PIL import Image, ImageEnhance
 from io import BytesIO
 
-def adjust_image_transparency(image_path, transparency_factor=0.5):
+def adjust_image_transparency(image, transparency_factor=0.5):
     """Adjust the transparency of an image."""
-    img = Image.open(image_path)
-    if img.mode != 'RGBA':
-        img = img.convert('RGBA')
-    alpha = img.split()[3]
+    if image.mode != 'RGBA':
+        image = image.convert('RGBA')
+    alpha = image.split()[3]
     alpha = ImageEnhance.Brightness(alpha).enhance(transparency_factor)
-    img.putalpha(alpha)
-    return img
+    image.putalpha(alpha)
+    return image
 
 def ensure_image_transparency(docx_file_path, transparency_factor=0.5):
     doc = Document(docx_file_path)
@@ -24,7 +23,7 @@ def ensure_image_transparency(docx_file_path, transparency_factor=0.5):
             image_stream = BytesIO(image_data)
             try:
                 img = Image.open(image_stream)
-                img = adjust_image_transparency(image_stream, transparency_factor)
+                img = adjust_image_transparency(img, transparency_factor)
 
                 img_data = BytesIO()
                 img.save(img_data, format="PNG")
@@ -43,7 +42,9 @@ def ensure_image_transparency(docx_file_path, transparency_factor=0.5):
 
 def convert_docx_to_pdf(docx_file_path, pdf_file_path):
     # Use LibreOffice to convert the DOCX file to PDF
-    subprocess.run(['libreoffice', '--headless', '--convert-to', 'pdf', docx_file_path, '--outdir', os.path.dirname(pdf_file_path)], check=True)
+    result = subprocess.run(['libreoffice', '--headless', '--convert-to', 'pdf', docx_file_path, '--outdir', os.path.dirname(pdf_file_path)], check=True)
+    if result.returncode != 0:
+        raise Exception("LibreOffice conversion failed")
 
 st.title("DOCX to PDF Converter")
 
@@ -76,3 +77,7 @@ if uploaded_file is not None:
                 os.remove(modified_docx_path)
             except subprocess.CalledProcessError as e:
                 st.error(f"An error occurred during conversion: {e}")
+            except FileNotFoundError as e:
+                st.error(f"File not found: {e}")
+            except Exception as e:
+                st.error(f"An error occurred: {e}")
