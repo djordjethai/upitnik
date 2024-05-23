@@ -1,4 +1,2 @@
-pandoc
-poppler-utils
-texlive
+libreoffice
 wkhtmltopdf
