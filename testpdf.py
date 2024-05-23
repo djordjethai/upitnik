@@ -14,10 +14,9 @@ def adjust_image_transparency(image, transparency_factor=0.5):
     image.putalpha(alpha)
     return image
 
-def ensure_image_transparency(docx_file_path, transparency_factor=0.5):
-    doc = Document(docx_file_path)
+def process_images_in_part(part, transparency_factor):
     image_count = 0
-    for rel in doc.part.rels.values():
+    for rel in part.rels.values():
         if "image" in rel.target_ref:
             image_part = rel.target_part
             image_data = image_part._blob
@@ -37,11 +36,26 @@ def ensure_image_transparency(docx_file_path, transparency_factor=0.5):
 
             except Exception as e:
                 st.warning(f"Could not process an image: {e}")
+    return image_count
+
+def ensure_image_transparency(docx_file_path, transparency_factor=0.5):
+    doc = Document(docx_file_path)
+    image_count = 0
+
+    # Process images in the main document body
+    image_count += process_images_in_part(doc.part, transparency_factor)
+
+    # Process images in headers and footers
+    for section in doc.sections:
+        for header in section.header.paragraphs:
+            st.write("Skipping images in header")
+        for footer in section.footer.paragraphs:
+            st.write("Skipping images in footer")
 
     # Save the modified document
     temp_docx_path = os.path.join("temp", "modified_" + os.path.basename(docx_file_path))
     doc.save(temp_docx_path)
-    st.write(f"Total images processed: {image_count}")
+    st.write(f"Total images processed (excluding headers/footers): {image_count}")
     return temp_docx_path
 
 def convert_docx_to_pdf(docx_file_path):
