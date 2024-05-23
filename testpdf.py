@@ -40,13 +40,17 @@ def ensure_image_transparency(docx_file_path, transparency_factor=0.5):
     doc.save(temp_docx_path)
     return temp_docx_path
 
-def convert_docx_to_pdf(docx_file_path, pdf_file_path):
+def convert_docx_to_pdf(docx_file_path):
     # Use LibreOffice to convert the DOCX file to PDF
-    result = subprocess.run(['libreoffice', '--headless', '--convert-to', 'pdf', docx_file_path, '--outdir', os.path.dirname(pdf_file_path)], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    result = subprocess.run(['libreoffice', '--headless', '--convert-to', 'pdf', docx_file_path, '--outdir', os.path.dirname(docx_file_path)], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     st.write(result.stdout.decode())
     st.write(result.stderr.decode())
     if result.returncode != 0:
         raise Exception("LibreOffice conversion failed")
+
+    # Extract the output PDF path from the command output
+    output_pdf_path = docx_file_path.replace('.docx', '.pdf')
+    return output_pdf_path
 
 st.title("DOCX to PDF Converter")
 
@@ -64,14 +68,12 @@ if uploaded_file is not None:
     with open(docx_file_path, "wb") as f:
         f.write(uploaded_file.getbuffer())
     
-    pdf_file_path = os.path.join(temp_dir, f"{os.path.splitext(uploaded_file.name)[0]}.pdf")
-
     if st.button("Convert to PDF"):
         with st.spinner("Converting..."):
             try:
                 modified_docx_path = ensure_image_transparency(docx_file_path, transparency_factor=0.2)  # Adjust transparency factor as needed
                 st.write(f"Modified DOCX saved at: {modified_docx_path}")
-                convert_docx_to_pdf(modified_docx_path, pdf_file_path)
+                pdf_file_path = convert_docx_to_pdf(modified_docx_path)
                 st.write(f"PDF saved at: {pdf_file_path}")
                 st.success("Conversion completed!")
                 with open(pdf_file_path, "rb") as f:
