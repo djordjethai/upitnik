@@ -1,10 +1,10 @@
 import streamlit as st
-import subprocess
+import pypandoc
 import os
 
 def convert_docx_to_pdf(docx_file_path, pdf_file_path):
-    # Use LibreOffice to convert the DOCX file to PDF
-    subprocess.run(['libreoffice', '--headless', '--convert-to', 'pdf', docx_file_path, '--outdir', os.path.dirname(pdf_file_path)], check=True)
+    # Use Pandoc to convert the DOCX file to PDF
+    pypandoc.convert_file(docx_file_path, 'pdf', outputfile=pdf_file_path)
 
 st.title("DOCX to PDF Converter")
 
@@ -33,5 +33,5 @@ if uploaded_file is not None:
                     st.download_button("Download PDF", f, file_name=os.path.basename(pdf_file_path), mime="application/pdf")
                 os.remove(pdf_file_path)
                 os.remove(docx_file_path)
-            except subprocess.CalledProcessError as e:
+            except Exception as e:
                 st.error(f"An error occurred during conversion: {e}")
