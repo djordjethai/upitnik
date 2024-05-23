@@ -3,7 +3,6 @@ import subprocess
 import os
 from docx import Document
 from docx.oxml.ns import qn
-from docx.oxml import OxmlElement
 from PIL import Image
 from io import BytesIO
 
@@ -20,14 +19,24 @@ def ensure_image_transparency(docx_file_path):
 
                 # Convert to PNG with transparency
                 img = img.convert("RGBA")
+                datas = img.getdata()
+
+                new_data = []
+                for item in datas:
+                    if item[0] == 255 and item[1] == 255 and item[2] == 255:
+                        new_data.append((255, 255, 255, 0))  # Change all white (also consider grayscale)
+                    else:
+                        new_data.append(item)
+
+                img.putdata(new_data)
+
                 img_data = BytesIO()
                 img.save(img_data, format="PNG")
                 img_data.seek(0)
 
                 # Update the image in the document
-                new_image_part = rel.target_part.package._image_parts[0]._image
-                new_image_part._blob = img_data.read()
-                rel.target_part._blob = new_image_part._blob
+                partname = rel.target_part.partname
+                doc.part.package.replace(partname, img_data.read())
 
             except Exception as e:
                 st.warning(f"Could not process an image: {e}")
