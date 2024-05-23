@@ -42,20 +42,20 @@ def ensure_image_transparency(docx_file_path, transparency_factor=0.5):
     doc = Document(docx_file_path)
     image_count = 0
 
-    # Process images in the main document body
-    image_count += process_images_in_part(doc.part, transparency_factor)
-
-    # Process images in headers and footers
+    # Process images in headers and footers only
     for section in doc.sections:
-        for header in section.header.paragraphs:
-            st.write("Skipping images in header")
-        for footer in section.footer.paragraphs:
-            st.write("Skipping images in footer")
+        for header in section.header.part.rels.values():
+            if "image" in header.target_ref:
+                image_count += process_images_in_part(header.target_part, transparency_factor)
+        for footer in section.footer.part.rels.values():
+            if "image" in footer.target_ref:
+                image_count += process_images_in_part(footer.target_part, transparency_factor)
+
+    st.write(f"Total images processed in headers/footers: {image_count}")
 
     # Save the modified document
     temp_docx_path = os.path.join("temp", "modified_" + os.path.basename(docx_file_path))
     doc.save(temp_docx_path)
-    st.write(f"Total images processed (excluding headers/footers): {image_count}")
     return temp_docx_path
 
 def convert_docx_to_pdf(docx_file_path):
