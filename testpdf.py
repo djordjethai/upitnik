@@ -2,11 +2,19 @@ import streamlit as st
 import subprocess
 import os
 from docx import Document
-from docx.oxml.ns import qn
-from PIL import Image
+from PIL import Image, ImageEnhance
 from io import BytesIO
 
-def ensure_image_transparency(docx_file_path):
+def adjust_image_transparency(image, transparency_factor=0.5):
+    """Adjust the transparency of an image."""
+    if image.mode != 'RGBA':
+        image = image.convert('RGBA')
+    alpha = image.split()[3]
+    alpha = ImageEnhance.Brightness(alpha).enhance(transparency_factor)
+    image.putalpha(alpha)
+    return image
+
+def ensure_image_transparency(docx_file_path, transparency_factor=0.5):
     doc = Document(docx_file_path)
     for rel in doc.part.rels.values():
         if "image" in rel.target_ref:
@@ -14,29 +22,15 @@ def ensure_image_transparency(docx_file_path):
             image_stream = BytesIO(image)
             try:
                 img = Image.open(image_stream)
-                if img.mode in ("RGBA", "LA") or (img.mode == "P" and "transparency" in img.info):
-                    continue  # Image already has transparency
-
-                # Convert to PNG with transparency
-                img = img.convert("RGBA")
-                datas = img.getdata()
-
-                new_data = []
-                for item in datas:
-                    if item[0] == 255 and item[1] == 255 and item[2] == 255:
-                        new_data.append((255, 255, 255, 0))  # Change all white (also consider grayscale)
-                    else:
-                        new_data.append(item)
-
-                img.putdata(new_data)
+                img = adjust_image_transparency(img, transparency_factor)
 
                 img_data = BytesIO()
                 img.save(img_data, format="PNG")
                 img_data.seek(0)
 
-                # Update the image in the document
+                # Replace the image in the document
                 partname = rel.target_part.partname
-                doc.part.package.replace(partname, img_data.read())
+                doc.part.package._rels[partname].target_part._blob = img_data.read()
 
             except Exception as e:
                 st.warning(f"Could not process an image: {e}")
@@ -67,7 +61,7 @@ if uploaded_file is not None:
     pdf_file_path = os.path.join(temp_dir, f"{os.path.splitext(uploaded_file.name)[0]}.pdf")
 
     # Ensure image transparency before conversion
-    ensure_image_transparency(docx_file_path)
+    ensure_image_transparency(docx_file_path, transparency_factor=0.2)  # Adjust transparency factor as needed
 
     if st.button("Convert to PDF"):
         with st.spinner("Converting..."):
