@@ -1,3 +1,49 @@
+import streamlit as st
+import subprocess
+import os
+
+def convert_docx_to_pdf(docx_file_path, pdf_file_path):
+    # Use LibreOffice to convert the DOCX file to PDF
+    result = subprocess.run(['libreoffice', '--headless', '--convert-to', 'pdf:writer_pdf_Export', docx_file_path, '--outdir', os.path.dirname(pdf_file_path)], check=True)
+    if result.returncode != 0:
+        raise subprocess.CalledProcessError(result.returncode, result.args)
+
+st.title("DOCX to PDF Converter")
+
+uploaded_file = st.file_uploader("Upload a DOCX file", type="docx")
+
+if uploaded_file is not None:
+    st.success("File uploaded successfully")
+    
+    temp_dir = "temp"
+    os.makedirs(temp_dir, exist_ok=True)
+    
+    docx_file_path = os.path.join(temp_dir, uploaded_file.name)
+    
+    with open(docx_file_path, "wb") as f:
+        f.write(uploaded_file.getbuffer())
+    
+    pdf_file_path = os.path.join(temp_dir, f"{os.path.splitext(uploaded_file.name)[0]}.pdf")
+
+    if st.button("Convert to PDF"):
+        with st.spinner("Converting..."):
+            try:
+                convert_docx_to_pdf(docx_file_path, pdf_file_path)
+                st.success("Conversion completed!")
+                with open(pdf_file_path, "rb") as f:
+                    st.download_button("Download PDF", f, file_name=os.path.basename(pdf_file_path), mime="application/pdf")
+                os.remove(pdf_file_path)
+                os.remove(docx_file_path)
+            except subprocess.CalledProcessError as e:
+                st.error(f"An error occurred during conversion: {e}")
+
+
+
+
+
+
+
+
 import os
 import streamlit as st
 from docx import Document

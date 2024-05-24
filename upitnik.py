@@ -106,6 +106,7 @@ def posalji_mail(email, file_name, poruka):
         password=os.getenv("PRAVNIK_PASS"),
         attachments=[file_path]
     )
+    _ = """
     send_email(
         subject="Izveštaj - Gap Analiza",
         message=poruka,
@@ -117,6 +118,7 @@ def posalji_mail(email, file_name, poruka):
         password=os.getenv("PRAVNIK_PASS"),
         attachments=[file_path]
     )
+    """
     st.info(f"Email sent to {email}")
     # Remove the files after sending
     os.remove(file_path) 
