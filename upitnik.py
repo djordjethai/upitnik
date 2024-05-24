@@ -193,7 +193,6 @@ def recommended(full_response):
     return processor.process_query_results(full_response)
 
 def main():
-    st.title("DOCX to PDF Converter")
     opcija = st.query_params.get('opcija', "Sve")
     if opcija == "Sve":
         with st.sidebar:
