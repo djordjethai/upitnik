@@ -106,7 +106,7 @@ def posalji_mail(email, file_name, poruka):
         smtp_server="smtp.office365.com",
         smtp_port=587,
         username="Aiupitnik@positive.rs",
-        password=os.getenv("PRAVNIK_PASS"),
+        password="Upitnik!24",
         attachments=[file_path]
     )
     st.info(f"Email sent to {email}")
