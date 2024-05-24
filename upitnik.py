@@ -10,14 +10,14 @@ from openai import OpenAI
 from pitanja import odgovori
 from smtplib import SMTP
 from datetime import datetime
-#from docx2pdf import convert
 from myfunc.prompts import PromptDatabase
 from myfunc.retrievers import HybridQueryProcessor
 from myfunc.varvars_dicts import work_vars
+import subprocess
 
-client=OpenAI()
-avatar_ai="bot.png" 
-anketa= ""
+client = OpenAI()
+avatar_ai = "bot.png"
+anketa = ""
 
 def change_extension(filename, new_extension):
     base = os.path.splitext(filename)[0]
@@ -36,14 +36,11 @@ except:
 
 def format_json_to_text(data):
     output = []
- 
     for key, value in data.items():
         if isinstance(value, list):  
             value = ", ".join(value)
         output.append(f"{key} '\n\n' {value}")
-      
     return "\n\n".join(output)
-
 
 def add_markdown_paragraph(doc, text, style=None):
     p = doc.add_paragraph(style=style)
@@ -55,15 +52,20 @@ def add_markdown_paragraph(doc, text, style=None):
             run.bold = True
         bold = not bold
     p.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
-        
+
+def convert_docx_to_pdf(docx_file_path, pdf_file_path):
+    # Use LibreOffice to convert the DOCX file to PDF
+    result = subprocess.run(['libreoffice', '--headless', '--convert-to', 'pdf:writer_pdf_Export', docx_file_path, '--outdir', os.path.dirname(pdf_file_path)], check=True)
+    if result.returncode != 0:
+        raise subprocess.CalledProcessError(result.returncode, result.args)
+
 def sacuvaj_dokument_upitnik(content, file_name, template_path="template.docx", anketa=anketa):
     if template_path:
-        doc = Document(template_path) 
+        doc = Document(template_path)
     else:
-        doc = Document() 
-    
-    # Parse Markdown and apply styles
-    datum =  datetime.today().date()  
+        doc = Document()
+
+    datum = datetime.today().date()
     formatted_date = datum.strftime("%d.%m.%Y")
 
     lines = content.split('\n')
@@ -73,23 +75,24 @@ def sacuvaj_dokument_upitnik(content, file_name, template_path="template.docx", 
         elif line.startswith('## '):
             add_markdown_paragraph(doc, line[3:], style='Heading 2')
         elif line.startswith('### '):
-            add_markdown_paragraph(doc, line[4:], style='Heading 3')    
+            add_markdown_paragraph(doc, line[4:], style='Heading 3')
         elif line.startswith('#### '):
             add_markdown_paragraph(doc, line[5:], style='Heading 4')
         else:
             add_markdown_paragraph(doc, line)
-    doc.add_paragraph(" ")    
-    doc.add_paragraph(f"Datum {formatted_date}")        
+    doc.add_paragraph(" ")
+    doc.add_paragraph(f"Datum {formatted_date}")
     doc.add_page_break()
     doc.add_paragraph(f"Anketa \n\n", style='Heading 2')
     lines = anketa.split('\n')
     for line in lines:
         doc.add_paragraph(line)
     doc.save(file_name)
-    # new_filename = change_extension(file_name, ".pdf")
-    # convert(file_name,new_filename)
-    
-# Function to send email
+
+    pdf_file_name = change_extension(file_name, ".pdf")
+    convert_docx_to_pdf(file_name, pdf_file_name)
+    return pdf_file_name
+
 def posalji_mail(email, file_name, poruka):
     st.info(f"Sending email to {email}")
     cwd = os.getcwd()
@@ -99,39 +102,46 @@ def posalji_mail(email, file_name, poruka):
         subject="Izveštaj - Gap Analiza",
         message=poruka,
         from_addr="Aiupitnik@positive.rs",
-        to_addr=email,
+        to_addrs=[email, "nemanja.perunicic@positive.rs"],
         smtp_server="smtp.office365.com",
         smtp_port=587,
         username="Aiupitnik@positive.rs",
-        password=os.getenv("PRAVNIK_PASS"),
+        password="Upitnik!24",
         attachments=[file_path]
     )
-    _ = """
-    send_email(
-        subject="Izveštaj - Gap Analiza",
-        message=poruka,
-        from_addr="Aiupitnik@positive.rs",
-        to_addr="prodaja@positive.rs",
-        smtp_server="smtp.office365.com",
-        smtp_port=587,
-        username="Aiupitnik@positive.rs",
-        password=os.getenv("PRAVNIK_PASS"),
-        attachments=[file_path]
-    )
-    """
     st.info(f"Email sent to {email}")
-    # Remove the files after sending
-    os.remove(file_path) 
-    #os.remove(new_file_path)
+    os.remove(file_path)
 
-# Adjusted mail sending function to attach PDF
-def send_email(subject, message, from_addr, to_addr, smtp_server, smtp_port, username, password, attachments=None):
+def send_email(subject, message, from_addr, to_addrs, smtp_server, smtp_port, username, password, attachments=None):
+    for to_addr in to_addrs:
+        msg = MIMEMultipart()
+        msg['From'] = from_addr
+        msg['To'] = to_addr
+        msg['Subject'] = subject
+        msg.attach(MIMEText(message, 'plain'))
+
+        if attachments:
+            for attachment in attachments:
+                with open(attachment, 'rb') as file:
+                    part = MIMEBase('application', 'octet-stream')
+                    part.set_payload(file.read())
+                encoders.encode_base64(part)
+                part.add_header('Content-Disposition', 'attachment', filename=os.path.basename(attachment))
+                msg.attach(part)
+
+        server = SMTP(smtp_server, smtp_port)
+        server.starttls()
+        server.login(username, password)
+        server.send_message(msg)
+        server.quit()
+
+def send_email2(subject, message, from_addr, to_addr, smtp_server, smtp_port, username, password, attachments=None):
     msg = MIMEMultipart()
     msg['From'] = from_addr
     msg['To'] = to_addr
     msg['Subject'] = subject
     msg.attach(MIMEText(message, 'plain'))
-    
+
     if attachments:
         for attachment in attachments:
             with open(attachment, 'rb') as file:
@@ -147,8 +157,6 @@ def send_email(subject, message, from_addr, to_addr, smtp_server, smtp_port, use
     server.send_message(msg)
     server.quit()
 
-
-# agent llm odgovara na razlicite upite - treba u myfunc
 def positive_agent(messages):
     with st.chat_message("assistant", avatar=avatar_ai):
         message_placeholder = st.empty()
@@ -161,82 +169,72 @@ def positive_agent(messages):
             full_response += (response.choices[0].delta.content or "")
             message_placeholder.markdown(full_response + "▌")
         message_placeholder.markdown(full_response)
-        
+
     return full_response
 
 def create_intro(name):
-     improve_message=[
-                        {"role": "system", "content": """You speak the Serbian language and you task is to adapt the sentence \ 
-                         I will give you by corerecting for Grammar and Gender. 
-                         Be careful with Serbian names double check if they are male or female names. 
-                         Here are some male names: Miljan, Dušan, Marko, Aleksandar, Siniša, Petar, Vladimir
-                         Here are some female names: Miljana, Dušanka, Aleksandra, Vlatka, Milica
-                         In the Serbian language we have gramatical case Vokativ (dozivanje, obracanje) \
-                         which is to be used it proposed sentence.
-                         DO NOT COMMENT only correct. """}, 
-                         {"role": "user", "content": f"Poštovani {name}, izveštaj je u prilogu."}
-                     ]
-     response = client.chat.completions.create(
-            model=work_vars["names"]["openai_model"],
-            messages=improve_message,
-         )
-     return response.choices[0].message.content
+    improve_message = [
+        {"role": "system", "content": """You speak the Serbian language and your task is to adapt the sentence I will give you by correcting for Grammar and Gender. 
+        Be careful with Serbian names double check if they are male or female names. 
+        Here are some male names: Miljan, Dušan, Marko, Aleksandar, Siniša, Petar, Vladimir
+        Here are some female names: Miljana, Dušanka, Aleksandra, Vlatka, Milica
+        In the Serbian language we have grammatical case Vokativ (dozivanje, obracanje) which is to be used in the proposed sentence.
+        DO NOT COMMENT only correct."""},
+        {"role": "user", "content": f"Poštovani {name}, izveštaj je u prilogu."}
+    ]
+    response = client.chat.completions.create(
+        model=work_vars["names"]["openai_model"],
+        messages=improve_message,
+    )
+    return response.choices[0].message.content
 
-# RAG pretrazuje index za preporuke    
 def recommended(full_response):
     processor = HybridQueryProcessor(namespace="positive", top_k=3)
     return processor.process_query_results(full_response)
 
-
-# glavni program
 def main():
-   
+    st.title("DOCX to PDF Converter")
     opcija = st.query_params.get('opcija', "Sve")
     if opcija == "Sve":
         with st.sidebar:
-            st.caption("Ver. 17.05.24" )
+            st.caption("Ver. 17.05.24")
             st.subheader("GAP analiza")
             opcija = st.selectbox("Odaberite upitnik", ("",
-                                                        "Opšti", 
-                                                        "Poslovna zrelost", 
-                                                        "Digitalna zrelost", 
-                                                        "Sajber bezbednost", 
-                                                        "IT infrastruktura", 
-                                                        "Upotreba AI" ))
+                                                        "Opšti",
+                                                        "Poslovna zrelost",
+                                                        "Digitalna zrelost",
+                                                        "Sajber bezbednost",
+                                                        "IT infrastruktura",
+                                                        "Upotreba AI"))
 
-    if opcija !="":  # Check if the result is not None
+    if opcija != "":
         result, email, ime = odgovori(opcija)
         file_name = f"{opcija}.docx"
-        #new_filename = f"{opcija}.pdf"
         anketa = format_json_to_text(result).replace('*', '').replace("'", '')
 
         if result:
-            # prva faza citanje odgovora i komentar
-            gap_message=[
+            gap_message = [
                 {"role": "system", "content": st.session_state.gap_ba_expert},
                 {"role": "user", "content": st.session_state.gap_write_report.format(result=result)}
             ]
             full_response = positive_agent(gap_message)
             predlozi, x, y = recommended(full_response)
-            #full_response = "xx"
-            #predlozi = "xx"
-            # druga faza preporuke na osnovu portfolia
-            recommend_message=[
-                        {"role": "system", "content": st.session_state.gap_dt_consultant},
-                        {"role": "user", "content": st.session_state.gap_service_suggestion.format(full_response=full_response, predlozi=predlozi)}
+
+            recommend_message = [
+                {"role": "system", "content": st.session_state.gap_dt_consultant},
+                {"role": "user", "content": st.session_state.gap_service_suggestion.format(full_response=full_response, predlozi=predlozi)}
             ]
             recommendation_response = positive_agent(recommend_message)
-            
+
             gap_analiza = full_response + "\n\n" + recommendation_response
-            sacuvaj_dokument_upitnik(gap_analiza, file_name, anketa=anketa)
-            # cetvrta faza slanje maila
+            pdf_file_name = sacuvaj_dokument_upitnik(gap_analiza, file_name, anketa=anketa)
             poruka = create_intro(ime)
             st.info(poruka)
-            posalji_mail(email, file_name,  poruka)
-            try:    
-                os.remove(file_name)
+            posalji_mail(email, pdf_file_name, poruka)
+            try:
+                os.remove(pdf_file_name)
             except:
                 pass
-                
+
 if __name__ == "__main__":
     main()
