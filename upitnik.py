@@ -66,7 +66,7 @@ def sacuvaj_dokument_upitnik(content, file_name, template_path="template.docx", 
         doc = Document()
 
     datum = datetime.today().date()
-    formatted_date = datum.strftime("%d.%m.%Y")
+    formatted_date = datum.strftime("%d.%m.%Y.")
 
     lines = content.split('\n')
     for line in lines:
@@ -78,6 +78,8 @@ def sacuvaj_dokument_upitnik(content, file_name, template_path="template.docx", 
             add_markdown_paragraph(doc, line[4:], style='Heading 3')
         elif line.startswith('#### '):
             add_markdown_paragraph(doc, line[5:], style='Heading 4')
+        elif line.startswith('- '):
+            add_markdown_paragraph(doc, line[2:], style='List Paragraph')
         else:
             add_markdown_paragraph(doc, line)
     doc.add_paragraph(" ")
