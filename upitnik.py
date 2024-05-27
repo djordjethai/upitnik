@@ -137,28 +137,6 @@ def send_email(subject, message, from_addr, to_addrs, smtp_server, smtp_port, us
         server.send_message(msg)
         server.quit()
 
-def send_email2(subject, message, from_addr, to_addr, smtp_server, smtp_port, username, password, attachments=None):
-    msg = MIMEMultipart()
-    msg['From'] = from_addr
-    msg['To'] = to_addr
-    msg['Subject'] = subject
-    msg.attach(MIMEText(message, 'plain'))
-
-    if attachments:
-        for attachment in attachments:
-            with open(attachment, 'rb') as file:
-                part = MIMEBase('application', 'octet-stream')
-                part.set_payload(file.read())
-            encoders.encode_base64(part)
-            part.add_header('Content-Disposition', 'attachment', filename=os.path.basename(attachment))
-            msg.attach(part)
-
-    server = SMTP(smtp_server, smtp_port)
-    server.starttls()
-    server.login(username, password)
-    server.send_message(msg)
-    server.quit()
-
 def positive_agent(messages):
     with st.chat_message("assistant", avatar=avatar_ai):
         message_placeholder = st.empty()
@@ -227,7 +205,8 @@ def main():
             ]
             recommendation_response = positive_agent(recommend_message)
 
-            gap_analiza = full_response + "\n\n" + recommendation_response
+            # gap_analiza = full_response + "\n\n" + recommendation_response
+            gap_analiza = recommendation_response
             pdf_file_name = sacuvaj_dokument_upitnik(gap_analiza, file_name, anketa=anketa)
             poruka = create_intro(ime)
             st.info(poruka)
