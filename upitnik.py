@@ -51,7 +51,11 @@ def add_markdown_paragraph(doc, text, style=None):
         if bold:
             run.bold = True
         bold = not bold
-    p.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
+
+    if style and style.startswith('Heading'):
+        p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    else:
+        p.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
 
 def convert_docx_to_pdf(docx_file_path, pdf_file_path):
     # Use LibreOffice to convert the DOCX file to PDF
@@ -156,9 +160,8 @@ def create_intro(name):
     improve_message = [
         {"role": "system", "content": """You speak the Serbian language and your task is to adapt the sentence I will give you by correcting for Grammar and Gender. 
         Be careful with Serbian names double check if they are male or female names. 
-        Here are some male names: Miljan, Dušan, Marko, Aleksandar, Siniša, Petar, Vladimir
-        Here are some female names: Miljana, Dušanka, Aleksandra, Vlatka, Milica
-        In the Serbian language we have grammatical case Vokativ (dozivanje, obracanje) which is to be used in the proposed sentence.
+        If the name ends with one of the following letters {a, e, i, o, u} don't change it (e.g. Milica >> Milica)
+        If it doesn't end with one of those letters you should add the letter "e" at the end of the name (e.g. Goran >> Gorane), UNLESS if it ends with the letters "ar", in that case replace those last two letters with "re" (e.g. Aleksandar >> Aleksandre)
         DO NOT COMMENT only correct."""},
         {"role": "user", "content": f"Poštovani {name}, izveštaj je u prilogu."}
     ]
