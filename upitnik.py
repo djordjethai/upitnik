@@ -52,7 +52,7 @@ def add_markdown_paragraph(doc, text, style=None):
             run.bold = True
         bold = not bold
 
-    if style and style.startswith('Heading'):
+    if style and (style.startswith('Heading 1') or style.startswith('Heading 2')):
         p.alignment = WD_ALIGN_PARAGRAPH.CENTER
     else:
         p.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
