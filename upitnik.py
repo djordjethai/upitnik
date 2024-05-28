@@ -89,7 +89,7 @@ def sacuvaj_dokument_upitnik(content, file_name, template_path="template.docx", 
     doc.add_paragraph(" ")
     doc.add_paragraph(f"Datum {formatted_date}")
     doc.add_page_break()
-    doc.add_paragraph(f"Anketa \n\n", style='Heading 2')
+    doc.add_paragraph(f"Anketa\n\n", style='Heading 2')
     lines = anketa.split('\n')
     for line in lines:
         doc.add_paragraph(line)
