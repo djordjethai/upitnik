@@ -11,7 +11,8 @@ from pitanja import odgovori
 from smtplib import SMTP
 from datetime import datetime
 #from docx2pdf import convert
-from myfunc.prompts import PromptDatabase
+from myfunc.mojafunkcija import initialize_session_state
+from myfunc.prompts import get_prompts
 from myfunc.retrievers import HybridQueryProcessor
 from myfunc.varvars_dicts import work_vars
 
@@ -19,20 +20,21 @@ client=OpenAI()
 avatar_ai="bot.png" 
 anketa= ""
 
+default_values = {
+    "gap_ba_expert" : "You are a helpful assistant",
+    "gap_dt_consultant" : "You are helpful assistant",
+    "gap_service_suggestion" : "You are a helpful assistant",
+    "gap_write_report" : "You are a helpful assistant",
+}
+
+initialize_session_state(default_values)
+
+if st.session_state.gap_ba_expert == "You are a helpful assistant":
+    get_prompts([key for key in default_values.keys()])
+
 def change_extension(filename, new_extension):
     base = os.path.splitext(filename)[0]
     return base + new_extension
-
-try:
-    x = st.session_state.gap_ba_expert
-except:
-    with PromptDatabase() as db:
-        prompt_map = db.get_prompts_by_names(["gap_ba_expert", "gap_dt_consultant", "gap_service_suggestion", "gap_write_report"], 
-                                             [os.getenv("GAP_BA_EXPERT"), os.getenv("GAP_DT_CONSULTANT"), os.getenv("GAP_SERVICE_SUGGESTION"), os.getenv("GAP_WRITE_REPORT")])
-        st.session_state.gap_ba_expert = prompt_map.get("gap_ba_expert", "You are helpful assistant that always writes in Serbian.")
-        st.session_state.gap_dt_consultant = prompt_map.get("gap_dt_consultant", "You are helpful assistant that always writes in Serbian.")
-        st.session_state.gap_service_suggestion = prompt_map.get("gap_service_suggestion", "You are helpful assistant that always writes in Serbian.")
-        st.session_state.gap_write_report = prompt_map.get("gap_write_report", "You are helpful assistant that always writes in Serbian.")
 
 def format_json_to_text(data):
     output = []
