@@ -85,7 +85,7 @@ def sacuvaj_dokument_upitnik(content, file_name, template_path="template.docx", 
             add_markdown_paragraph(doc, line[4:], style='Heading 3')
         elif line.startswith('#### '):
             add_markdown_paragraph(doc, line[5:], style='Heading 4')
-        elif line.startswith('- '):
+        elif line.startswith('- ') or line.startswith(' - ') or line.startswith('  - ') or line.startswith('   - ') or line.startswith(' -  ') or line.startswith('  -  '):
             add_markdown_paragraph(doc, line[2:], style='List Paragraph')
         else:
             add_markdown_paragraph(doc, line)
