@@ -30,7 +30,7 @@ default_values = {
 initialize_session_state(default_values)
 
 if st.session_state.gap_ba_expert == "You are a helpful assistant":
-    get_prompts([key for key in default_values.keys()])
+    get_prompts("gap_ba_expert", "gap_dt_consultant", "gap_service_suggestion", "gap_write_report")
 
 def format_json_to_text(data):
     output = []
@@ -169,7 +169,7 @@ def main():
 
     if opcija == "Sve":
         with st.sidebar:
-            st.caption("Ver. 04.05.24" )
+            st.caption("Ver. 30.05.24" )
             st.subheader("Demo GAP Word i slanjem maila ")
             opcija = st.selectbox("Odaberite upitnik", ("",
                                                         "Opšti", 

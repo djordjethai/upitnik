@@ -30,7 +30,7 @@ default_values = {
 initialize_session_state(default_values)
 
 if st.session_state.gap_ba_expert == "You are a helpful assistant":
-    get_prompts([key for key in default_values.keys()])
+    get_prompts("gap_ba_expert", "gap_dt_consultant", "gap_service_suggestion", "gap_write_report")
 
 def change_extension(filename, new_extension):
     base = os.path.splitext(filename)[0]
@@ -194,7 +194,7 @@ def main():
     opcija = st.query_params.get('opcija', "Sve")
     if opcija == "Sve":
         with st.sidebar:
-            st.caption("Ver. 17.05.24" )
+            st.caption("Ver. 30.05.24" )
             st.subheader("GAP analiza")
             opcija = st.selectbox("Odaberite upitnik", ("",
                                                         "Opšti", 

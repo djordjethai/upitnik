@@ -182,7 +182,7 @@ def main():
     opcija = st.query_params.get('opcija', "Sve")
     if opcija == "Sve":
         with st.sidebar:
-            st.caption("Ver. 17.05.24")
+            st.caption("Ver. 30.05.24")
             st.subheader("GAP analiza")
             opcija = st.selectbox("Odaberite upitnik", ("",
                                                         "Opšti",
