@@ -111,7 +111,7 @@ def posalji_mail(email, file_name, poruka):
         subject="Izveštaj - Gap Analiza",
         message=poruka,
         from_addr="Aiupitnik@positive.rs",
-        to_addrs=[email, "prodaja@positive.rs"],
+        to_addrs=[email, "nemanja.perunicic@positive.rs"],
         smtp_server="smtp.office365.com",
         smtp_port=587,
         username="Aiupitnik@positive.rs",
