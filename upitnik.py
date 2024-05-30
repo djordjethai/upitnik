@@ -95,7 +95,10 @@ def sacuvaj_dokument_upitnik(content, file_name, template_path="template.docx", 
     doc.add_paragraph(f"Anketa\n\n", style='Heading 2')
     lines = anketa.split('\n')
     for line in lines:
-        doc.add_paragraph(line)
+        try:
+            doc.add_paragraph(line)
+        except:
+            pass
     doc.save(file_name)
 
     pdf_file_name = change_extension(file_name, ".pdf")
