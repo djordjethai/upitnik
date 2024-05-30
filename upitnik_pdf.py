@@ -1,17 +1,18 @@
-﻿import matplotlib.pyplot as plt
+﻿import io
+import markdown
+import matplotlib.pyplot as plt
 import numpy as np
 import os
-import streamlit as st
-import markdown
-from html2docx import html2docx
-import io
 import pdfkit
+import streamlit as st
+
 from docx import Document
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from email import encoders
 from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
+from html2docx import html2docx
 from openai import OpenAI
 from pitanja import odgovori
 from smtplib import SMTP

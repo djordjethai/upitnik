@@ -1,5 +1,7 @@
 ﻿import os
 import streamlit as st
+
+from datetime import datetime
 from docx import Document
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from email import encoders
@@ -9,12 +11,13 @@ from email.mime.text import MIMEText
 from openai import OpenAI
 from pitanja import odgovori
 from smtplib import SMTP
-from datetime import datetime
-#from docx2pdf import convert
+
 from myfunc.mojafunkcija import initialize_session_state
 from myfunc.prompts import get_prompts
 from myfunc.retrievers import HybridQueryProcessor
 from myfunc.varvars_dicts import work_vars
+
+#from docx2pdf import convert
 
 client=OpenAI()
 avatar_ai="bot.png" 

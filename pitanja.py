@@ -1,6 +1,6 @@
-import streamlit as st
 import json
 import re
+import streamlit as st
 
 # proverava ispravnost email adrese - treba u myfunc
 def is_valid_email(email):
