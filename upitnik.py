@@ -30,7 +30,7 @@ default_values = {
 initialize_session_state(default_values)
 
 if st.session_state.gap_ba_expert == "You are a helpful assistant":
-    get_prompts([key for key in default_values.keys()])
+    get_prompts(key for key in default_values.keys())
 
 
 def change_extension(filename, new_extension):
