@@ -9,11 +9,13 @@
 *.user
 *.userosscache
 *.sln.docstates
+/venv
 
 # common files
 *.txt
 *.docx
 *.pdf
+!upitnik.txt
 !template.docx
 !requirements.txt
 !packages.txt
