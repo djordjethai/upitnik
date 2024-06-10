@@ -13,27 +13,12 @@ from openai import OpenAI
 from pitanja import odgovori
 from smtplib import SMTP
 
-from myfunc.mojafunkcija import initialize_session_state
-from myfunc.prompts import get_prompts
 from myfunc.retrievers import HybridQueryProcessor
-from myfunc.varvars_dicts import work_vars
+from myfunc.varvars_dicts import work_prompts, work_vars
 
 client = OpenAI()
 avatar_ai = "bot.png"
 anketa = ""
-
-default_values = {
-    "gap_ba_expert" : "You are a helpful assistant",
-    "gap_dt_consultant" : "You are helpful assistant",
-    "gap_service_suggestion" : "You are a helpful assistant",
-    "gap_write_report" : "You are a helpful assistant",
-}
-
-initialize_session_state(default_values)
-
-if st.session_state.gap_ba_expert == "You are a helpful assistant":
-    get_prompts("gap_ba_expert", "gap_dt_consultant", "gap_service_suggestion", "gap_write_report")
-
 
 def change_extension(filename, new_extension):
     base = os.path.splitext(filename)[0]
