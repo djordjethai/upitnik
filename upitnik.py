@@ -16,6 +16,8 @@ from smtplib import SMTP
 from myfunc.retrievers import HybridQueryProcessor
 from myfunc.varvars_dicts import work_prompts, work_vars
 
+mprompts = work_prompts()
+
 client = OpenAI()
 avatar_ai = "bot.png"
 anketa = ""
@@ -189,15 +191,15 @@ def main():
 
         if result:
             gap_message = [
-                {"role": "system", "content": st.session_state.gap_ba_expert},
-                {"role": "user", "content": st.session_state.gap_write_report.format(result=result)}
+                {"role": "system", "content": mprompts["gap_ba_expert"]},
+                {"role": "user", "content": mprompts["gap_write_report"].format(result=result)}
             ]
             full_response = positive_agent(gap_message)
             predlozi, x, y = recommended(full_response)
 
             recommend_message = [
-                {"role": "system", "content": st.session_state.gap_dt_consultant},
-                {"role": "user", "content": st.session_state.gap_service_suggestion.format(full_response=full_response, predlozi=predlozi)}
+                {"role": "system", "content": mprompts["gap_dt_consultant"]},
+                {"role": "user", "content": mprompts["gap_service_suggestion"].format(full_response=full_response, predlozi=predlozi)}
             ]
             recommendation_response = positive_agent(recommend_message)
 

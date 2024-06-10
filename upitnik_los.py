@@ -12,28 +12,14 @@ from openai import OpenAI
 from pitanja import odgovori
 from smtplib import SMTP
 
-from myfunc.mojafunkcija import initialize_session_state
-from myfunc.prompts import get_prompts
 from myfunc.retrievers import HybridQueryProcessor
-from myfunc.varvars_dicts import work_vars
+from myfunc.varvars_dicts import work_prompts, work_vars
 
-#from docx2pdf import convert
+mprompts = work_prompts()
 
 client=OpenAI()
 avatar_ai="bot.png" 
 anketa= ""
-
-default_values = {
-    "gap_ba_expert" : "You are a helpful assistant",
-    "gap_dt_consultant" : "You are helpful assistant",
-    "gap_service_suggestion" : "You are a helpful assistant",
-    "gap_write_report" : "You are a helpful assistant",
-}
-
-initialize_session_state(default_values)
-
-if st.session_state.gap_ba_expert == "You are a helpful assistant":
-    get_prompts("gap_ba_expert", "gap_dt_consultant", "gap_service_suggestion", "gap_write_report")
 
 def change_extension(filename, new_extension):
     base = os.path.splitext(filename)[0]
@@ -216,8 +202,8 @@ def main():
         if result:
             # prva faza citanje odgovora i komentar
             gap_message=[
-                {"role": "system", "content": st.session_state.gap_ba_expert},
-                {"role": "user", "content": st.session_state.gap_write_report.format(result=result)}
+                {"role": "system", "content": mprompts["gap_ba_expert"]},
+                {"role": "user", "content": mprompts["gap_write_report"].format(result=result)}
             ]
             full_response = positive_agent(gap_message)
             predlozi, x, y = recommended(full_response)
@@ -225,8 +211,8 @@ def main():
             #predlozi = "xx"
             # druga faza preporuke na osnovu portfolia
             recommend_message=[
-                        {"role": "system", "content": st.session_state.gap_dt_consultant},
-                        {"role": "user", "content": st.session_state.gap_service_suggestion.format(full_response=full_response, predlozi=predlozi)}
+                        {"role": "system", "content": mprompts["gap_dt_consultant"]},
+                        {"role": "user", "content": mprompts["gap_service_suggestion"].format(full_response=full_response, predlozi=predlozi)}
             ]
             recommendation_response = positive_agent(recommend_message)
             
